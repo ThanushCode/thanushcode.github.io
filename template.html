@@ -3,71 +3,71 @@
   <head>
     <title>CIT 160 Add Two Numbers</title>
     <meta charset="UTF-8" />
+    <style>
+      body {
+        text-align: center;
+      }
+      header,
+      footer {
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+      }
 
-    <body>
-      <header>
-        <h1>Week 3: Add Two Numbers</h1>
-        <h2>Thanush Ganesh</h2>
-      </header>
+      footer {
+        font-size: 13px;
+        letter-spacing: 1.5pt;
+      }
 
-      <main>
-        <h3>Add Two Numbers</h3>
-        <label>Enter Number One: <input type="text" id="number1" /></label>
-        <label>Enter Number Two: <input type="text" id="number2" /></label>
-        <label><button onclick="addNumbers()">Add Numbers</button></label>
-        <hr />
-        <p><span id="output"></span></p>
-        <footer>
-          &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
-        </footer>
-      </main>
-      <style>
-        body {
-          text-align: center;
-        }
-        header,
-        footer {
-          background-color: #000;
-          color: #fff;
-          padding: 10px;
-        }
+      h1,
+      h2 {
+        margin: 0;
+      }
 
-        footer {
-          font-size: 13px;
-          letter-spacing: 1.5pt;
-        }
+      h2,
+      #currentdate {
+        color: yellow;
+      }
 
-        h1,
-        h2 {
-          margin: 0;
-        }
+      main {
+        margin: 10px auto;
+        border: 1px solid #999;
+        padding: 10px;
+        max-width: 500px;
+        background-color: #abe;
+        box-shadow: 0 0 30px;
+      }
 
-        h2,
-        #currentdate {
-          color: yellow;
-        }
+      h3 {
+        font-size: 24px;
+        margin: 0 0 15px 0;
+        border-bottom: 1px solid #333;
+        padding: 0;
+      }
 
-        main {
-          margin: 10px auto;
-          border: 1px solid #999;
-          padding: 10px;
-          max-width: 500px;
-          background-color: #abe;
-          box-shadow: 0 0 30px;
-        }
-
-        h3 {
-          font-size: 24px;
-          margin: 0 0 15px 0;
-          border-bottom: 1px solid #333;
-          padding: 0;
-        }
-
-        label {
-          display: block;
-          margin: 5px;
-        }
-      </style>
-    </body>
+      label {
+        display: block;
+        margin: 5px;
+      }
+    </style>
   </head>
+
+  <body>
+    <header>
+      <h1>Week 3: Add Two Numbers</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+
+    <main>
+      <h3>Add Two Numbers</h3>
+      <label>Enter Number One: <input type="text" id="number1" /></label>
+      <label>Enter Number Two: <input type="text" id="number2" /></label>
+      <label><button onclick="addNumbers()">Add Numbers</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+      <footer>
+        &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+    </main>
+  </body>
 </html>
