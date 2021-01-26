@@ -8,16 +8,18 @@
     <button>Click me</button>
     <button onclick="createParagraph()">Click me!</button>
     <script>
-     
-        document.addEventListener("DOMContentLoaded", function () {
-          function createParagraph() {
-            let para = document.createElement("p");
-            para.textContent = "You clicked the button!";
-            document.body.appendChild(para);
-          }
-         
-      </script>
-  </body>
+      document.addEventListener("DOMContentLoaded", function () {
+        function createParagraph() {
+          let para = document.createElement("p");
+          para.textContent = "You clicked the button!";
+          document.body.appendChild(para);
+        }
+        const buttons = document.querySelectorAll("button");
 
- 
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener("click", createParagraph);
+        }
+      });
+    </script>
+  </body>
 </html>
