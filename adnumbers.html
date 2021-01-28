@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <meta charset="UTF-8" />
+
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 3: Add Two Numbers</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+
+    <main>
+        <h3>Add Two Numbers</h3>
+        <label>Enter Number One: <input type="text" id="number1" /></label>
+        <label>Enter Number Two: <input type="text" id="number2" /></label>
+        <label><button onclick="addNumbers()">Add Numbers</button></label>
+        <hr />
+        <p><span id="output"></span></p>
+      </main>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  
+  <script >
+  function addNumbers() {
+    let num1 = parseFloat(document.getElementById('number1').value);
+    let num2 = parseFloat(document.getElementById('number2').value);
+    // MATH
+    let addition = num1 + num2;
+
+    document.getElementById('output').innerHTML = addition;
+
+}
+  
+  
+  </script>
+  </body>
+</html>
