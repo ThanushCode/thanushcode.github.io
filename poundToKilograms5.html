@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Module 5: Convert Pounds to Kilometers</title>
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+<h1>Module 5 Convert Pounds to Kilometers</h1>
+<h2>Debra Jones</h2>
+</header>
+<main>
+<h3>Convert Pounds to Kilograms</h3>
+<label>Enter Amount in Pounds:<input type="text" id="pounds" /></label>
+<label
+><button type="button" onclick="poundsToKilograms()">
+Convert Numbers
+</button></label
+>
+<hr />
+<p>output:<span id="output"></span></p>
+</main>
+<script>
+// round the display answer to one decimal and label the output, e.g., 50.6 Kilograms
+// program should correctly hand REAL NUMBERS (parsefloat) such as 160.5. This input should return and display 72.8 kilograms a round to one decimal answer
+// program must use a button click to handle the conversion event
+function poundsToKilograms() {
+//input val
+let text = document.getElementById("pounds").value;
+// processing
+let pounds = parseFloat(text);
+//conversion factor from pounds to kilograms
+let kilograms = 1 * 0.45359237;
+//output
+document.getElementById("output").textContent = `${kilograms.tofixed(1)}` + Kilograms;}
+</script>
+<footer>&copy;20 &bull; Debra Jones &bull; BYU-Idaho &bull; CIT 160</footer>
+</body>
+</html>
