@@ -14,7 +14,7 @@
         let k = parseFloat (document .getElementById('inputkilograms') .value);              
         let sum = p * "2.2046";
         document.getElementById("output").innerHTML = multiply
-        let multiply = "p" * "2.2046";
+        let multiply = "p" * ("num.toFixed(1) is "0.45");
         }
 
         function multiplyBy() {
