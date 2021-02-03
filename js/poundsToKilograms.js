@@ -4,7 +4,7 @@ function poundsToKilograms() {
       let pounds = parseFloat (text) // Processing
       let kilograms = pounds * 0.45359237; 
       document.getElementById("output").textContent=  //output
-      " pounds equals to " + `${kilograms.toFixed (1)}`+ " kilograms " ;  
+      " pounds equals to " + `${kilograms.toFixed (1)}` + " kilograms " ;  
     }
   
 
