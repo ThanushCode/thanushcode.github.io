@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <body>
+        <h2>Price of pizza after topping</h2>
+
+<p id="demo"></p>
+
+<script>
+    //Imagine a program to compute the price of a pizza. The price of a large sized cheese pizza with no other toppings is $10.95.
+// The price for each topping such as ham, peperoni, olives, and pineapple is $1.45. 
+//Here is a short example that uses the += operator to compute the price of a pizza.
+// let price = 10.95;
+//let toppings = 3;
+   // let perTopping = 1.45;
+   // price += toppings * perTopping;
+
+let price = 10.95;
+let toppings = 3;
+let perTopping = 1.45;
+let totalprice = price + toppings * perTopping;
+document.getElementById("demo").innerHTML =  totalprice;
+
+</script>
+
+</body>
+</html>
