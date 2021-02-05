@@ -3,18 +3,71 @@
 <head>
 <meta charset="utf-8">
 <title>employee's after tax pay</title>
+<style>
+  body {
+    text-align: center;
+  }
+  header,
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+  }
 
+  footer {
+    font-size: 13px;
+    letter-spacing: 1.5pt;
+  }
+
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  h2,
+  #currentdate {
+    color: yellow;
+  }
+
+  main {
+    margin: 10px auto;
+    border: 1px solid #999;
+    padding: 10px;
+    max-width: 500px;
+    background-color: #abe;
+    box-shadow: 0 0 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #333;
+    padding: 0;
+  }
+
+  label {
+    display: block;
+    margin: 5px;
+  }
+</style>
+ </head>
+   <body>
+     <header>
+        <main>
+   <h1>Week 5:Emploee's After Tax Pay</h1>
+   <h2>Thanush Ganesh</h2>
+</header>
 <main>
-    <body>
-        <p><label>reguler 1 hours pay: <input type="text" id="regulerhourlypay" /></label></p><br>
-        <p><label>reguler hours : <input type="text" id="regulerhours" /></label></p><br>
+    
+        <p><label>Reguler hourly wage: <input type="text" id="regulerhourlypay" /></label></p><br>
+        <p><label>Reguler total hours : <input type="text" id="regulerhours" /></label></p><br>
         <p><label>Total overtime : <input type="text" id="overtime" /></label></p><br>
-        <p><label>overtime pay per hours : <input type="text" id="overtimehourypay" /></label></p><br>
+        <p><label> One Hour overtime pay : <input type="text" id="overtimehourypay" /></label></p><br>
         
         <button type="button" onclick="get_salary()">salary</button>
         <div id="outputDiv"></div>  
-        </body>
-  </main>
+    </body>
+        </main>
 
 <script>
     /* Input: The regular pay rate is constant of $15 per hour
@@ -41,7 +94,7 @@
                 // Processing
                 let salary = (regulerhourlypay * regulerhours ) + (totalovertime * overtimehourypay) * 0.15;
                 // output
-                document.getElementById("outputDiv").innerHTML = salary;
+                document.getElementById("outputDiv").innerHTML =  `${salary.toFixed (2)}`;
                 }
     </script>
     
