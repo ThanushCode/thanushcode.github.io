@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Week 5 Exercise 1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Please enter volume in quarts: </p> 
+
+	<input type="text" id="quarts">
+	<button type="button" onclick="convert()">Convert</button>
+    <div id="answer"></div>
+	<script>
+
+	var quarts;
+	var formula;	
+
+	function convert()
+	{
+		quarts = parseFloat(document.getElementById("quarts").value);
+	
+
+		formula = Math.round((quarts *.946353) *100)/100;
+
+		document.getElementById('answer').innerHTML = formula;
+	};
+	</script> 
+</body>
+</html>
