@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>employee's after tax pay</title>
+
+<main>
+    <body>
+        <p><label>reguler 1 hours pay: <input type="text" id="regulerhourlypay" /></label></p><br>
+        <p><label>reguler hours : <input type="text" id="regulerhours" /></label></p><br>
+        <p><label>Total overtime : <input type="text" id="overtime" /></label></p><br>
+        <p><label>overtime pay per hours : <input type="text" id="overtimehourypay" /></label></p><br>
+        
+        <button type="button" onclick="get_salary()">salary</button>
+        <div id="outputDiv"></div>  
+        </body>
+  </main>
+
+<script>
+    /* Input: The regular pay rate is constant of $15 per hour
+    The overtime pay rate is constant at $22.50 per hour
+    The user should be able to enter the total regular hours and total overtime hours.
+    The tax rate is constant at 15% of the gross amount. 
+    The user enters 40 regular hours and 2.5 hours of overtime
+    The calculation of after tax pay would be regular pay (15 * 40) + overtime pay (22.50 * 2.5) - the tax amount.
+    The tax amount is 15% of that gross pay which is .15( 15*40 + 22.5*2.5).
+    600 (reg) + 56.25 (ot) - 98.44 (tax) = $557.81
+    Output a $ formatted amount with two decimals, e.g., $234.56
+    
+     * Processing: 
+    
+     * Output: 
+     */
+   //Input
+   function get_salary() {
+                let regulerhourlypay  = parseFloat (document.getElementById("regulerhourlypay").value); 
+                let regulerhours = parseFloat (document.getElementById("regulerhours").value);
+                
+                let totalovertime = parseFloat (document.getElementById("overtime").value );
+                let overtimehourypay = parseFloat (document.getElementById("overtimehourypay").value );
+                // Processing
+                let salary = (regulerhourlypay * regulerhours ) + (totalovertime * overtimehourypay) * 0.15;
+                // output
+                document.getElementById("outputDiv").innerHTML = salary;
+                }
+    </script>
+    
+<footer>
+  &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+</footer>
+
+</body>
+</html>
