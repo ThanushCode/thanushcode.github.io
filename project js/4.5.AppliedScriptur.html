@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script>
+/* Defining Table
+ * Input: A person's name
+ * Processing: Create a verse of scripture for that person
+ * Output: The scripture
+ */
+function applyScripture() {
+    // Get the user's name from the text field that has the id
+    // of "nameInputBox" and store it in a variable named name.
+    var name = document.getElementById('nameInputBox').value;
+
+    // Use string concatenation to create a verse
+    // of scripture personalized for the user.
+    var scripture = "I, " + name + ", having been born of" +
+        " goodly parents, therefore I was taught somewhat" +
+        " in all the learning of my father.";
+
+    // Display the scripture in the div that has the id "outputDiv".
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>                             
+Please enter your name: <input type="text" id="nameInputBox">    
+<button type="button" onclick="applyScripture()">Verse</button>
+<div id="outputDiv"></div>
+<link href="css/style.css" rel="stylesheet" />
+</body>       
+</html>

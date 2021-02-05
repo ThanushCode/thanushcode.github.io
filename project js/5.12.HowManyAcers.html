@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>How Many Acres?</title>
+<script>
+
+function computeSize()
+{
+	var w = parseFloat(document.getElementById("width").value);
+	var x = parseFloat(document.getElementById("length").value);
+	var acres = Math.round(((w * x)/43560) * 100)/100; 
+	document.getElementById('acres').innerHTML = acres;
+}
+</script>
+</head>
+
+<body>
+    <h1>How Many Acres?</h1>
+    Width (feet) <input type="text" id="width"><br>
+    Length (feet) <input type="text" id="length"><br>
+    <button type="button" onclick="computeSize()">Acres</button><br>
+    Size (acres) <div id="acres"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 5: Volume of a Tetrahedron</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <h3>Volume of a Tetrahedrons</h3>
+        <label>Side Length: <input type="text" id="length" /></label>
+       
+        <label></label>
+        <hr />
+        <button type="button" onclick="computeVolume()">volume</button>
+       
+        <p><span id="volume"></span></p>
+      </main>
+      <script>
+         /*Defining Table:
+	Input: The edge length of a regular tetrahedron.
+	Processing: Cube the length (a) and divide it by 6 times the square root  of 2.
+	Output: The volume of the regular tetrahedron (v).
+       */
+              //Input
+              function computeVolume() {
+                let a  = parseFloat (document.getElementById("length").value); 
+                // Processing
+                
+                let v = (a * a * a) / (6 * Math.sqrt (2));
+                // output
+                document.getElementById("volume").innerHTML = v;
+                }
+             
+      </script>
+
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+  </body>
+</html>

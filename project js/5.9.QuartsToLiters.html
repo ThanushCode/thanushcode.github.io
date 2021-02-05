@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 5: Quarts to Liters</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <h3>Convert Quarts to Liters</h3>
+        <label>Enter the amount in Quarts: <input type="text" id="quarts" /></label>
+       
+        <label></label>
+        <hr />
+        <button type="button" onclick="convert2Liters()">Convert</button>
+       
+        <p><span id="output"></span></p>
+      </main>
+      <script>
+          /* Defining Table
+          * Input: Floating point number of quarts. 
+          * Processing: Convert quarts to liters.
+          * Output: Floating point number of liters.
+          * <button type= "button" onclick="quartsToLiters()">Convert  </button>
+          */
+
+              //Input
+              function convert2Liters() {
+                let quarts  = parseFloat (document.getElementById("quarts").value); 
+                // Processing
+                
+                let liters = quarts * 0.946353;
+                // output
+                document.getElementById("output").innerHTML = liters;
+                }
+             
+      </script>
+
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+  </body>
+</html>

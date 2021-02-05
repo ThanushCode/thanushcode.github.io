@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 5:Mileage Calculator</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <h3>Calculate Mileage </h3>
+        
+        <label>Starting Odometer Reading: <input type="text" id="startOdometerInput" /></label>
+        <label>end Odometer Reading: <input type="text" id="endOdometerInput" /></label>
+        <label>Gallons of Gasoline used: <input type="text" id="gasolineUsedInput" /></label>
+       
+
+        <label></label>
+        <hr />
+        <button type="button" onclick="calculateMileage()">volume</button>
+       
+        <p><span id="output"></span></p>
+      </main>
+      <script>
+     /* Defining Table
+ * Input: Floating point number of quarts. 
+ * Processing: Convert quarts to liters.
+ * Output: Floating point number of liters.
+ */
+              //Input
+              function calculateMileage() {
+                let startOdometer  = parseFloat (document.getElementById("startOdometerInput").value); 
+                let endOdometer = parseFloat (document.getElementById("endOdometerInput").value);
+                let gasolinused = parseFloat (document.getElementById("gasolineUsedInput").value );
+                // Processing
+                let mileage = (endOdometer - startOdometer) / gasolinused;
+                // output
+                document.getElementById("output").innerHTML = mileage;
+                }
+             
+      </script>
+
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+  </body>
+</html>
