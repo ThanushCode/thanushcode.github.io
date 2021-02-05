@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Distance</title>
+
+<script>
+/* Input: x and y for two points: x1, y1, x2, y2
+ * Processing:
+ *   1. Calculate the distance between the two points.
+ *   2. Round the distance to two digits after the decimal.
+ * Output: the rounded distance
+ * The built in JavaScript Math object has a function named Math.round that rounds a real number to an integer. However, 
+ * a programmer will occasionally need to write a program that rounds fractional numbers to a fixed number of places after the
+ *  decimal point. For example, U.S. currency amounts are usually rounded to two decimal places (pennies). Lines 27–29 of the
+ *  next example use the built in Math.pow and Math.round functions to round the value in the variable named dist to two decimal
+ *  places.
+ * Figure 5-2 shows a plot of two points in two-dimensional Cartesian space and the distance between those points. 
+ * We can compute the distance between two points p1 and p2 with the formula:
+
+* d = √
+* (x2 − x1)2 + (y2 − y1)2
+* where d is the distance between the points. Point p1 has the coordinates (x1, y1), and point p2 has the coordinates (x2, y2).
+* This formula can be written in JavaScript as shown in the next example. Notice the use of the built-in JavaScript
+* function Math.sqrt at line 24.
+ */
+function distance() {
+    // Get the coordinates for two points from the user.
+    let x1 = parseFloat(document.getElementById('x1inputBox').value);
+    let y1 = parseFloat(document.getElementById('y1inputBox').value);
+    let x2 = parseFloat(document.getElementById('x2inputBox').value);
+    let y2 = parseFloat(document.getElementById('y2inputBox').value);
+
+    // Compute the distance between the two points.
+    let dx = x2 - x1;
+    let dy = y2 - y1;
+    let dist = Math.sqrt(dx * dx + dy * dy);
+
+    // Round the distance to two digits after the decimal.
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    dist = Math.round(dist * multiplier) / multiplier;
+
+    // Display the distance to the user.
+    document.getElementById('outputDiv').innerHTML = dist;
+}
+</script>
+</head>
+
+<body>
+Please enter the x and y coordinates for two points:<br>
+(x1, y1) <input type="text" id="x1inputBox" size="3">  
+         <input type="text" id="y1inputBox" size="3"><br>  
+(x2, y2) <input type="text" id="x2inputBox" size="3">  
+         <input type="text" id="y2inputBox" size="3"><br>  
+<button type="button" onclick="distance()">Distance</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>
