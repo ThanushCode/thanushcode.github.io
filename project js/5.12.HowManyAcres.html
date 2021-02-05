@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 5: How many Acres?</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <h3>Compute size</h3>
+        <label> Width in feet: <input type="text" id="width" /></label>
+        <label> Length in feet: <input type="text" id="length" /></label>
+        <label></label>
+        <hr />
+        <button type="button" onclick="computeSize()">Acres?</button>
+       
+        <p><span id="output"></span></p>
+      </main>
+      <script>
+         /*Defining Table:
+	Input: The Land Width and Lenth
+	Processing:
+	Output: Acers
+       */
+              //Input
+              function computeSize() {
+                let w  = parseFloat (document.getElementById("width").value); 
+                let l  = parseFloat (document.getElementById("length").value); 
+               
+                // Processing
+                
+                let acres  = Math.round(((w * l)/43560) * 100)/100; 
+                // output
+                document.getElementById("output").innerHTML = acres;
+                }
+             
+      </script>
+
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+  </body>
+</html>
