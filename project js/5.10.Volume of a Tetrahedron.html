@@ -26,6 +26,10 @@
 	Input: The edge length of a regular tetrahedron.
 	Processing: Cube the length (a) and divide it by 6 times the square root  of 2.
 	Output: The volume of the regular tetrahedron (v).
+  var length = parseFloat(document.getElementById("length").value);
+		var volume = (length * length * length)/(6 * Math.sqrt(2));
+		var round = Math.round(volume * 1000)/1000;
+		document.getElementById('volume').innerHTML = round;
        */
               //Input
               function computeVolume() {
