@@ -93,7 +93,11 @@
                 let totalovertime = parseFloat (document.getElementById("overtime").value );
                 let overtimehourypay = parseFloat (document.getElementById("overtimehourypay").value );
                 // Processing
-                let salary = (regulerhourlypay * regulerhours ) + (  overtimehourypay * totalovertime) * 0.15;
+                let reg = (regulerhourlypay * regulerhours);
+                let ot  = (overtimehourypay * totalovertime);
+                let tax =  ( reg  + ot ) * 0.15 ;
+                let salary = ( reg + ot ) - tax;
+                
                 // output
                 document.getElementById("outputDiv").innerHTML =  `${salary.toFixed (2)}`;
                 }
