@@ -61,9 +61,10 @@
 <main>
     
         <p><label>Reguler hourly wage: <input type="text" id="regulerhourlypay" /></label></p><br>
-        <p><label>Reguler total hours : <input type="text" id="regulerhours" /></label></p><br>
-        <p><label>Total overtime : <input type="text" id="overtime" /></label></p><br>
+        <p><label>Total Reguler hours : <input type="text" id="regulerhours" /></label></p><br>
         <p><label> One Hour overtime pay : <input type="text" id="overtimehourypay" /></label></p><br>
+        <p><label>Total overtime : <input type="text" id="overtime" /></label></p><br>
+      
         
         <button type="button" onclick="get_salary()">salary</button>
         <div id="outputDiv"></div>  
@@ -81,6 +82,7 @@
     600 (reg) + 56.25 (ot) - 98.44 (tax) = $557.81
     Output a $ formatted amount with two decimals, e.g., $234.56
     
+    
      */
 
                 //Input
@@ -91,13 +93,13 @@
                 let totalovertime = parseFloat (document.getElementById("overtime").value );
                 let overtimehourypay = parseFloat (document.getElementById("overtimehourypay").value );
                 // Processing
-                let reg = (regulerhourlypay * regulerhours);
-                let ot  = (overtimehourypay * totalovertime);
-                let tax =  ( reg  + ot ) * 0.15 ;
-                let salary = ( reg + ot ) - tax;
+                let reg = regulerhourlypay * regulerhours;
+                let ot  = overtimehourypay * totalovertime;
+                let tax =  ( reg  + ot )  * 0.15 ;
+                let salary =  (reg + ot ) - tax;
                 
                 // output
-                document.getElementById("outputDiv").innerHTML =  `${salary.toFixed (2)}`;
+                document.getElementById("outputDiv").innerHTML = "$" + `${salary.toFixed (2)}`;
                 }
     </script>
     
