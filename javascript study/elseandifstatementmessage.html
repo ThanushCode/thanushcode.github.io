@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <body>
+        <h2>Declare two variables named balance and rate</h2>
+        <label>value of x <input type="text" id="x" size="2" /></label>
+        <label>value of y <input type="text" id="y" size="2" /></label>
+        <button onclick="myFunction()">message</button>
+<p id="demo"></p>
+
+<script>
+function myFunction () {
+    let x = parseFloat(document.getElementById("x").value);
+    let y = parseFloat(document.getElementById("y").value);
+    
+    let message = 'Wave';
+    if (x < 2) {
+        if (y > 8) {
+            message = 'Hello';
+        }
+    }
+    else {
+        message = 'Goodbye';
+    }
+    document.getElementById('demo').innerHTML = message;
+}
+</script>
+
+</body>
+</html>
