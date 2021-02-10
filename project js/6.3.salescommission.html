@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculater</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <input type="text" id="salesInputBox" size="3">
+
+      <hr />
+
+      <button type="button" onclick="compute()">Check</button>
+      <div id="outputDiv"></div>
+    </main>
+
+    <script>
+      /* Input: 2 numbers, an operator, and a result.
+       
+       */
+      function compute() {
+        
+        let sales = parseFloat(document.getElementById('salesInputBox').value);
+    let rate;
+    if (sales < 300) {
+        rate = 0;
+    }
+    else if (sales < 600) {
+        rate = 0.02;
+    }
+    else if (sales < 1000) {
+        rate = 0.025;
+    }
+    else {
+        rate = 0.03;
+    }
+    
+            let commission = sales * rate;
+let output = 'The employee earned ' + commission;
+document.getElementById('outputDiv').innerHTML = output;
+      }
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>

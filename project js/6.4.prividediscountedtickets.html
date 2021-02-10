@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Provide Discount</title>
+  </head>
+
+  <body>
+        <header>
+      <h1>Week 6: Provide Discount</h1>
+      <h2>Thanush Ganesh</h2>
+        </header>
+    <main>
+        Age: <input type="text" id="ageBox" size="3"><br>  
+        Number of games attended: <input type="text" id="gamesBox" size="3"><br>  
+        <hr />
+        <button type="button" onclick="ticketPrice()">Ticket Price</button>  
+        <div id="outputDiv"></div>  
+    </main>
+
+    <script>
+      /* Input: 2 numbers, an operator, and a result.
+       
+      */ 
+        function ticketPrice() {
+    let age = parseInt(document.getElementById('ageBox').value);
+    let gamesAttended = parseInt(document.getElementById('gamesBox').value);
+
+    let price;
+    if (age < 18) {
+        if (gamesAttended < 6)
+            price = 8.0;
+        else if (gamesAttended < 11)
+            price = 6.0;
+        else
+            price = 5.0;
+    }
+    else if (age < 55) {
+        if (gamesAttended < 11)
+            price = 10.0;
+        else
+            price = 8.0;
+    }
+    else {
+        if (gamesAttended < 11)
+            price = 8.0;
+        else
+            price = 6.0;
+    }
+
+    document.getElementById('outputDiv').innerHTML = price;
+}
+</script>
+    
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+ </body>
+</html>
