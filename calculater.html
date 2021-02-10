@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculater</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <input type="text" id="num1InputBox" size="2" />
+      <input type="text" id="opInputBox" size="1" />
+      <input type="text" id="num2InputBox" size="2" />=
+      <input type="text" id="resInputBox" size="3" />
+      <hr />
+
+      <button type="button" onclick="checkProblem()">Check</button>
+      <div id="outputDiv"></div>
+    </main>
+
+    <script>
+      /* Input: 2 numbers, an operator, and a result.
+       * Processing: determine which operator is being used, and check the equation.
+       * Output: whether or not the equation is correct.
+       */
+      function checkProblem() {
+        // Get 2 numbers as num1 and num2, operator= op, and result = res.
+        // for an arithmetic test from the user.
+        let num1 = parseFloat(document.getElementById("num1InputBox").value);
+        let op = document.getElementById("opInputBox").value;
+        let num2 = parseFloat(document.getElementById("num2InputBox").value);
+        let res = parseFloat(document.getElementById("resInputBox").value);
+        //Computed the calculation to compare with res
+        let result;
+        //if correct answer, value is "  Correct! .". If incorrect, value is "Incorrect. ".
+        let correct;
+
+        if (op == "+") {
+          result = num1 + num2;
+        } else if (op == "-") {
+          result = num1 - num2;
+        } else if (op == "*") {
+          result = num1 * num2;
+        } else if (op == "/") {
+          result = num1 / num2;
+        }
+
+        if (result == res) {
+          correct = "Correct ";
+        } else {
+          correct = "Incorrect ";
+        }
+
+        // notify the user if the answers they enter correct or wrong:
+        document.getElementById("outputDiv").innerHTML = correct;
+      }
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>

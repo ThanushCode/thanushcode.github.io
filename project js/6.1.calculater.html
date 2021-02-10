@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Simple Calc</title>
+</head>
+
+<body>
+    <h1>Test Your Math Skills</h1>
+    <input type="text" id="aInputBox" size="3">
+    <input type="text" id="opInputBox" size="2">
+    <input type="text" id="bInputBox" size="3">=
+    <input type="text" id="cInputBox" size="3">
+    <br>
+<button type="button" onclick="checkProblem()">Check</button>
+<div id="outputDiv"></div>
+</body>
+<script>
+/* Input: 2 numbers, an operator, and a result.
+ * Processing: determine which operator is being used, and check the equation.
+ * Output: whether or not the equation is correct.
+ *    
+ *    
+ */
+function checkProblem() {
+    // Get 2 numbers a and b, operator op, and result c.
+    // for an arithmetic test from the user.
+    var a = parseFloat(document.getElementById('aInputBox').value);
+    var op = document.getElementById('opInputBox').value;
+    var b = parseFloat(document.getElementById('bInputBox').value);
+    var c = parseFloat(document.getElementById('cInputBox').value);
+    //Computed result to compare with c
+    var result;
+    //if correct, value is "Correct! Good job.". If incorrect, value is "Incorrect. Try again!".
+    var correct;
+
+    if (op == "+") {
+        result = a + b;
+    } else if (op == "-") {
+        result = a - b;
+    } else if (op == "*") {
+        result = a * b;
+    } else if (op == "/") {
+        result = a / b;
+    }
+
+    if (result == c){
+        correct = "Correct! Good job.";
+    }
+    else{
+        correct = "Incorrect. Try again!"
+    }
+    
+
+    // Tell the user if they are correct.
+    document.getElementById('outputDiv').innerHTML = correct;
+}
+</script>
+
+</html>
