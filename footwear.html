@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>What Should I Wear Today</title>
+
+<script>
+/* Input: A word that describes the weather
+ * Processing: Match that word with an appropriate footwear recommendation:
+hot = sandals
+rain = galoshes
+snow = boots
+anything else = shoes
+ * Output: The appropriate footwear recommendation.
+ */
+function clothingLogic() {
+    // Get the user input from a text field.
+    var text = document.getElementById('weather').value;
+
+    // Choose a message
+    var message;
+    if (text == "hot") {
+        message = "sandals";
+    }
+	else if (text == "rain") {
+	message = "galoshes";
+    }
+	else if (text == "snow") {
+	message = "boots"
+	}
+    else {
+        message = "shoes";
+    }
+
+    // Display the message to the user.
+    document.getElementById('outputDiv').innerHTML = message;
+}
+</script>
+</head>
+
+<body>                      
+Please enter the weather to get a footwear suggestion:  <input type="text" id="weather">
+<button type="button" onclick="clothingLogic()">Get Recommendation</button>
+<div id="outputDiv"></div>              
+</body>         
+</html>
