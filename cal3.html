@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculater</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <input type="text" id="classStandingInputBox" size="3">
+
+      <hr />
+
+      <button type="button" onclick="getDayString()">Check</button>
+      <div id="outputDiv"></div>
+    </main>
+
+    <script>
+ 
+      function getDayString() {
+        
+        let classStanding = parseFloat(document.getElementById('classStandingInputBox').value);
+        let registerDate;
+       
+    switch (classStanding) {
+        case 'F':
+          registerDate = "Nov 23";
+          break;
+        case 'S':
+          registerDate = "Nov 17";
+          break;
+        case 'J':
+          registerDate = "Nov 12";
+          break;
+        case 'N':
+          registerDate = "Nov 6";
+          break;
+        default:
+          registerDate = "none";
+          alert("unknown class standing");
+          break;
+    }
+    
+    
+    document.getElementById('outputDiv').innerHTML = registerDate;
+      
+}   
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>
+

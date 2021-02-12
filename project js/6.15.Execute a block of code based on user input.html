@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Shoes</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Execute a block of code based on user input:</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <p> Write Banana, Orange or Apple in the input field and click the button</p>
+        <p>The switch statement will execute a block of code based on your input</p>
+        <input id="myInput" type="text">
+
+        <button onclick="myFunction()">Try it</button>
+        
+        <p id="demo"></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+    
+    <script>
+
+function myFunction() {
+  var text;
+  var fruits = document.getElementById("myInput").value;
+
+  switch(fruits) {
+    case "Banana":
+      text = "Banana is good!";
+    break;
+    case "Orange":
+    text = "I am not a fan of orange.";
+    break;
+    case "Apple":
+    text = "How you like them apples?";
+    break;
+    default:
+    text = "I have never heard of that fruit...";
+  }
+  document.getElementById("demo").innerHTML = text;
+  }
+ </script>
+   
+</html>

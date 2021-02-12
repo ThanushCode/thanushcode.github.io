@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculater</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        <input type="text" id="costInputBox" size="3">
+
+      <hr />
+
+      <button type="button" onclick="compute()">Check</button>
+      <div id="outputDiv"></div>
+    </main>
+
+    <script>
+      /* Input: 2 numbers, an operator, and a result.
+       
+       */
+      function compute() {
+     
+        
+        let cost = parseFloat(document.getElementById('costInputBox').value);
+       
+        let discount;
+    if (cost < 100) {
+        discount = 0.10;
+    }
+    else if (cost < 250) {
+        discount = 0.15;
+    }
+    else if (cost < 400) {
+        discount = 0.18;
+    }
+    else {
+        discount = 0.20;
+    }
+    
+
+    
+let output = cost *= (1 - discount);   //cost *= (1 - discount);
+document.getElementById('outputDiv').innerHTML = output;
+      }
+    
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>
+
