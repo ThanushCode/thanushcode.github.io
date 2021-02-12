@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculater</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main style="max-width: 550px;">
+        <h3>Simple Calculator</h3>
+        <input placeholder="Enter Number One" type="text" id="number1" size="15">
+        <select name="arithmetic-operator" id="operator">
+            <option value="" >Operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="-">*</option>
+        </select>
+        <input placeholder="Enter Number Two" type="text" id="number2" size="15">
+        =
+        <input placeholder="Enter the Answer" type="text" id="answer" size="15">
+        <label><button onclick="checkAnswer()">Check Answer</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <script>
+        function checkAnswer() {
+    //INPUT = Getting user inputs and assigning them to variables
+    let number1 = parseFloat(document.getElementById('number1').value);
+    let number2 = parseFloat(document.getElementById('number2').value);
+    let operator = document.getElementById('operator').value;
+    let userAnswer = parseFloat(document.getElementById('answer').value);
+    let correctAnswer;
+
+    //PROCESSING = Using switch statement to verify which of the arithmetic operators 
+    //were selected and calculates the answer
+    switch (operator) {
+        case '+':
+            correctAnswer = number1 + number2;
+            break;
+        case '-':
+            correctAnswer = number1 - number2;
+            break;
+        case '/':
+            correctAnswer = number1 / number2;
+            break;
+        case '*':
+            correctAnswer = number1 * number2;
+            break;
+    }
+    //OUTPUT = Compares the user answer with the answer calculated by the computer
+    // and if the result is the same it will display "Correct", else will display "Incorrect"
+    if (userAnswer == correctAnswer) {
+        document.getElementById('output').innerHTML = "Correct! 🏆"
+    } else {
+        document.getElementById('output').innerHTML = "Incorrect! 😢"
+    }
+
+}
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>

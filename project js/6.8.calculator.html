@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Week6 Assignment: Simple Calc</title>
+<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<header>
+<h1>Check the Calculation</h1>
+<h2>Thanush Ganesh</h2>
+</header>
+<main>
+<h3>Test Your Math Skills!</h3>
+<label><input type="text" id="number1" placeholder="1st num"></label>
+<select id="operator">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="/">*</option>
+<option value="-">/</option>
+</select>
+<label><input type="text" id="number2" placeholder="2nd num"></label>
+<label>=</label>
+<label><input type="text" id="answer" placeholder="answer"></label>
+<br>
+<label><button onclick="calculator()">Check your answer</button></label>
+<hr>
+<p><span id="output"></span></p>
+</main>
+<footer>
+&copy;2021 &bull; THANUSH GANESH &bull; BYU-Idaho &bull; CIT 160
+</footer>
+<script>
+function calculator() {
+/* Input: two numbers, an arithmetic operator and an answer
+* Procesing: calculate the numbers with provided operator and check the answer
+* Output: Display the message if the calculation is correct.
+*/
+
+// Get the user input from a text field and calculate them.
+let number1 = parseFloat(document.getElementById('number1').value);
+let number2 = parseFloat(document.getElementById('number2').value);
+let operator = document.getElementById('operator').value;
+let answer = parseFloat(document.getElementById('answer').value);
+
+// Calculate the user's calculation by using SWITCH statement
+let correctAnswer;
+switch (operator) {
+case '+':
+correctAnswer = number1 + number2;
+break;
+case '-':
+correctAnswer = number1 - number2;
+break;
+case '*':
+correctAnswer = number1 * number2;
+break;
+case '/':
+correctAnswer = number1 / number2;
+break;
+}
+
+//Check the user's calculation
+let message;
+if (answer == correctAnswer) {
+message = 'Correct! 🏆'
+}
+else {
+message = 'Incorrect 😢'
+}
+
+// Display the message to the user.
+document.getElementById('output').innerHTML = message;
+
+}
+</script>
+</body>

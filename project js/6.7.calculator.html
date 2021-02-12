@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>CIT 160 Calculator</title>
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Week 3: CIT 160 Calculator</h1>
+            <hr>
+            <h2>Thanush Ganesh</h2>
+        </header>        
+        <main>
+        	<h4>Enter Two Numbers</h4>
+        	<label>Number One: <input type="text" id="number1"></label>
+            <label>Number Two: <input type="text" id="number2"></label>
+            <h4>Select Operator</h4>
+            <label>Operator: <input type="text" id="operator"></label>
+            <h4>Give Answer</h4>
+            <label>Answer: <input type="text" id="answer"></label>
+            <br>
+            <label><button type="button" onclick="Calculate()">Check Answer</button></label>
+        	<hr>
+        	<p><span id="output" style="display: none"></span></p>
+        </main>
+        
+        <footer>
+        	2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+        </footer> 
+        <script>
+            /*This function takes in two numbers and an operator, and compares the answer to the users answer.*/
+function Calculate()
+{
+    //Initialize variables from input
+    let number1 = parseFloat(document.getElementById("number1").value)
+    let number2 = parseFloat(document.getElementById("number2").value)
+    let operator = document.getElementById("operator").value
+    let user_answer = parseFloat(document.getElementById("answer").value)
+
+    //Process data according to operator
+    let computer_answer;
+    let valid_input = true;
+    switch(operator)
+    {
+        case '+':
+            computer_answer = number1 + number2;
+            break;
+        case '-':
+            computer_answer = number1 - number2;
+            break;
+        case '*':
+            computer_answer = number1 * number2;
+            break;
+        case '/':
+            computer_answer = number1 / number2;
+            break;
+        default:
+            valid_input = false;
+
+    }
+
+    //Present output according to user answer
+    if (valid_input)
+    {
+        if (user_answer == computer_answer)
+        {
+            document.getElementById("output").innerHTML = "You are correct!";
+        }
+        else
+        {
+            document.getElementById("output").innerHTML = "You are incorrect.";
+        }
+    }
+    else
+    {
+        document.getElementById("output").innerHTML = 'Invalid operator input. Options: +, -, *, or /';
+    }
+    
+    document.getElementById("output").style.display = "block";
+}
+            
+        </script>
+    </body>
+</html>

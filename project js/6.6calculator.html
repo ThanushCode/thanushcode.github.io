@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Simple Calculator</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h3>Test Your Math Skills!</h3>
+      <input type="text" id="number1" placeholder="First number" />
+      <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" id="number2" placeholder="Second Number" />
+      <input type="text" id="answer" placeholder="Enter your answer" />
+      <label><button onclick="simpleCalc()">Calculate</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+     function simpleCalc() {
+    //INPUT - user inputs two numbers and selects an operator, and then submits their own answer
+    let message, trueAnswer;
+    let num1 = parseInt(document.getElementById('number1').value);
+    let num2 = parseInt(document.getElementById('number2').value);
+    let operator = document.getElementById('operator').value;
+    let answer = parseInt(document.getElementById('answer').value);
+    //PROCESSING - add, subtract, multiply or divide depending on the operator and validate user's answer
+    switch(operator) {
+        case "+":
+            trueAnswer = num1 + num2;
+            break;
+        case "-":
+            trueAnswer = num1 - num2;
+            break;
+        case "*":
+            trueAnswer = num1 * num2;
+            break;
+        case "/":
+            trueAnswer = num1 / num2;
+            break;
+    }
+    if (trueAnswer == answer) {
+        message = "Correct! 🏆"
+    } else {
+        message = "Incorrect 😢"
+    }
+    //OUTPUT - display correct or incorrect
+    document.getElementById('output').innerHTML = `${message}`;
+}
+    </script>
+  </body>
+</html>
