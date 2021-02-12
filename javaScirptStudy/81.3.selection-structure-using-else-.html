@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>For a statement that's a selection structure we use a keyword "if" and then we use () parentheses don't forget it.</title>
+    </head>
+    <p>Click the button to display a time-based greeting:</p>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+        //if (condition) {
+       //  block of code to be executed if the condition is true
+      // else {
+     //  block of code to be executed if the condition is false
+
+    function myFunction() {
+      var hour = new Date().getHours(); 
+      var greeting;
+      if (hour < 18) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      document.getElementById("demo").innerHTML = greeting;
+    }
+    // If this is true, then I want greeting to be this or whatever,
+   // you can also have faults branch you just use the keyword else notice how it's embedded in here.
+    </script>
+    
+    </body>
+</html>

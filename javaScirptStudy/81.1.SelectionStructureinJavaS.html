@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>For a statement that's a selection structure we use a keyword "if" and then we use () parentheses don't forget it.</title>
+    </head>
+    <body>
+
+        <p>Display "Good day!" if the hour is less than 18:00:</p>
+        
+        <p id="demo">Good Evening!</p>
+        
+        <script>
+          //how do you do these structures well they get more complex,
+          //You do it if block to you have to write the logic, because you have to think about the problem saying Okay, what do I want.
+          //If this is true, then I want greeting to be this or whatever  
+          
+        if (new Date().getHours() < 18) {   //if they hour of the day is less than 18.Set the greeting to equal to good day
+             
+            //  block of code to be executed if the condition is true
+
+          document.getElementById("demo").innerHTML =  'Good day' ; //we don't care what we're doing in here, this is what we do if it's true.
+          //its faults, so it doesn't doesn't change the inner html of this just keeps it good evening and that's what it produced.
+        }
+        </script>
+    
+</html>
