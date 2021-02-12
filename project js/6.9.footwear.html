@@ -19,7 +19,7 @@
         <option value="hot">HOT</option>
         <option value="rain">RAIN</option>
         <option value="snow">SNOW</option>
-        <option value="unknown">UNKNOWN</option>
+        <option value="unknown">UNKNOWN</option>Z
       </select>
 
       <button type="button" onclick="clothingLogic()">
@@ -41,33 +41,22 @@ anything else = shoes
  */
       function clothingLogic() {
         // Get the user input from a text field.
-        
-        let hot = document.getElementById('weather').value;
-        let hot = parseFloat(document.getElementById('hot').value);
-        let rain = parseFloat(document.getElementById('rain').value);
-        let snow = document.getElementById('snow').value;
-        let unknown = parseFloat(document.getElementById('unknown').value);
-        
+        let text = document.getElementById("weather").value;
 
         // Choose a message
-        let shoes;
-switch (weather) {
-case hot:
-shoes = 'sandals';
-break;
-case rain:
-shoes = 'galoshes';
-break;
-case snow:
-shoes = 'boots';
-break;
-case unknown:
-shoes = 'shoes';
-break;
-}
+        let message;
+        if (text == "hot") {
+          message = "sandals";
+        } else if (text == "rain") {
+          message = "galoshes";
+        } else if (text == "snow") {
+          message = "boots";
+        } else {
+          message = "shoes";
+        }
 
         // Display the message to the user.
-        document.getElementById("outputDiv").innerHTML = shoes;
+        document.getElementById("outputDiv").innerHTML = message;
       }
     </script>
   </body>

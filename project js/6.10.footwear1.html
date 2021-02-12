@@ -2,8 +2,21 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" />
 <title>What Should I Wear Today</title>
+</head>
 
+<body>     
+    <select id="weather">
+        <option value="">--Please choose an option--</option>
+        <option value="hot">HOT</option>
+        <option value="rain">RAIN</option>
+        <option value="snow">SNOW</option>
+        <option value="unknown">UNKNOWN</option>Z
+      </select>                 
+
+<button type="button" onclick="clothingLogic()">Get Recommendation</button>
+<div id="outputDiv"></div>   
 <script>
 /* Input: A word that describes the weather
  * Processing: Match that word with an appropriate footwear recommendation:
@@ -36,11 +49,6 @@ function clothingLogic() {
     document.getElementById('outputDiv').innerHTML = message;
 }
 </script>
-</head>
-
-<body>                      
-Please enter the weather to get a footwear suggestion:  <input type="text" id="weather">
-<button type="button" onclick="clothingLogic()">Get Recommendation</button>
-<div id="outputDiv"></div>              
+           
 </body>         
 </html>

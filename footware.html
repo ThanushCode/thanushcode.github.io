@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Week6 Assignment: Weather Shoes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Get The Shoes for weather</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+  <main>
+      <h3>Choose weather type</h3>
+      <label for="weather-select"> choose the weather below</label>
+      <select name="footwear" id="weather-select">
+        <option value="hot">hot</option>
+        <option value="rain">rain</option>
+        <option value="snow">snow</option>
+        <option value="unknown">unknown</option>
+      </select>
+      <label><button onclick="clothingLogic()">Get Recommendation</button></label>
+      <hr/>
+      <p><span id="output"></span></p>
+  </main>
+  <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+  </footer>
+  <script>
+ function clothingLogic() {
+    //INPUT - user selects weather list using a dropdown menu by clicking the weather
+    let shoes;
+    let weather = document.getElementById("weather-select").value;
+    //PROCESSING - program selects the appropriate footwear for the weather using switch
+    switch (weather) {
+      case "hot":
+      shoes = "sandals";
+      break;
+      case "rain":
+      shoes = "galoshes";
+      break;
+      case "snow":
+      shoes = "boots";
+      break;
+      case "unknown":
+      shoes = "shoes";
+       break;
+        }
+    //OUTPUT - displays the footwear for the weather the user choose
+   document.getElementById("output").innerHTML = `${shoes}`;
+      }
+  </script>
+  </body>
+</html>
