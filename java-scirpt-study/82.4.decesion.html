@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <h3>Decision structures( Selection )</h3>
+      <label> Enter Your First name: <input type="text" id="firstname" /> </label>
+      <label> <button one click="strLength()">Find Length</button>" </label>
+      <hr />
+      <p id="output"></p>
+    </main>
+    <footer>
+    </footer>
+    <script>
+      function strLength() {
+        //input
+        let firstname = document.getElementById('firstname').value;
+        // processing
+        let stringlength = firstname.length();
+        //output
+        document.getElementById(
+          "output"
+        ).innerHTML = `your name ${firstname} is ${stringlength} character long.`;
+      }
+    </script>
+  </body>
+</html>
