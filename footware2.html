@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Week6 Assignment: Weather Shoes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week6 Assignment: Get Shoes Recommendation</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h3>WEATHER SHOES</h3>
+      <label>Choose the weather:</label>
+
+      <select id="weather">
+        <option value="">--Please choose an option--</option>
+        <option value="hot">HOT</option>
+        <option value="rain">RAIN</option>
+        <option value="snow">SNOW</option>
+        <option value="unknown">UNKNOWN</option>
+      </select>
+
+      <button type="button" onclick="clothingLogic()">
+        Get Recommendation
+      </button>
+      <div id="outputDiv"></div>
+    </main>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+      /* Input: A word that describes the weather
+ * Processing: Match that word with an appropriate footwear recommendation:
+hot = sandals
+rain = galoshes
+snow = boots
+anything else = shoes
+ * Output: The appropriate footwear recommendation.
+ */
+      function clothingLogic() {
+        // Get the user input from a text field.
+        
+        let hot = document.getElementById('weather').value;
+        let hot = parseFloat(document.getElementById('hot').value);
+        let rain = parseFloat(document.getElementById('rain').value);
+        let snow = document.getElementById('snow').value;
+        let unknown = parseFloat(document.getElementById('unknown').value);
+        
+
+        // Choose a message
+        let shoes;
+switch (weather) {
+case hot:
+shoes = 'sandals';
+break;
+case rain:
+shoes = 'galoshes';
+break;
+case snow:
+shoes = 'boots';
+break;
+case unknown:
+shoes = 'shoes';
+break;
+}
+
+        // Display the message to the user.
+        document.getElementById("outputDiv").innerHTML = shoes;
+      }
+    </script>
+  </body>
+</html>
