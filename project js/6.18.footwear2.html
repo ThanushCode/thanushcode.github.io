@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Shoes</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+  text-align: center;
+}
+header,
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+footer {
+  font-size: 13px;
+  letter-spacing: 1.5pt;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2,
+#currentdate {
+  color: yellow;
+}
+
+main {
+  margin: 10px auto;
+  border: 1px solid #999;
+  padding: 10px;
+  max-width: 500px;
+  background-color: #abe;
+  box-shadow: 0 0 30px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid #333;
+  padding: 0;
+}
+
+label {
+  display: block;
+  margin: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Weather Shoes</h1>
+      <h2>Melisa</h2>
+    </header>
+    <main>
+      <h3>Shoes for the Weather</h3>
+      <label for="weather-select">Select the weather</label>
+      <select name="footwear" id="weather-select">
+          <option value="hot">hot</option>
+          <option value="rain">rain</option>
+          <option value="snow">snow</option>
+          <option value="unknown">unknown</option>
+      </select>
+      <label><button onclick="clothinglogic()">Get your shoes</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+    
+    <script>
+        function clothinglogic() {
+    //INPUT - user selects weather list using a dropdown menu by clicking the weather
+    let shoes;
+    let weather = document.getElementById("weather-select").value;
+    //PROCESSING - program selects the appropriate footwear for the weather using switch
+    switch (weather) {
+      case "hot":
+      shoes = "sandals";
+      break;
+      case "rain":
+      shoes = "galoshes";
+      break;
+      case "snow":
+      shoes = "boots";
+      break;
+      case "unknown":
+      shoes = "shoes";
+       break;
+        }
+    //OUTPUT - displays the footwear for the weather the user choose
+   document.getElementById("output").innerHTML = `${shoes}`;
+      }
+    </script>
+   
+</html>
