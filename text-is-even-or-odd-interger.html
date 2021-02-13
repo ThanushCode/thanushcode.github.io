@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Is Even?</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+        Please enter an integer: <input type="text" id="inputBox">
+        <button type="button" onclick="isEven()">message</button>
+        <div id="output"></div>    
+        
+    </main>
+
+    <script>
+function isEven() {
+    // Get the user input from a text field and convert it to an integer.
+    let text = document.getElementById('inputBox').value;
+    let value = parseInt(text);
+
+    // Choose a message.
+    let message;
+    if ((value % 2) == 0) {
+        message = value + " is an even integer";
+    }
+    else {
+        message = value + " is an odd integer";
+    }
+
+    // Display the message to the user.
+    document.getElementById('output').innerHTML = message;
+}
+/* function isEven() {
+    // Get the user input from a text field and convert it to a number.
+    var text = document.getElementById('integer').value;
+    var value = parseInt(text);
+
+    // Choose a message.
+    var message;
+    if ((value % 2) == 0) {
+        message = value + " is an even integer";
+    }
+    else {
+        message = value + " is an odd integer";
+    }
+
+    // Display the message to the user.
+    document.getElementById('output').innerHTML = message;
+    */
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
