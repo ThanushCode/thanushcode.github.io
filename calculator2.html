@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: Calculator</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main style="max-width: 550px">
+      <input
+        placeholder="Enter First Number"
+        type="text"
+        id="num1InputBox"
+        size="25"
+      />
+      <select name="arithmetic-operator" id="mathematicaloperator">
+        <option value="">select operator</option>
+        <option value="-">-</option>
+        <option value="+">+</option>
+        <option value="/" ->/</option>
+        <option value="*" ->*</option>
+      </select>
+
+      <input
+        placeholder="Enter Second Number"
+        type="text"
+        id="num2InputBox"
+        size="25"
+      />
+      <input
+        placeholder="Enter The result"
+        type="text"
+        id="resInputBox"
+        size="12.5"
+      />
+      <hr />
+
+      <button type="button" onclick="checkProblem()">Check</button>
+      <hr />
+      <div id="outputDiv"></div>
+    </main>
+
+    <script src="js/calculator.js"></script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>
