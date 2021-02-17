@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Week6 Assignment: Weather Shoes</title>
+</head>
+<body>
+    
+   <header>
+    <h1>which shoes suitable for 4 fiffeent weather types</h1>
+    <h2>Thanush Ganesh</h2>
+   </header>
+    <main>
+    <h3>Select the weather type and find your shoes</h3>
+      <label for="user_chooses_the_Weather">Select the weather</label>
+      <select name="anyoption user select" id="user_chooses_the_Weather">
+          <option value="hot">hot</option>
+          <option value="rain">rain</option>
+          <option value="snow">snow</option>
+          <option value="Unknown">shoes</option>
+      </select>  
+      <label><button onclick="shoesSelection()">ecommandation to best Shoes</button></label>
+      <p><span id="output"></span></p>
+
+    </main>
+
+    <script>
+        function shoesSelection() {
+           //  lrt the user click from a text menu
+          let wearable;
+          let climate = document.getElementById("user_chooses_the_Weather").value;
+          
+          
+          //PROCESSING  SWITCH function run and choose the answer and break after move to output
+          switch(climate){
+          case "unknown":
+          wearable = " shoes";
+          break;
+          case "hot":
+          wearable = "sandals";
+          break;
+          case "snow":
+          wearable = "boots";
+          break;
+          case "rain":
+          wearable = "galoshes";
+          break;
+           
+          }
+
+
+
+           // Determine the output and show it to the user or  Display the message to the user.
+           // document.getElementById('output').innerHTML ="The sum of " + x + " and " + y + " equals " + sum + "!";
+          document.getElementById("output").innerHTML = wearable;
+        }
+      </script>
+  
+      <footer>
+          &copy;2021 &bull; Melisa &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+</body>
+</html>
