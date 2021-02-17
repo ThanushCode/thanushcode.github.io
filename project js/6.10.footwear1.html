@@ -7,13 +7,13 @@
 </head>
 
 <body>     
-    <select id="weather">
+    <select id="weather"> </select>  
         <option value="">--Please choose an option--</option>
         <option value="hot">HOT</option>
         <option value="rain">RAIN</option>
         <option value="snow">SNOW</option>
-        <option value="unknown">UNKNOWN</option>Z
-      </select>                 
+        <option value="unknown">UNKNOWN</option>
+                     
 
 <button type="button" onclick="clothingLogic()">Get Recommendation</button>
 <div id="outputDiv"></div>   
@@ -28,10 +28,10 @@ anything else = shoes
  */
 function clothingLogic() {
     // Get the user input from a text field.
-    var text = document.getElementById('weather').value;
+    let text = document.getElementById('weather').value;
 
     // Choose a message
-    var message;
+    let message;
     if (text == "hot") {
         message = "sandals";
     }

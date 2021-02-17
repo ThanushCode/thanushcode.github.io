@@ -5,7 +5,7 @@ function checkProblem() {
     let op = document.getElementById("mathematicaloperator").value;
     let num2 = parseFloat(document.getElementById("num2InputBox").value);
     let result = parseFloat(document.getElementById("resInputBox").value);
-    let correctAnswer; //Computed the calculation to compare with res
+    let correctAnswer = document.getElementById("mathematicaloperator") //Computed the calculation to compare with res
 
     switch (op) {
       case "-":
