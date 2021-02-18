@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 3 Template 160</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Display "Good day!" if the hour is less than 18:00:</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <p>Display "Good day!" if the hour is less than 18:00:</p>
+
+      <p id="demo">Good Evening!</p>
+    </main>
+    <footer>
+      &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+      if (new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML = "Good day!";
+      }
+    </script>
+  </body>
+</html>

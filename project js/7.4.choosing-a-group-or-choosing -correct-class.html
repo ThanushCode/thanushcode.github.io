@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 3 Template 160</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+ 
+    <script>
+/*
+ Choosing a Group
+A programmer can use the logical operators to write code that chooses in which group a person or item belongs.
+ Consider the following program that reads a girl’s age from the keyboard and determines which class she should attend. 
+ The program uses these criteria to choose the correct class.
+
+Age	                 Class
+younger than 12	    Primary
+12 or 13	        Beehive
+14 or 15	        Mia Maid
+16 or 17	        Laurel
+18 or older	        Relief Society
+
+ */
+ 
+function chooseClass() {
+let age = parseInt(document.getElementById("age").value);
+let group
+if (age <= 11) {
+    group= "Primary";
+}
+ else if ( age == 12 && age == 13) {
+    group= "Beehie";
+ }
+ else if ( age == 14 && age == 15) {
+    group= "Mia Maid";
+ }
+ else if ( age == 16 && age == 17) {
+    group= "Laurel";
+ }
+ else {
+ group = "Relief Society"; 
+
+ }
+  document.getElementById("output").innerHTML = group;
+}
+</script>
+<body>
+    
+        
+        Please enter your age: <input type="text" id="age" size="3"><br>  
+        <button type="button" onclick="chooseClass()">Class</button>  
+        <div id="output"></div>
+        
+    
+    <footer>
+      &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>

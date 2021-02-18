@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 3 Template 160</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+        <p>Click the button to get a time-based greeting:</p>
+
+        <button onclick="myFunction()">Try it</button>
+        
+        <p id="demo"></p>
+        
+    </main>
+    <footer>
+      &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+/*
+  if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+ */
+ 
+function myFunction() {
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+ 
+  </body>
+</html>
