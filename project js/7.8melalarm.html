@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>setAlarm</title>
+    <style>
+      body {
+        background-color: #f1faee;
+      }
+    </style>
+    <script>
+      //Input: Date
+      //Processing: Weekday, weekend or holiday.
+      //Output: Message to User: Get up or Sleep in if weekend or holiday.
+
+      function myfunction() {
+        var now = new Date();
+        var month = now.getMonth();
+        var dayOfMonth = now.getDate();
+        var dayOfWeek = now.getDay();
+
+        //dayofweek: Sunday 0, Monday 1, Tuesday 2, Wednesday 3, Thursday 4, Friday 5, Saturday 6
+        //month jan: 0, feb 1, mar 2, apr 3, mai 4, jun 5, jul 6, aug 7, sep 8, oct 9, nov 10, dec 11
+        //dayofmonth: 1, 2, 3 etc
+        //example is Friday 1st of January = dayofweek 5, month 0, dayofmonth 1;
+
+        if (
+          (dayOfWeek == 6 && dayOfWeek == 0) ||
+          (month == 6 && dayOfMonth == 4) ||
+          (month == 11 && dayOfMonth == 25) ||
+          (month == 0 && dayOfMonth == 1) ||
+          (month == 7 && dayOfMonth == 1)
+        ) {
+          message = "Sleep in and Aareböötle 🛌";
+        } else {
+          message = "Rise and Shine! ⏰";
+        }
+        document.getElementById("output").innerHTML = message;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Does the alarm clock go off?</h2>
+    <button type="button" onclick="myfunction()">Check</button><br />
+    <div id="output"></div>
+  </body>
+</html>
