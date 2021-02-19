@@ -38,20 +38,28 @@
     </main>
 
     <script>
-        function name() {
-           //  Input
-          let name = parseFloat(document.getElementById("InputBox").value);
-          let op = document.getElementById("opInputBox").value;
-               
-          //PROCESSING   
-          let name;
-
-           // document.getElementById('output').innerHTML ="The sum of " + x + " and " + y + " equals " + sum + "!";
-          document.getElementById("outputDiv").innerHTML = correct;
+    function calculateDiscount() {
+        // variables
+        let salesTax;
+        let totalAmount;
+        let subTotal = parseFloat(
+          document.getElementById("subtotalAmount").value
+        );
+        // Get day of week
+        var dayOfWeek = new Date().getDay();
+        //Tuesday or Wednesday, the program should subtract 10% from the subtotal
+        if (subTotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+          salesTax = 0.1;
+        } else {
+          salesTax = 1;
         }
-      </script>
+        // To calculate final Total Amount
+        totalAmount = subTotal * salesTax * 1.06;
+        //Output will be total amount after discounts and taxes.
+        document.getElementById("outputDiv").innerHTML = totalAmount;
+      }
       
-   <body>
+      <body>
     <header>
     <h1>Week ?: Heading</h1>
     <h2>Thanush Ganesh</h2>
@@ -65,6 +73,8 @@
     <button type="button" onclick="checkHeight()">Check Height to Ride for Autopia</button>
     <div id="outputDiv"></div> 
     </main>
-      
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
 </body>
 </html>
