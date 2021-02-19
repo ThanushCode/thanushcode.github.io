@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>sample video brother</title>
   </head>
 
   <body>
     <script>
-      function discount() {
-        //input: customer's subtotal amount and the day of week
-        let subtotal = 50;
-        let dayOfWeek = new Date().getDay();
+      //input: customer's subtotal amount and the day of week
+      let subtotal = 100;
+      let dayOfWeek = new Date().getDay();
 
-        //processing: calculate the customer's discount if they buy in Tuesday or Wednesday.
-        let total = 0;
-        if (subtotal > 50 && dayOfWeek == 2) {
-          total = subtotal * 0.9;
-        } else if (subtotal > 50 && dayOfWeek == 3) {
-          total = subtotal * 0.9;
-        } else {
-          total = subtotal;
-        }
-        total = total * 1.06;
-        //output: the total amount after discount and adding tax
+      //processing: calculate the customer's discount if they buy in Tuesday or Wednesday.
+      let total = 0;
+      if (subtotal > 50 && dayOfWeek == 2) {
+        total = subtotal * 0.9;
+      } else if (subtotal > 50 && dayOfWeek == 3) {
+        total = subtotal * 0.9;
+      } else {
+        total = subtotal;
       }
-      console.log = "$" + total.toFixed(2);
+      total = total * 1.06;
+
+      //output: the total amount after discount and adding tax
+
+      console.log("$" + total.toFixed(2));
     </script>
   </body>
 </html>
