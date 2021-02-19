@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Are you tall enough to drive on the Autopia?</title>
+  </head>
+  
+
+    <script>
+              /*
+              Disneyland Autopia
+      According to the Disneyland website, guests wishing to drive a car on the Autopia must meet one of the following height requirements:
+
+      54 inches (137 cm) or taller to drive alone
+      32 inches (81 cm) or taller and accompanied by a passenger 54 inches or taller
+
+      Here is a JavaScript program that accepts the height of a driver and an optional passenger and
+      uses the logical operators || and && to determine if they may ride the Autopia. Notice the use
+      of parentheses in the if statement to ensure the logic is correct. The program outputs either
+      “Enjoy the ride!” or “Sorry, to drive a car on the Autopia you must be at least 54 inches tall
+       or at least 32 inches tall and accompanied by a passenger who is at least 54 inches tall.”
+              */
+             /* Input: the height of a driver and an optional passenger
+       * Processing: Determine if a driver and
+       *     optional passenger may ride the Autopia
+       * Output: "Enjoy the ride!" or
+       *    "Sorry, to drive a car on the Autopia you must be
+       *    at least 54 inches tall or at least 32 inches tall and
+       *    accompanied by a passenger who is at least 54 inches tall."
+       */
+              function checkHeight() {
+                 //  Get the user input from a text field.
+                let driver = parseFloat(document.getElementById("driverBox").value);
+                let passenger = parseFloat(document.getElementById("passengerBox").value);
+                let message;
+
+                //PROCESSING   let sum = x + y;
+                if (driver >=54 || ( driver >=32 && passenger >=54) ) {
+                      message = "Enjoy the ride!" ;
+                }
+                  else {
+                    message = " Sorry, to drive a car on the Autopia you must be " +
+            "at least 54 inches tall or at least 32 inches tall and " +
+            "accompanied by a passenger who is at least 54 inches tall.";
+                 }
+
+
+                 // Determine the output and show it to the user or  Display the message to the user.
+                 // document.getElementById('output').innerHTML ="The sum of " + x + " and " + y + " equals " + sum + "!";
+                 document.getElementById('outputDiv').innerHTML = message;
+              }
+    </script>
+    <body>
+    <header>
+    <h1>Week ?: Heading</h1>
+    <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+    <h1>Are you tall enough to drive on the Autopia?</h1>
+    Driver's height in inches:
+      <input type="text" id="driverBox" size="3" /><br />
+    Passenger's height in inches:
+    <input type="text" id="passengerBox" size="3" value="0" /><br />
+    <button type="button" onclick="checkHeight()">Check Height to Ride for Autopia</button>
+    <div id="outputDiv"></div> 
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+  </body>
+</html>

@@ -9,10 +9,6 @@
 </head>
 <body>
     
-   <header>
-    <h1>Week ?: Heading</h1>
-    <h2>Thanush Ganesh</h2>
-   </header>
     <main>
     <h3>Heading</h3>
     <label for="anythinguser-select">Select the weather</label>
@@ -43,24 +39,32 @@
 
     <script>
         function name() {
-           //  Get the user input from a text field.
+           //  Input
           let name = parseFloat(document.getElementById("InputBox").value);
           let op = document.getElementById("opInputBox").value;
-          
-          
-          //PROCESSING   let sum = x + y;
+               
+          //PROCESSING   
           let name;
 
-
-
-           // Determine the output and show it to the user or  Display the message to the user.
            // document.getElementById('output').innerHTML ="The sum of " + x + " and " + y + " equals " + sum + "!";
           document.getElementById("outputDiv").innerHTML = correct;
         }
       </script>
-  
-      <footer>
-          &copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
-      </footer>
+      
+   <body>
+    <header>
+    <h1>Week ?: Heading</h1>
+    <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+    <h1>Are you tall enough to drive on the Autopia?</h1>
+    Driver's height in inches:
+      <input type="text" id="driverBox" size="3" /><br />
+    Passenger's height in inches:
+    <input type="text" id="passengerBox" size="3" value="0" /><br />
+    <button type="button" onclick="checkHeight()">Check Height to Ride for Autopia</button>
+    <div id="outputDiv"></div> 
+    </main>
+      
 </body>
 </html>
