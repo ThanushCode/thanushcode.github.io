@@ -32,8 +32,9 @@ $1000	                      ∞	                                            3.0%
 
       function getDiscountedAmount() {
         let purchase = parseInt(document.getElementById("purchaseBox").value);
-        let discount;
         let discountedAmount;
+        let discount;
+
         let rate = 0;
         if (purchase >= 0 && purchase < 300) {
           rate = 0;
@@ -62,10 +63,16 @@ $1000	                      ∞	                                            3.0%
     </header>
     <main>
       <h1>Computes and returns a discounted purchase amount</h1>
-     <input type="text"id="purchaseBox"placeholder="Enter The purchase price in USD" />
-      
-      <button type="button" onclick="getDiscountedAmount()">Get discounted Amount</button>
-      <div id="outputDiv"></div>discounted Amount</button>
+      <input
+        type="text"
+        id="purchaseBox"
+        placeholder="Enter The purchase price in USD"
+      />
+
+      <button type="button" onclick="getDiscountedAmount()">
+        discounted Amount
+      </button>
+      <div id="outputDiv"></div>
     </main>
     <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
   </body>
