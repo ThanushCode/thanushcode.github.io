@@ -7,7 +7,7 @@ let total = 0;
 if (subtotal > 50 && dayOfWeek == 2) {
   total = subtotal * 0.9;
 } else if (subtotal > 50 && dayOfWeek == 3) {
-  total = subtotal * 0.9;
+  total = subtotal * 0.1;
 } else {
   total = subtotal;
 }
@@ -17,3 +17,4 @@ total = total * 1.06;
 
 console.log("$" + total.toFixed(2));
 // nodemon js/disco.js
+// ctl+s
