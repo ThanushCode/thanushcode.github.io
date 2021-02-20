@@ -36,28 +36,36 @@
           <label>Enter user texr: <input type="text" id="number2" /></label>
           <label><button onclick="functionName()">buton name</button></label>
     </main>
-
-    <script>
-    function calculateDiscount() {
-        // variables
+ <script>
+     function calculateDiscount() {
+        // input
+        // declare variables && assign variables
+        // Get day of week from the computer Automatically
+        let dayOfWeek = new Date().getDay();
         let salesTax;
+
+        //processing:
         let totalAmount;
         let subTotal = parseFloat(
           document.getElementById("subtotalAmount").value
         );
-        // Get day of week
-        var dayOfWeek = new Date().getDay();
-        //Tuesday or Wednesday, the program should subtract 10% from the subtotal
+
+        // to check if today is Tuesday or Wednesday && To check if client buying more than 50 USD
         if (subTotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+          // 10% discount will be offered to clients who those buying on Tuesday and Wednesday
           salesTax = 0.1;
         } else {
           salesTax = 1;
         }
         // To calculate final Total Amount
-        totalAmount = subTotal * salesTax * 1.06;
-        //Output will be total amount after discounts and taxes.
-        document.getElementById("outputDiv").innerHTML = totalAmount;
+        totalAmount = subTotal * salesTax * 1.06; // discount amount will be added after the 1 , 0.06 for other days in else statement.
+
+        //output:
+        //will be total amount after discounts and taxes.
+        document.getElementById("outputDiv").innerHTML =
+          "$" + totalAmount.toFixed(2);
       }
+      </script>
       
       <body>
     <header>
@@ -74,7 +82,7 @@
     <div id="outputDiv"></div> 
     </main>
     <footer>
-      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+      &copy;2021 &bull; Thanush  &bull; BYU-Idaho &bull; CIT 160
     </footer>
 </body>
 </html>
