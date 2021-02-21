@@ -36,7 +36,27 @@
           <label>Enter user texr: <input type="text" id="number2" /></label>
           <label><button onclick="functionName()">buton name</button></label>
     </main>
- <script>
+
+      
+      <body>
+    <header>
+    <h1>Week ?: Heading</h1>
+    <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+    <h1>Are you tall enough to drive on the Autopia?</h1>
+    Driver's height in inches:
+      <input type="text" id="driverBox" size="3" /><br />
+    Passenger's height in inches:
+    <input type="text" id="passengerBox" size="3" value="0" /><br />
+    <button type="button" onclick="checkHeight()">Check Height to Ride for Autopia</button>
+    <button type="button" onclick="sleepOrWake()" size="10">Sleep In or Get Up</button>
+    <div id="outputDiv"></div> 
+    </main>
+    <footer>
+      &copy;2021 &bull; Thanush  &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+     <script>
      function calculateDiscount() {
         // input
         // declare variables && assign variables
@@ -66,24 +86,5 @@
           "$" + totalAmount.toFixed(2);
       }
       </script>
-      
-      <body>
-    <header>
-    <h1>Week ?: Heading</h1>
-    <h2>Thanush Ganesh</h2>
-    </header>
-    <main>
-    <h1>Are you tall enough to drive on the Autopia?</h1>
-    Driver's height in inches:
-      <input type="text" id="driverBox" size="3" /><br />
-    Passenger's height in inches:
-    <input type="text" id="passengerBox" size="3" value="0" /><br />
-    <button type="button" onclick="checkHeight()">Check Height to Ride for Autopia</button>
-    <button type="button" onclick="sleepOrWake()" size="10">Sleep In or Get Up</button>
-    <div id="outputDiv"></div> 
-    </main>
-    <footer>
-      &copy;2021 &bull; Thanush  &bull; BYU-Idaho &bull; CIT 160
-    </footer>
 </body>
 </html>
