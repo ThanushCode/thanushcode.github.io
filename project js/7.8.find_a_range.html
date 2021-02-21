@@ -23,7 +23,7 @@
       <button type="button" onclick="getDiscountedAmount()">
         discounted Amount
       </button>
-      <div id="outputDiv"></div>
+      <div id="output"></div>
     </main>
     <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
     <script>
@@ -66,11 +66,11 @@
         }
         discount = purchase * rate;
         discountedAmount = purchase - discount;
+
+        //output:
+
+        document.getElementById("output").innerHTML = discountedAmount;
       }
-
-      //output:
-
-      document.getElementById("outputDiv").innerHTML = discountedAmount;
     </script>
   </body>
 </html>
