@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      let sum = 0;
+      let number = 1;
+      while (number <= 50) {
+        // -- condition
+        sum += number; // -- body
+        number++; // -- updater
+      }
+      alert("Sum = " + sum); // => Sum = 1275
+      document.getElementById("demo").innerHTML = sum;
+    </script>
+  </body>
+</html>

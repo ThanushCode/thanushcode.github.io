@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sum of Odd Numbers</title>
+
+    <script>
+      function sumOdds() {
+        //Input: an integer
+        let input = parseInt(document.getElementById("integerBox").value);
+        let result = 0;
+        let oddNum = 1;
+        // Test all numbers between 1 and the user's input, and add all of the the odd ones to result.
+        //Processing: find and sum all odd integers between 1 and the user's input, inclusive.
+        for (; oddNum <= input; oddNum++) {
+          if (oddNum % 2 != 0) {
+            result = oddNum + result;
+          }
+        }
+        // Output: sum of all odd integers between 1 and the user's input, inclusive.
+        // Determine the output and show it to the user.
+        document.getElementById("outputDiv").innerHTML = result;
+      }
+    </script>
+  </head>
+
+  <body>
+    Please enter an integer: <input type="text" id="integerBox" /><br />
+    <button type="button" onclick="sumOdds()">Sum Odds</button>
+    <div id="outputDiv"></div>
+  </body>
+</html>
