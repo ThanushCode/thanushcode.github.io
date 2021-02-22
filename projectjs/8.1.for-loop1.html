@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript = ( "For" Loop)</h2>
+
+    <h1>Testing Loops</h1>
+    <div id="output"></div>
+    <hr />
+    <footer>&copy;2021 &bull; Thanush &bull; &bull; CIT</footer>
+    <script>
+      let outputstring = ""; // out put sting initialize with nothing
+      for (let i = 0; i < 5; i++) {
+        console.log("number:" + i); // console out put example
+        outputstring += "number:" + i + "<br>"; // same out put to screen , must include line break to each line
+      } // out put string plus + and equql = to number
+
+      document.getElementById("output").innerHTML = outputstring; // to print in the screen we use Document get element ID by out put
+      // InnerHTML to print on the screen
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>can I sleep today or not?</title>
+</head>
+
+
+
+    <script>
+/*
+In a file named alarm.html, write a program that determines if you can sleep in or not. 
+Your program should get all its input from your computer’s clock. 
+= On all weekdays 
+“Get up!” will be "else" statement
+1. (Monday through Friday) that are not holidays, 
+your program should output 
+ On all other
+
+ “Sleep in.”   if statement used (becouse all data given ) 
+ The four holidays will be grouped 
+1.that your program must check for are January 1 (New Year’s Day),  ( month == 0 && dayOfMonth == 1)
+2.July 4 (U.S. Independence Day), ( month == 6 && dayOfMonth == 4  ) 
+3.and December 25 (Christmas).  () month == 11 && dayOfMonth == 25 ) 
+4. days (weekends and holidays) your program should output “Sleep in.”  sat and sun ( dayOfWeek == 0 && dayOfWeek == 6 )  
+
+You don’t need to include other holidays in your program because 
+most other holidays do not occur on a fixed day each year.
+
+Within your program, use this JavaScript code that will get the current month,
+ current day of the month, and current day of the week from your computer’s clock:
+
+    var now = new Date();
+    var month = now.getMonth();
+    var dayOfMonth = now.getDate();
+    var dayOfWeek = now.getDay();
+
+If you use the above code, the variable month will hold 0 if the current month is January, 
+1 if February, and so on to 11 if December. 
+The variable dayOfMonth will hold 1 for the first day of the month up to 28, 29, 30, or 31 for the last day of the month. 
+The variable dayOfWeek will hold 0 if today is Sunday, 1 if today is Monday, and so on to 6 if today is Saturday.
+
+- You must use a compound condition.
+*/
+
+        function AlarmAlert() {
+//input
+    let now = new Date();
+    let month = now.getMonth();        // month 
+    let dayOfMonth = now.getDate();   //dayOfMonth 
+    let dayOfWeek = now.getDay();     //dayOfWeek
+    let sleep;
+    let alert = sleep;
+    // using if statement going to input all holiday that user can "sleep in "  
+    // with else statements and other all days will be " Get up"
+ // Process
+    if  ( dayOfWeek == 0 && dayOfWeek == 6 ) {    // sat and sunday
+        
+        alert = "You are allowed to 'Sleep in' today ";   
+    }
+    else if ( month == 0 && dayOfMonth == 1 ) {   // January 1 (New Year’s Day)
+        alert = "You are allowed to 'Sleep in' today ";   
+    }
+    else if ( month == 6 && dayOfMonth == 4 ){    // (U.S. Independence Day)
+        alert = "You are allowed to 'Sleep in' today ";   
+    }
+    else if (month == 11 && dayOfMonth == 25){   // 25 (Christmas)
+        alert = "You are allowed to 'Sleep in' today ";   
+
+    }
+
+    else {
+
+        alert = "Sorry You are not allowed to sleep Please 'get up' for work" ; // This will be other all days from the hoilday mention above.
+    }
+// OutPUt
+          document.getElementById("output").innerHTML = alert;
+        }
+      </script>
+    
+   <body>
+    <header>
+    <h1>Week 7: Alarm Alert</h1>
+    <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+    <h1> Can I Sleep Today or Not? </h1>
+    
+    
+    <body>
+        
+    <button type="button" onclick="AlarmAlert()"> Check Alarm </button> 
+    <div id="output"></div> 
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+</body>
+</html>
