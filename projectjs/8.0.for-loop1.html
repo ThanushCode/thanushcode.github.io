@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript = ( "For" Loop)</h2>
+
+    <h1>Testing Loops</h1>
+    <div id="output"></div>
+    <hr />
+    <footer>&copy;2021 &bull; Thanush &bull; &bull; CIT</footer>
+    <script>
+      /*
+      Within the parentheses of a for loop there must always be three statements separated by two semicolons. The three statements are:
+      1.The initialization statement which is executed only once at the beginning of the loop.
+      2.The condition that the computer checks to see if it should continue to execute the statements inside the body of the loop. 
+      The computer checks this condition after the initialization statement and each time at the beginning of the loop.
+      3.The update statement that the computer executes each time through the loop as if it were written as the last statement in 
+      the body of the loop.
+
+      
+      */
+      let outputstring = ""; // out put sting initialize with nothing
+      for (let i = 1; i < 3; i++) {
+        console.log("number:" + i); // console out put example
+        outputstring += "number:" + i + "<br>"; // same out put to screen , must include line break to each line
+      } // out put string plus + and equql = to number
+
+      document.getElementById("output").innerHTML = outputstring; // to print in the screen we use Document get element ID by out put
+      // InnerHTML to print on the screen
+      /*
+      for
+The for loop is a shortened way of writing a counting while loop. Use a for loop when:
+You need a simple counting loop.
+Template
+    for (initialization;  condition;  update) {
+        statements;
+    }
+    
+    */
+
+      /*
+shows a for loop and the order in which the computer executes the statements in the parentheses and the body of the loop. This is the order in which the computer executes the statements in figure 8-2:
+
+1.reserve space in main memory for a variable named i and store the value 1 into it
+2.test if i is less than 3, which is true
+3.because i is less than 3, execute the statement in the body of the for loop
+      a.open a popup window that contains the number 1 and wait for the user to click OK in the popup window
+4.add 1 to i so that its new value is 2
+5.test if i is less than 3, which is true
+6.because i is less than 3, execute the statement in the body of the for loop
+      a.open a popup window that contains the number 2 and wait for the user to click OK in the popup window
+7.add 1 to i so that its new value is 3
+8.test if i is less than 3, which is false
+9.because i is not less than 3, skip the statement that is in the body of the loop and execute the statements that are written after the body of the loop
+    */
+    </script>
+  </body>
+</html>

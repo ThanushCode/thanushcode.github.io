@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript = ( "For In" Loop)</h2>
+
+    <h1>Testing Loops</h1>
+    <div id="output"></div>
+    <hr />
+    <footer>&copy;2021 &bull; Thanush &bull; &bull; CIT</footer>
+    <script>
+      /*
+
+      * FOR IN LOOP ONLY WORK IN OBJECT DATA TYPE
+      The statements in the loop must be repeated once for each element in an object.
+      Template
+          for (variable in object) {
+              statements;
+          }
+          iF You have some object with some key and value pair
+
+                  */
+      let outputstring = ""; // out put sting initialize with nothing
+      const obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        e: 5,
+        f: 6,
+        g: 7,
+        h: 8,
+        i: 9,
+        j: 10,
+        k: 11,
+        l: 12,
+        m: 13,
+        n: 14,
+        o: 15,
+        p: 16,
+        q: 17,
+        r: 18,
+        s: 19,
+        t: 20,
+        u: 21,
+        v: 22,
+        w: 23,
+        x: 24,
+        y: 25,
+        z: 26,
+      };
+      for (let o in obj) {
+        // using "for in" loop we iterate each object property one by one
+        console.log(obj[o]); // Print object properties values on the console using keys: we need to specify perticuer key to aacces that value
+        outputstring += obj[o] + "<br>";
+      }
+
+      document.getElementById("output").innerHTML = outputstring; // to print in the screen we use Document get element ID by out put
+
+      /*
+             variable o=a
+             console.log()=1
+                */
+      // can print keys also
+    </script>
+  </body>
+</html>
