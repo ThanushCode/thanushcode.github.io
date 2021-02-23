@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript = ( "Nested For Loop Important for Dynamic Array" )</h2>
+
+    <h1>Testing Loops</h1>
+    <div id="output"></div>
+    <hr />
+    <footer>&copy;2021 &bull; Thanush &bull; &bull; CIT</footer>
+    <script>
+      /*
+
+        */
+      // declare arry
+      let ary = [1, 2, 3, 4, 5]; // ary = array
+
+      // declare string object
+      let str = "Hello World";
+      let outputstring = ""; // out put sting initialize with nothing
+      // start for of loop
+      for (let value of ary) {
+        //value += 1; // increase value by one
+        console.log(value); // print array element on the console
+
+        outputstring += value + "<br>"; // same out put to screen ,
+      }
+
+      document.getElementById("output").innerHTML = outputstring; // to print in the screen we use Document get element ID by out put
+      // InnerHTML to print on the screen
+
+      /*
+        syntex
+        for ( varibale of object){
+             statement;
+        }
+
+      /*
+      difference between for in and for of loop
+
+      for in loop;- loop over enumerable properties
+      for of loop ;- does use iterable objects and loop over generated values
+        */
+    </script>
+  </body>
+</html>
