@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>JavaScript = ( "For" Loop)</h2>
+
+    <h1>Testing Loops</h1>
+    <div id="output"></div>
+    <hr />
+    <footer>&copy;2021 &bull; Thanush &bull; &bull; CIT</footer>
+    <script>
+      /*
+Task: Write code that uses repetition to move a virtual robot.
+Purpose: Practice writing loops.
+Instructor: Tutors and mentors.
+Attempt 1 of 3
+
+Type commands in the code text area to cause Robbie the Robot to move from the upper left corner to the lower right 
+corner of the robot
+
+ arena. On the way to the lower right corner Robbie must pass over the center dot in the 
+ middle row and the center dot in the bottom row. The commands that you write must include 
+ at least three repetition control structures (loops) with some or all of these commands inside the loops.
+
+    moveForward();
+    moveBackward();
+    turnLeft();
+    turnRight();
+    print("Any message here");
+For example:
+
+    for (let i = 1;  i <= 5;  i++) {
+        moveForward();
+    }
+*/
+      let outputstring = "";
+      let moveForward = 0;
+      while (moveForward < 10) {
+        console.log("Numbber of steps move forward:" + moveForward);
+        outputstring += "Numbers of steps move forward:" + moveForward + "<br>";
+        moveForward++;
+      }
+      document.getElementById("output").innerHTML = outputstring;
+
+      ///////////////////////////////////////////////////////////////////
+
+      for (
+        let moveBackward = 0, steps = 5;
+        moveBackward < 5;
+        moveBackward++, steps--
+      ) {
+        console.log(moveBackward + "and" + steps); // console out put example
+        outputstring +=
+          "moveBackward steps is :" +
+          moveBackward +
+          ", and " +
+          "step-number is:" +
+          steps +
+          "<br>"; // same out put to screen , must include line break to each line
+      } // // out put string plus + and equql = to number
+
+      document.getElementById("output").innerHTML = outputstring;
+
+      //////////////////////////////////////////////////////////////////
+      //let outputstring = ""; // out put sting initialize with nothing
+
+      for (let turnLeft = 1; turnLeft < 4; turnLeft++) {
+        for (let turnRight = 1; turnRight < 4; turnRight++) {
+          console.log(turnLeft + ", " + turnRight); // console out put example
+
+          outputstring +=
+            turnLeft + "turnLeft" + ", " + turnRight + "turnRight" + "<br>"; // same out put to screen ,
+        }
+
+        console.log("\n");
+      }
+
+      document.getElementById("output").innerHTML = outputstring; // to print in the screen we use Document get element ID by out put
+      /////////////////////////////////////////////////////////////////
+      //let outputstring = "";
+      let Robiie, response;
+      do {
+        Robiie = prompt("Can i go to my destination ? Please reply yes "); // Get the user's name.
+        response = prompt(
+          "if you want to print my jurney MAP" + Robiie + " - ok type yes?"
+        ); // Ask the user if that is really her name.
+
+        outputstring += "hello" + " , " + Robiie + "  please reply yes below";
+        //console.log("hello" + " , " + Robiie + " Can you move back ward");
+      } while (response != "yes");
+
+      alert("Hello " + Robiie); // Say hello to the user.
+      document.getElementById("output").innerHTML = outputstring;
+      ////////////////////////////////////////////////////////////////////
+
+      /*
+        do {
+            statement 1
+            statement 2
+            statement 3
+            statement 4
+        }
+        statement ;
+        while (expression);
+
+
+            */
+    </script>
+  </body>
+</html>
