@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week ?: Heading</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h3>Repitation</h3>
+
+      <label>enter an interger : <input type="text" id="upper" /> </label>
+
+      <label> <button onclick="exampleLoops()">loop example</button> </label>
+      <hr />
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      function exampleLoops() {
+        // get upper control value from
+        let upper = parseInt(document.getElementById("upper").value);
+        // for loop from starting i value to the upper Limit given by user
+        output = "";
+        for (let i = 1; i <= upper; i++) {
+          // i = i + 1 same as  (i++)
+
+          console.log(i);
+          //alert(i);
+          // Statements to be repeated go here.
+          output = output + "value :" + i + "<br>";
+        }
+        document.getElementById("output").innerHTML =
+          output + "<p> Done + ✌ </p>";
+        //alert("Done");
+      }
+    </script>
+  </body>
+</html>
