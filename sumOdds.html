@@ -47,18 +47,18 @@ function sumUpOddValue() {
         let n = document.getElementById("numberBox").value;
         let outputstring = "";
         let odd;
-       let sum = 0;
+        let sum = 0; // assigning interger to sum.
         //processing:
-         //for (initialization;  condition;  update) {
+         //for (initialization = assigning odd number to 1; if odd number lesser then the user iput number = until this condition valid;  update or increment the odd number by 2) {
 
       for(odd = 1 ; odd < n ; odd = odd + 2  ){
-         console.log(odd);
+         console.log(odd); // to print the odd numbers on console 
+         outputstring += odd + "<br>"; // outspring used for out put the result in inner HTML
          sum += odd ;  
-         outputstring += odd + "<br>";
       }
-      console.log( sum);
+      console.log( sum); // calculate the sum on consle after listing all odd numbers
        // output
-        document.getElementById("output").innerHTML = outputstring + "total: " + sum;
+        document.getElementById("output").innerHTML = outputstring + "total:🗣 " + sum;
       }
       
       </script>
