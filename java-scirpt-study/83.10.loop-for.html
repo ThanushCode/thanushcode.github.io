@@ -19,14 +19,14 @@
     <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
     <script>
       outputstring = "";
-      let i = 1;
-      while (1 < 5) {
-        i++;
-
-        outputstring += i + "<br>";
-        console.log(i);
+      for (let i = 1; i < 5; i++) {
+        console.log("number:" + i); // console out put example
+        outputstring += "number:" + i + "<br>"; // same out put to screen , must include line break to each line
+        //console.log(i);
+        // outputstring += i + "<br>";
       }
       document.getElementById("output").innerHTML = outputstring;
+
       // 1.initizialization (let i = 1)
       // 2. expression  (i < 5)
       // 3. increment or decrement

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <script>
+      var balance = parseFloat(prompt("Enter your account balance"));
+      var annualRate = parseFloat(prompt("Enter the annual interest rate"));
+      var numMonths = parseInt(prompt("Enter the number of months"));
+      var monthlyRate = annualRate / 12;
+      for (var month = 1; month <= numMonths; month++) {
+        // Compute the interest for a month.
+        var interest = balance * monthlyRate;
+
+        // Round the interest to pennies.
+        interest = Math.round(interest * 100) / 100;
+
+        // Add the interest to the balance.
+        balance += interest;
+      }
+      alert("Your balance after " + numMonths + " months will be $" + balance);
+    </script>
+  </body>
+</html>

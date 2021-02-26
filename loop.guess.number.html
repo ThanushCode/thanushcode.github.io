@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <script>
+      var message =
+        "I'm thinking of a number between 1 and 100.\n" +
+        "Try to guess it!\n" +
+        "Please enter an integer between 1 and 100.";
+      var answer = 38;
+      var guess;
+      do {
+        guess = parseInt(prompt(message));
+        if (guess < answer) {
+          message = guess + " is too low. Please enter another integer.";
+        } else if (guess > answer) {
+          message = guess + " is too high. Please enter another integer.";
+        }
+      } while (guess != answer);
+      message = guess + " is correct!";
+      alert(message);
+    </script>
+  </body>
+</html>

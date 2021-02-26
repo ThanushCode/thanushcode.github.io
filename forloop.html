@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,10 +8,84 @@
   </head>
 
   <body>
-    <p id="demo"></p>
+    <p id="output"></p>
     <script>
-      for (let count = 0; count < 5; count++)
-        document.getElementById("demo").innerHTML = " number:" + count;
+      /*
+      Given the following JavaScript code, how many times will the computer display the word "Apple"? 2 wrong answer
+
+let i = 0, limit = 5;
+while (i < limit) {
+    alert("Apple");
+    i += 2;
+}
+---------------------------------------------------------------------------------------------------------------------
+Given the following JavaScript code, how many times will the computer display the word "Snow"? 3 wrong answer
+
+let i = 0;
+while (i < 3) {
+    alert("Snow");
+}
+--------------------------------------------------------------------------------------------------------------
+
+Write a for loop that uses only one variable and that counts from 12 down to 4 by twos.
+for (let i = 12; i >= 4; i -= 2) {   wrong
+
+  ----------------------------------------------------------------------------------------------------------
+Write a for loop that uses only one variable and that counts from 1 to 8 by ones. correct
+for (let i = 1; i < 9; i++) {
+
+-----------------------------------------------------------------------------------------------------------
+Given the following JavaScript code, how many times will the computer display the word "Flowers"? 4 times correct
+
+for (let i = 3;  i < 7;  i++) {
+    alert("Flowers");
+}
+
+      outputstring = "";
+      for (let i = 3; i < 7; i++) {
+        alert(i);
+
+        console.log(i);
+
+        outputstring += i;
+      }
+      document.getElementById("output").innerHTML = outputstring;
+----------------------------------------------------------------------------------------------------
+Given the following JavaScript code, how many times will the computer display the word "Goodbye"? 0 times correct
+
+for (let i = 0;  i > 3;  i++) {
+    alert("Goodbye");
+}
+  --------------------------------------------------------------------------------------------------
+      */
+
+      /*
+        outputstring = "";
+            for (let i = 1; i < 9; i++) {
+              alert("count");
+
+              console.log(i + "count");
+              outputstring += i;
+            }
+            document.getElementById("output").innerHTML = outputstring;
+      */
+
+      // for (let count = 0; count < 5; count++)
+      // document.getElementById("demo").innerHTML = " number:" + count;
+
+      outputstring = "";
+      let i = 0,
+        limit = 5;
+      while (i < limit) {
+        alert("Apple");
+        i += 2;
+
+        console.log(i);
+
+        outputstring += i;
+      }
+      document.getElementById("output").innerHTML = outputstring;
     </script>
   </body>
 </html>
+//for ( let i = 1 ; i < 9 ; i++){}
