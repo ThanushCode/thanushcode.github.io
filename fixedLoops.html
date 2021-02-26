@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <h1>Week ?: Heading</h1>
+      <h1>Week 8: Fixing Loop Problem</h1>
       <h2>Thanush Ganesh</h2>
     </header>
     <main>
@@ -39,7 +39,7 @@ Part 1:1
       output1 = "";
       let i = 0;
       while (i < 2) {
-        output1 += `Part1:${i}<br>`; // part1 + ":" +
+        output1 += `Part1:${i}<br>`;
         console.log(`Part1:${i}<br>`);
         i++;
         // console.log("Part" + i + ":" + 0 + "<br>");
@@ -95,9 +95,6 @@ output should be
       }
       document.getElementById("display3").textContent = output3;
 
-      //output should be
-      //0 1 2 3
-
       ///////////////////////////////////////////////////////////////////////////////////
 
       /*
@@ -123,20 +120,7 @@ output should be
         console.log(balance);
       }
 
-      document.getElementById("display4").textContent = balance;
-
-      //output should be
-      //15863.09
+      document.getElementById("display4").textContent = balance.toFixed(2);
     </script>
   </body>
 </html>
-function futureValue() { let balance =
-parseFloat(document.getElementById('balance').value); let annualRate =
-parseFloat(document.getElementById('annualRate').value); let numMonths =
-parseInt(document.getElementById('months').value); let monthlyRate = annualRate
-/ 12; // For each month, compute the interest and add it to the balance. for
-(let month = 1; month <= numMonths; month++) { // Compute the interest for a
-month. let interest = balance * monthlyRate; // Round the interest to pennies.
-interest = Math.round(interest * 100) / 100; // Add the interest to the balance.
-balance += interest; console.log('Your balance after ' + numMonths + ' months
-will be $' + balance);
