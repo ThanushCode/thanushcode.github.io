@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 8: Sum up the Odd Values</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h1>Sum up the numbers count</h1>
+      Enter The SubTotal :
+      <input type="text" id="numberBox" size="3" value="" /><br />
+      <button type="button" onclick="sumUpNumbers()">count</button>
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      /*
+
+*/
+      function sumUpNumbers() {
+        // input
+        // declare variables number as "n" and odd
+        // declare outputstring to print out in inner html using GetdocumentlementById
+
+        let n = document.getElementById("numberBox").value;
+        let outputstring = ""; // declare as string inorder to print in innerhtml
+
+        //let sum = 0; // assigning interger to sum.
+        //processing:
+        //for (initialization = assigning odd number to 1; if odd number lesser then the user iput number = until this condition valid;  update or increment the odd number by 2) {
+
+        for (let counting = 1; counting < n; counting++) {
+          // counting < 100 or counting <=100 and let counting = 0
+          document.getElementById("output").innerHTML += counting + "<br>";
+        }
+        //outputstring += counting;
+        console.log(
+          (document.getElementById("output").innerHTML += counting + "<br>")
+        );
+        // to print the odd numbers on console
+
+        //outputstring += counting + "<br>"; // outspring used for out put the result in inner HTML
+        //sum += counting;
+
+        // console.log( sum); // calculate the sum on consle after listing all odd numbers
+        // output
+        //document.getElementById("output").innerHTML =outputstring + "total:🗣 " + sum;
+        document.getElementById("output").innerHTML = outputstring + "<br>";
+      }
+    </script>
+  </body>
+</html>

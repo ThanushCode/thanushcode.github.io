@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 8: Sum up the Odd Values</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h1>Sum up the numbers count</h1>
+      Enter The SubTotal :
+      <input type="text" id="numberBox" size="3" value="" /><br />
+      <button type="button" onclick="sumUpNumbers()">count</button>
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      /*
+
+      */
+      function sumUpNumbers() {
+        let UserEnteredNumber = parseFloat(
+          document.getElementById("numberBox").value
+        );
+        let sum = 0;
+        //let outputstring = "";
+        for (let counting = 1; counting <= UserEnteredNumber; counting += 2) {
+          sum = sum + counting;
+          document.getElementById("output").innerHTML += counting + "<br>";
+        }
+        document.getElementById("output").innerHTML += "<br>" + sum;
+      }
+      //outputstring += counting;
+    </script>
+  </body>
+</html>

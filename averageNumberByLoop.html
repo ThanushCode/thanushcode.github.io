@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 8: Sum up the Odd Values</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <h1>Numbers</h1>
+
+      <input type="text" id="numberBox1" size="3" value="" /><br />
+      <input type="text" id="numberBox2" size="3" value="" /><br />
+      <input type="text" id="numberBox3" size="3" value="" /><br />
+      <input type="text" id="numberBox4" size="3" value="" /><br />
+      <input type="text" id="numberBox5" size="3" value="" /><br />
+      <input type="text" id="numberBox6" size="3" value="" /><br />
+      <input type="text" id="numberBox7" size="3" value="" /><br />
+      <input type="text" id="numberBox8" size="3" value="" /><br />
+      <input type="text" id="numberBox9" size="3" value="" /><br />
+      <input type="text" id="numberBox10" size="3" value="" /><br />
+      <button type="button" onclick="average()" size="3">average</button>
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      /*
+. The user interface for your program should look similar to figure 8-4. 
+Your program must use a loop to read the ten numbers and compute the sum of those numbers.
+Write a defining table and a program that allows a user to enter ten numbers and then computes 
+and outputs the average of those numbers
+*/
+      function average() {
+        // input
+        // declare variables number as "n" and odd
+        // declare outputstring to print out in inner html using GetdocumentlementById
+
+        //let n1 = parseFloat(document.getElementById("numberBox"+i).value);
+
+        let outputstring = ""; // declare as string inorder to print in innerhtml
+        //let n = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10;
+        let sum = 0; // assigning interger to sum.
+
+        //processing:
+        //for (initialization = assigning 10 numbers to 1; if odd number lesser then the user iput number = until this condition valid;  update or increment the odd number by 2) {
+
+        for (let average = 1; average < 11; average++) {
+          sum += parseFloat(
+            document.getElementById("numberBox" + average).value
+          );
+          console.log(
+            parseFloat(document.getElementById("numberBox" + average).value)
+          ); // to print the odd numbers on console
+          //outputstring += average + "<br>"; // outspring used for out put the result in inner HTML
+          //sum += average ;
+        }
+        console.log(sum); // calculate the sum on consle after listing all odd numbers
+        // output
+        document.getElementById("output").innerHTML =
+          outputstring + "total:🗣 " + sum / 10;
+      }
+    </script>
+  </body>
+</html>
