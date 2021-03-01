@@ -8,10 +8,11 @@
   </head>
 
   <body>
-    <input type="text" id="integer" size="3" value="" /><br />
-
-    <button type="button" onclick="numberGuessGame()" size="3">aguess</button>
-    <div id="output"></div>
+    <p id="output"></p>
+    Please enter balance: <input type="text" id="balance" /><br />
+    Please enter annualRate: <input type="text" id="annualRate" /><br />
+    Please enter months: <input type="text" id="months" /><br />
+    <button type="button" onclick="futureValue()">futureValue</button>
     <script>
       /*
             Given the following JavaScript code, how many times will the computer display the word "Apple"? 2 wrong answer
@@ -81,35 +82,29 @@
 
       // for (let count = 0; count < 5; count++)
       // document.getElementById("demo").innerHTML = " number:" + count;
-      //var i = parseInt(document.getElementById("numberBox").Value);
-      //sum += parseFloat(document.getElementById("numberBox" + sum).value);
-      function numberGuessGame() {
-        var i = parseInt(document.getElementById("integer").Value);
-        var message =
-          "I'm thinking of a number between 1 and 100." +
-          "Try to guess it! " +
-          "Please enter an integer between 1 and 100.";
-        var answer = 38;
-        var guess;
-        do {
-          guess = parseInt(prompt(message));
-          if (guess < answer) {
-            message = guess + " is too low. Please enter another integer.";
-          } else if (guess > answer) {
-            message = guess + " is too high. Please enter another integer.";
-          }
-        } while (guess != answer);
-        message = guess + " is correct!";
-        alert(message);
+      function futureValue() {
+        var balance = parseFloat(document.getElementById("balance").value);
+        var annualRate = parseFloat(
+          document.getElementById("annualRate").value
+        );
+        var numMonths = parseInt(document.getElementById("months").value);
+        var monthlyRate = annualRate / 12;
+
+        // For each month, compute the interest and add it to the balance.
+        for (var month = 1; month <= numMonths; month++) {
+          // Compute the interest for a month.
+          var interest = balance * monthlyRate;
+
+          // Round the interest to pennies.
+          interest = Math.round(interest * 100) / 100;
+
+          // Add the interest to the balance.
+          balance += interest;
+        }
+
+        document.getElementById("output").innerHTML =
+          "Your balance after " + numMonths + " months will be $" + balance;
       }
-
-      //  sum += n;
-
-      // console.log(sum);
-
-      // Statements to be repeated go here.
-      //alert(i);
-      //outputstring = +sum;
     </script>
   </body>
 </html>

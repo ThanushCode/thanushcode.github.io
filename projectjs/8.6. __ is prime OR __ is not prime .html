@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>Week ?: Heading</h1>
+    <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+    <h1>is prime OR __ is not prime</h1>
+    
+
+Please enter an integer: <input type="text" id="integerBox"><br>  
+<button type="button" onclick="isPrime()">Is Prime</button>  
+<div id="outputDiv"></div>  
+
+</html>
+    </main>
+    <footer>&copy;2021 &bull; Thanush  &bull; BYU-Idaho &bull; CIT 160</footer>
+     <script>
+         /* Input: an integer
+ * Processing: determine if the given integer is prime or not.
+ * Output: __ is prime OR __ is not prime
+ */
+         function isPrime() {
+    let candidate = parseInt(document.getElementById('integerBox').value);
+    let limit = Math.sqrt(candidate);
+    let prime = true;
+
+    // Find the first integer that evenly divides candidate.
+    for (let divisor = 2;  divisor <= limit;  divisor++) {
+        let remainder = candidate % divisor;
+        if (remainder == 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    // Determine the output and show it to the user.
+    let output;
+    if (prime) {
+        output = candidate + ' is prime';
+    }
+    else {
+        output = candidate + ' is not prime';
+    }
+    document.getElementById('outputDiv').innerHTML = output;
+}
+      </script>
+</body>
+</html>
