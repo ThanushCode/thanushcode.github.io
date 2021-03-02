@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Simple Calc</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 6: convert</h1>
+      <h2>Thanush Ganesh</h2>
+    </header>
+    <main>
+      <input type="text" id="InputBox" size="3" />
+
+      <hr />
+
+      <button type="button" onclick="convertDecimalsToRomans()">convert</button>
+      <div id="outputDiv"></div>
+    </main>
+
+    <script>
+      /*
+ Roman numerals are still used today to display a year on the cornerstone of buildings.
+  Write a defining table and then a program to convert a four digit decimal number into Roman numerals.
+   The Roman number system has the digits
+Roman	Arabic
+
+I	1
+V	5
+X	10
+L	50
+C	100
+D	500
+M	1000
+
+The rules for writing Roman numerals are
+
+a;Thousands, hundreds, tens, and ones are written separately.
+b;Thousands can be no larger than 3000 and are written as M, MM, or MMM, meaning 1000, 2000, or 3000 respectively.
+c;The numbers 100 to 900 are written as C, CC, CCC, CD, D, DC, DCC, DCCC, CM
+d;The numbers 10 to 90 are written similarly, except X, L, and C are used: X, XX, XXX, XL, L, LX, LXX, LXXX, XC
+e;The numbers 1 to 9 are written similarly, except I, V, and X are used: I, II, III, IV, V, VI, VII, VIII, IX
+
+As an example, 1987 is MCMLXXXVII (1000 = M, 900 = CM, 80 = LXXX, and 7 = VII).
+
+ */
+      function convertDecimalsToRomans() {
+        let arabic = parseFloat(document.getElementById("InputBox").value);
+        let roman;
+
+        switch (arabic) {
+          case 1:
+            roman = "I";
+            break;
+          case 5:
+            roman = "V";
+            break;
+          case 10:
+            roman = "x";
+            break;
+          case 50:
+            roman = "L";
+            break;
+          case 100:
+            roman = "C";
+            break;
+          case 500:
+            roman = "D";
+            break;
+          case 1000:
+            roman = "M";
+            break;
+          default:
+            romane = "none";
+            alert("unknown Numeric");
+            break;
+        }
+
+        document.getElementById("outputDiv").innerHTML = roman;
+      }
+    </script>
+    <footer>
+      &copy;2021 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>

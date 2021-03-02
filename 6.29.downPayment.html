@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 3 Template 160</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <script>
+    /*
+    A bank will not loan money to a homebuyer unless the homebuyer pays for part of the house at the time of purchase.
+     This initial payment is called a down payment and is based on the cost of the home.
+      The Bank of Ririe calculates down payments according to this schedule:
+
+    Cost of House		                 Down Payment
+    $0	–	$49,999.99		               5% * cost
+    $50,000	–	$99,999.99		          $2,000 + 10% * (cost − $50,000)
+    $100,000	–	$199,999.99		      $7,500 + 20% * (cost − $100,000)
+    $200,000	–	∞		              $27,500 +     25% * (cost − $200,000)
+
+     */
+
+    function downPayment() {
+      let costofHouse = parseInt(document.getElementById("amount").value);
+      let downPayment;
+      let cost;
+      if (costofHouse >= 0 && costofHouse <= 49999.99) {
+        downPayment = "( 5% * cost)";
+      } else if (costofHouse >= 50000 && costofHouse <= 99999.99) {
+        downPayment = "$2,000 + 10% * (cost − $50,000)";
+      } else if (costofHouse >= 100000 && costofHouse <= 199999.99) {
+        downPayment = "$7,500 + 20% * (cost − $100,000)";
+      } else if (costofHouse >= 200000) {
+        downPayment = "$27,500 + 25% * (cost − $200,000)";
+      } else {
+        downPayment = "Not able to Apply for Loan";
+      }
+      document.getElementById("output").innerHTML = downPayment;
+    }
+  </script>
+  <body>
+    Please enter the Loan amount:
+    <input type="text" id="amount" size="3" /><br />
+    <button type="button" onclick="downPayment()">Down Payment</button>
+    <div id="output"></div>
+
+    <footer>
+      &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>
