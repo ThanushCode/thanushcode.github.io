@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 9: multiplication</h1>
+      <h2>Thanush</h2>
+    </header>
+    <main>
+      <h1>multiplication</h1>
+   
+      </button>
+
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      /*
+In a file named fiveTimes.html, write a program to display the five times table from 1 to 12 in this format:
+5 x 1 = 5
+5 x 2 = 10
+…
+5 x 12 = 60
+        */
+
+      
+        // a will be the user Input assigned to user input text number
+        let a = 5;
+        // let a = 5; // but i assigned as default value to text input becouse requirement is multiply by 5 but i also like to see it with other numbers.
+        let b;
+        outputstring = "";
+        //processing:
+
+        for (let i = 1; i < 13; i++) {
+          b = a * i;
+          outputstring += " " + a + "*" + i + "=" + b + "<br>";
+          console.log(" " + a + "*" + i + "=", +b + "<br>");
+          // document.write(" " + a + "*" + i + "=", +b + "<br>");
+        }
+        // output
+        document.getElementById("output").innerHTML = outputstring;
+      
+    </script>
+  </body>
+</html>
