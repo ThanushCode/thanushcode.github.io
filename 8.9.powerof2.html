@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Template</title>
+        <script>
+            /************************
+            *Defining Table
+            *Input: None
+            *Processing: Counf from 1 to 12
+            *            Multiple each value by 2
+            *            Print all equations and their answers
+            *Output:All equations and answers 
+            *************************/
+
+            function printPowers() {
+
+                //Variable
+                let output= '';
+
+                // Count from 1 to 12
+                for (let i =　0; i <= 30; i++){
+　　　　　　　　　　　　output += '2 ^ ' + i + '=' + ( 2 ** i) + '<br>';　　
+                }
+
+                // Output the result
+                document.getElementById('outputDiv').innerHTML = output;
+            }
+             </script>
+            
+    </head>
+    <body>
+        <!-- This is a template-->
+    
+        <button type="button" onclick="printPowers()">Button</button>
+        <div id="outputDiv"></div>
+    </body>
+</html>
