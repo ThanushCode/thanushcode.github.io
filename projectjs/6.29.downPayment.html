@@ -28,6 +28,10 @@
       $100,000	–	$199,999.99		      $7,500 + 20% * (cost − $100,000)
       $200,000	–	∞		              $27,500 +     25% * (cost − $200,000)
 
+      For example a house that costs $126,900 would have a down payment of 7,500 + 20% * (126,900 − 100,000) = $12,880.
+       Write a defining table and a program that gets the cost of a house from a user and calculates and outputs the down
+        payment based on the Bank of Ririe’s schedule.
+
        */
 
       function downPaymentCalculation() {
@@ -46,7 +50,7 @@
           downPayment = "Not able to Apply for Loan";
         }
 
-        document.getElementById("output").innerHTML = downPayment;
+        document.getElementById("output").innerHTML = "$" + downPayment;
       }
     </script>
   </body>

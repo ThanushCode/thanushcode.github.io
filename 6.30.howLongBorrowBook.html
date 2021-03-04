@@ -1,0 +1,90 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>Week 3 Template 160</title>
+      <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        status: <input type="text" id="status" size="3" value="" /><br />
+      Book Overdue: <input type="text" id="overdue" size="3" value="" /><br />
+  
+      <button type="button" onclick="borrowBook()">
+        Down Payment
+      </button>
+      <div id="output"></div>
+  
+      <footer>
+        &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+        /*
+       A university library that loans books to students, faculty, and the public has a written policy that determines 
+how long someone may borrow a book before it is due. This table shows the criteria and length of time that someone
+ is allowed to borrow a book.
+
+Patron
+Status      	Number of
+              Overdue Books
+             in the Last Year	 Loan
+                                 Duration
+                                 (weeks)
+student	            0	           6
+                fewer than3	       4
+               3 or more	       2
+faculty	          0               16
+               fewer than 3	       12
+               3 or more	        8
+other	            0	            4
+              fewer than 3	        3
+              3 or more	            2
+ Write a defining table and a JavaScript program that determines how long a person may borrow a book. 
+ Your program must allow a librarian to enter a person’s status: “student”, “faculty”, or “other” and
+  how many books the person has kept past the due date in the last year.
+  
+         */
+  
+        function borrowBook() {
+          let status = (document.getElementById("status").value);
+          let overdue = parseInt(document.getElementById("overdue").value);
+          let durationWeek;
+          
+  
+          if (status == "student"){
+            if(overdue == 0) 
+               durationWeek = 6;
+
+            else if ( overdue < 3 )
+               durationWeek = 4;
+            else (overdue >= 3 )
+              durationWeek = 2;
+
+    }
+
+    else if (status == "faculty") {
+        if(overdue == 0) 
+        durationWeek = 16;
+        else if(overdue < 3) 
+        durationWeek = 12;
+        else (overdue >= 3 )
+              durationWeek = 8;
+    }
+
+    
+    else {
+        if (status == "others" )
+        if(overdue == 0) 
+        durationWeek = 4;
+        if(overdue < 3) 
+        durationWeek = 3;
+        else (overdue >= 3 )
+              durationWeek = 2;
+    }
+  
+          document.getElementById("output").innerHTML = durationWeek;
+        }
+      </script>
+    </body>
+  </html>
+  

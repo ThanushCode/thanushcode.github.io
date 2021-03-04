@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -8,18 +7,21 @@
         <script>
             /************************
             *Defining Table
-Write a defining table and a program to output all powers of 2 from 20 up to 231, inclusive. In other words, 
-your program should output this series:  1, 2, 4, 8, … 2147483648 
+            *Input: None
+            *Processing: Counf from 1 to 12
+            *            Multiple each value by 5
+            *            Print all equations and their answers
+            *Output:All equations and answers 
             *************************/
 
-            function printPowers() {
+            function printMultiFive() {
 
                 //Variable
                 let output= '';
 
                 // Count from 1 to 12
-                for (let i =　0; i <= 31; i++){
-　　　　　　　　　　　　output += '2 ^ ' + i + '=' + ( 2 ** i) + '<br>';　　
+                for (let i =　1; i <= 12; i++){
+　　　　　　　　　　　　output += '5 x ' + i + '=' + (i * 5) + '<br>';　　
                 }
 
                 // Output the result
@@ -31,7 +33,7 @@ your program should output this series:  1, 2, 4, 8, … 2147483648
     <body>
         <!-- This is a template-->
     
-        <button type="button" onclick="printPowers()">Button</button>
+        <button type="button" onclick="printMultiFive()">Button</button>
         <div id="outputDiv"></div>
     </body>
 </html>

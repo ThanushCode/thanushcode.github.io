@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 3 Template 160</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    Please enter your age: <input type="text" id="age" size="3" /><br />
+    Please enter the season: <input type="text" id="season" size="3" /><br />
+    <button type="button" onclick="timeFinder()">Class</button>
+    <div id="output"></div>
+
+    <footer>
+      &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+      /*
+Write a defining table and then a program that determines what time a child should go to bed. 
+Your program must read a child’s age and the season (winter, spring, summer, or fall) from the keyboard and output 
+the child’s bedtime according to this table:
+
+Age	               Season	      Bed Time
+5 or younger	summer, fall	8:30 p.m.
+5 or younger	winter, spring	8:00 p.m.
+6 to 12	        summer	        9:30 p.m.
+6 to 12	winter, spring, fall	8:30 p.m.
+13 and older	summer	         10:30 p.m.
+13 and older	winter, spring, fall	9:30 p.m
+
+ */
+      function timeFinder() {
+        let age = parseInt(document.getElementById("age").value);
+        let season = document.getElementById("season").value;
+        let time;
+
+        if (age <= 5 && (season == "summer" || season == "fall")) {
+          time = "8.30 p.m.";
+        } 
+        else if (age <= 5 && (season == "winter" || season == "spring")) {
+          time = "8.00 p.m.";
+        } 
+        else if (age >= 6 && age <= 12 && (season == "summer")) {
+          time = "9.30 p.m";
+        } 
+        else if ( age >= 6 && age <= 12 && (season == "spring" || season == "fall" || season == "winter" )) {
+          time = "8.30 p.m";
+        } 
+        else if (age >= 13 && (season == "summer")) {
+          time = "10.30 p.m";
+        } 
+        else if (age >= 13 && (season == "winter" || season == "spring" || season == "fall")) {
+          time = "9.30 p.m";
+        } 
+        else {
+          time = "Cant go to Bed this Time";
+        }
+        document.getElementById("output").innerHTML = "bedtime Now 😗" + time;
+      }
+    </script>
+  </body>
+</html>
