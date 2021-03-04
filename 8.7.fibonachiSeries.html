@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Template</title>
+    <script>
+        /************************
+              *Write a defining table and a program that outputs the first 25 numbers in this Fibonacci series:
+    0, 1, 1, 2, 3, 5, 8, … 46368
+  
+              *************************/
+
+        function fibonachi() {
+            let lastNumber = 0,
+                actualNumber = 1,
+                output = "0 ,<br>";
+            for (let i = 0 ; i < 25; i++) { 
+                let result= actualNumber + lastNumber;
+               
+                actualNumber = lastNumber;
+                
+
+                lastNumber = result;
+                output += result + "," + "<br>";
+            }
+
+            // Output the result
+            document.getElementById("outputDiv").innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- This is a template-->
+
+    <button type="button" onclick="fibonachi()">Button</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>
