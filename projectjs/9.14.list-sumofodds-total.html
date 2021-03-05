@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>sum of odds</title>
+  </head>
+  <body>
+    <script>
+      function sum() {
+        // inputs
+        let n = document.getElementById("InputBox").value;
+        let text = "";
+        let sum = 0;  // assigning interger to sum.
+        let i;
+        //processing:
+ //for (initialization = assigning odd number to 1; if odd number lesser then the user iput number = until this condition valid;
+        for (i = 1; i <= n; i += 2) {
+          text += i + "<br>";
+          sum += i ;
+          console.log(i + "<br>");
+        }
+        console.log( sum); // calculate the sum on consle after listing all odd numbers
+        // output
+        document.getElementById("output").innerHTML = text +"total:🗣 "+ sum;
+      }
+    </script>
+    Enter the sum:<input type="number" id="InputBox" />
+    <button type="button" onclick="sum()">Enter</button>
+
+    <p id="output"></p>
+  </body>
+</html>
