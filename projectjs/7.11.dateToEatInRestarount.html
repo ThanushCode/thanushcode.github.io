@@ -10,7 +10,7 @@
 <body>
 insert number 1 : <input type="text" id="number" size="3" /><br />
 insert number 2 : <input type="text" id="number2" size="3" /><br />
-    <button type="button" onclick="timeFinder()">Class</button>
+    <button type="button" onclick="timeFinder()">fashion measures</button>
     <div id="output"></div>
 
     <footer>
@@ -20,35 +20,40 @@ insert number 2 : <input type="text" id="number2" size="3" /><br />
     <script>
         /*
 Write defining table and then a program to determine if you and your date will be allowed 
-to eat in a fancy and fashionable
- restaurant. Your program should read two integers from the keyboard, 
-   one that specifies your fashion measure from 1 to 10,inclusive and one that specifies your date’s fashion measure from 1 to 10,
- inclusive. 
+to eat in a fancy and fashionable restaurant. 
+
+Your program should read two integers from the keyboard, 
+
+ one that specifies your fashion measure from 1 to 10,inclusive and 
+ one that specifies your date’s fashion measure from 1 to 10,inclusive. 
+
  If either of your fashion measures is 2 or less, your program should output “Not a chance”. 
  If either of your fashion measures is 8 or greater, your program should output “Welcome”.
   If your fashion measures sum to more than 12 your program should output, “Maybe”. Otherwise, 
   your program should output “Unlikely”.
    */
         function timeFinder() {
+            let output ;
             let num1 = parseInt(document.getElementById("number").value);
             let num2 = parseInt(document.getElementById("number2").value);
             
+            
             //One of the imputs less than 2
-            if (age <= 5 && (season == "summer" || season == "fall")) {
-                time = "8.30 p.m.";
+            if (num1 == 2 || num2 < 2) {
+                output = "Not a chance";
             }
             //One of the inputs more than 8
-            if (age <= 5 && (season == "winter" || season == "spring")) {
-                time = "8.00 p.m.";
+            if (num1 == 8 || num2 > 8) {
+                output = "Welcome";
             }
             //Adition is omre than 12
-            if (age >= 13 && (season == "winter" || season == "spring" || season == "fall")) {
-                time = "9.30 p.m";
+            if (num1 >= 12 || num2 >= 12) {
+                output = "Maybe";
             }
             else { //Otherwise
-                time = "Cant go to Bed this Time";
+                output = "Unlikely";
             }
-            document.getElementById("output").innerHTML = "bedtime Now 😗" + time;
+            document.getElementById("output").innerHTML = output;
         }
     </script>
 </body>

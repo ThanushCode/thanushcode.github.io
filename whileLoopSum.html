@@ -1,113 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <input type="text" id="numberBox1" size="3" value="" /><br />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-    <button type="button" onclick="sum10()" size="3">average</button>
-    <div id="output"></div>
-    <script>
-      /*
-            Given the following JavaScript code, how many times will the computer display the word "Apple"? 2 wrong answer
+<body>
+  <input type="text" id="numberBox1" size="3" value="" /><br />
 
-      let i = 0, limit = 5;
-      while (i < limit) {
-          alert("Apple");
-          i += 2;
-      }
-      ---------------------------------------------------------------------------------------------------------------------
-      Given the following JavaScript code, how many times will the computer display the word "Snow"? 3 wrong answer
+  <button type="button" onclick="sum10()" size="3">average</button>
+  <div id="output"></div>
+  <script>
+    /*
+          Given the following JavaScript code, how many times will the computer display the word "Apple"? 2 wrong answer
 
-      let i = 0;
-      while (i < 3) {
-          alert("Snow");
-      }
-      --------------------------------------------------------------------------------------------------------------
+    let i = 0, limit = 5;
+    while (i < limit) {
+        alert("Apple");
+        i += 2;
+    }
+    ---------------------------------------------------------------------------------------------------------------------
+    Given the following JavaScript code, how many times will the computer display the word "Snow"? 3 wrong answer
+
+    let i = 0;
+    while (i < 3) {
+        alert("Snow");
+    }
+    --------------------------------------------------------------------------------------------------------------
+
+    Write a for loop that uses only one variable and that counts from 12 down to 4 by twos.
+    for (let i = 12; i >= 4; i -= 2) {   wrong
 
       Write a for loop that uses only one variable and that counts from 12 down to 4 by twos.
-      for (let i = 12; i >= 4; i -= 2) {   wrong
 
-        Write a for loop that uses only one variable and that counts from 12 down to 4 by twos.
+      *************************************
+      Write a for loop that uses only one variable and that counts from 1 to 8 by ones.
+      for(let i = 1 ; i< 9; i++)
 
-        *************************************
-        Write a for loop that uses only one variable and that counts from 1 to 8 by ones.
-        for(let i = 1 ; i< 9; i++)
+      ----------------------------------------------------------------------------------------------------------
+    Write a for loop that uses only one variable and that counts from 1 to 8 by ones. correct
+    for (let i = 1; i < 9; i++) {
 
-        ----------------------------------------------------------------------------------------------------------
-      Write a for loop that uses only one variable and that counts from 1 to 8 by ones. correct
-      for (let i = 1; i < 9; i++) {
+    -----------------------------------------------------------------------------------------------------------
+    Given the following JavaScript code, how many times will the computer display the word "Flowers"? 4 times correct
 
-      -----------------------------------------------------------------------------------------------------------
-      Given the following JavaScript code, how many times will the computer display the word "Flowers"? 4 times correct
+    for (let i = 3;  i < 7;  i++) {
+        alert("Flowers");
+    }
 
-      for (let i = 3;  i < 7;  i++) {
-          alert("Flowers");
-      }
+          outputstring = "";
+          for (let i = 3; i < 7; i++) {
+            alert(i);
 
+            console.log(i);
+
+            outputstring += i;
+          }
+          document.getElementById("output").innerHTML = outputstring;
+    ----------------------------------------------------------------------------------------------------
+    Given the following JavaScript code, how many times will the computer display the word "Goodbye"? 0 times correct
+
+    for (let i = 0;  i > 3;  i++) {
+        alert("Goodbye");
+    }
+      --------------------------------------------------------------------------------------------------
+          */
+
+    /*
             outputstring = "";
-            for (let i = 3; i < 7; i++) {
-              alert(i);
+                for (let i = 1; i < 9; i++) {
+                  alert("count");
 
-              console.log(i);
+                  console.log(i + "count");
+                  outputstring += i;
+                }
+                document.getElementById("output").innerHTML = outputstring;
+          */
 
-              outputstring += i;
-            }
-            document.getElementById("output").innerHTML = outputstring;
-      ----------------------------------------------------------------------------------------------------
-      Given the following JavaScript code, how many times will the computer display the word "Goodbye"? 0 times correct
-
-      for (let i = 0;  i > 3;  i++) {
-          alert("Goodbye");
+    // for (let count = 0; count < 5; count++)
+    // document.getElementById("demo").innerHTML = " number:" + count;
+    function sum10() {
+      var i = parseInt(document.getElementById("numberBox1").Value);
+      outputstring = "";
+      var sum = 0;
+      //var i = parseInt(document.getElementById("numberBox").Value);
+      //sum += parseFloat(document.getElementById("numberBox" + sum).value);
+      var output = "0";
+      var i = 2;
+      while (i <= 10) {
+        output += ", " + i;
+        i += 2;
       }
-        --------------------------------------------------------------------------------------------------
-            */
+      document.getElementById("output").innerHTML = output;
 
       /*
-              outputstring = "";
-                  for (let i = 1; i < 9; i++) {
-                    alert("count");
+      function countDown() {
+  var output = "";
+  var skip = parseInt(document.getElementById('integer').value);
+  var i = 100;
+  while (i >= 0) {
+      output += i + "<br>";
+      i -= skip;
+  }
+  document.getElementById('output').innerHTML = output;
 
-                    console.log(i + "count");
-                    outputstring += i;
-                  }
-                  document.getElementById("output").innerHTML = outputstring;
-            */
-
-      // for (let count = 0; count < 5; count++)
-      // document.getElementById("demo").innerHTML = " number:" + count;
-      function sum10() {
-        var i = parseInt(document.getElementById("numberBox1").Value);
-        outputstring = "";
-        var sum = 0;
-        //var i = parseInt(document.getElementById("numberBox").Value);
-        //sum += parseFloat(document.getElementById("numberBox" + sum).value);
-        var output = "0";
-        var i = 2;
-        while (i <= 10) {
-          output += ", " + i;
-          i += 2;
-        }
-        document.getElementById("output").innerHTML = output;
-
-        /*
-        function countDown() {
-    var output = "";
-    var skip = parseInt(document.getElementById('integer').value);
-    var i = 100;
-    while (i >= 0) {
-        output += i + "<br>";
-        i -= skip;
+      */
     }
-    document.getElementById('output').innerHTML = output;
+  </script>
+</body>
 
-        */
-      }
-    </script>
-  </body>
 </html>
