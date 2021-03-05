@@ -39,15 +39,15 @@ Your program should read two integers from the keyboard,
             
             
             //One of the imputs less than 2
-            if (num1 == 2 || num2 < 2) {
+            if (num1 <= 2 || num2 <= 2) {
                 output = "Not a chance";
             }
             //One of the inputs more than 8
-            if (num1 == 8 || num2 > 8) {
+            else if (num1 >= 8 || num2 >= 8) {
                 output = "Welcome";
             }
             //Adition is omre than 12
-            if (num1 >= 12 || num2 >= 12) {
+            else if (num1 +  num2 > 12) {
                 output = "Maybe";
             }
             else { //Otherwise
