@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>sum of odds</title>
+  </head>
+  <body>
+    <script>
+      /*
+      Instructions
+
+In a file named, sumOdds.html, write a program that asks the user for an integer n and then outputs the sum of all the odd integers between 1 and n, inclusive.
+For example,
+  if a user entered 10, your program would add 1 + 3 + 5 + 7 + 9 and output 25.
+
+  If a user entered 11, your program would add 1 + 3 + 5 + 7 + 9 + 11 and output 36.
+
+Requirements
+Your program must include code comments which are planning tools you used to break this problem down and to label parts.
+Your program must use a repetition structure. 
+Your program must be running on your GitHub Pages account.
+      */
+      function sum() {
+        // inputs
+        let n = document.getElementById("InputBox").value;
+        let text = "";
+        let sum = 0;  // assigning interger to sum.
+        let i;
+        //processing:
+ //for (initialization = assigning odd number to 1; if odd number lesser then the user iput number = until this condition valid;
+        for (i = 1; i <= n; i += 2) {
+          text += i + "<br>";
+          sum += i ;
+          console.log(i + "<br>");
+        }
+        console.log( sum); // calculate the sum on consle after listing all odd numbers
+        // output
+        document.getElementById("output").innerHTML = text +"total:🗣 "+ sum;
+      }
+    </script>
+    Enter the sum:<input type="number" id="InputBox" />
+    <button type="button" onclick="sum()">Enter</button>
+
+    <p id="output"></p>
+  </body>
+</html>
