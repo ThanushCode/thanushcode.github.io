@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+      <main>
+          
+<body>
+<p>Temperature: <input type="text" id="tempinFahrenhei"><br>
+    Wind Speed: <input type="text" id="windSpeed"></p>
+<button type="button" onclick="calWindChill()">Wind Chill</button>  
+<div id="output"></div>  
+<footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+      </main>
+    <header>
+      <h1>Week 9: windChill Speed Calculation</h1>
+      <h2>Thanush</h2>
+    </header>
+
+<script>
+/* Input: Temperature in fahrenheit and the wind speed in miles per hour.
+ * Processing: Calculate windchill
+ * Output: windchill
+ */
+function calWindChill() {
+    let tempinFahrenheit = parseFloat(document.getElementById('tempinFahrenhei').value);
+    let windspeed = parseFloat(document.getElementById('windSpeed').value);
+
+    // Determine the output and show it to the user.
+    let result = windChill(tempinFahrenheit, windspeed);
+    document.getElementById('output').innerHTML = result ;
+
+}
+function windChill(tempinFahrenheit, windspeed) {
+    let t = tempinFahrenheit;
+    let s = windspeed;
+    let windchill = 35.74 + 0.6215 * t - 35.75 * Math.pow(s,0.16) + 0.4275 * t * Math.pow(s,0.16);
+    return windchill;
+
+}
+</script>
+
+
+</body>
+</html>

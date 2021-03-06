@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Five times table</title>
+
+<script>
+/* Input: none
+ * Processing: Create a 5 times table from 1 to 12.
+ * Output: The 5 times table from 1 to 12.
+ */
+function timesTable() {
+    let multiplier = 5;
+    let max = 12;
+    let counter = 1;
+    let table = "";
+    let line;
+    // Test all numbers between 1 and 12, and create a times table
+    
+    while (counter <= max) {
+        line = multiplier + " x " + counter + " = " + multiplier * counter;
+        table = table + line + "<br>";
+        counter += 1;
+    }
+
+    // Determine the output and show it to the user.
+    document.getElementById('outputDiv').innerHTML = table ;
+}
+</script>
+</head>
+
+<body>
+<p>Click the button below to see the 5 times table</p><br> 
+<button type="button" onclick="timesTable()">Show 5 Times Table</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>

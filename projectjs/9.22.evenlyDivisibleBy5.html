@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 9: multiplication</h1>
+      <h2>Thanush</h2>
+    </header>
+    <main>
+      <h1>division</h1>
+      Start:<input type="text" id="Start" size="5" /><br />
+       End:<input type="text" id="End" size="5" /><br />
+        Divisor :<input type="text" id="Divisor" size="5" /><br />
+      
+      <button type="button" onclick="evenlyDivisble()" size="3">
+        Multiplication
+      </button>
+
+      <div id="output"></div>
+    </main>
+    <footer>&copy;2021 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160</footer>
+    <script>
+      /*
+In a file named fiveTimes.html, write a program to display the five times table from 1 to 12 in this format:
+5 x 1 = 5
+5 x 2 = 10
+…
+5 x 12 = 60
+        */
+
+      function evenlyDivisble() {
+        // Input: 3 numbers: a starting number as begining, an ending number as ending, and a divisor as dividing
+        let begining = parseFloat(document.getElementById("Start").value);
+        let ending = parseFloat(document.getElementById("End").value);
+        let dividing = parseFloat(document.getElementById("Divisor").value);
+        let counter = begining;
+        let outputstring = "";
+        // Processing: count all the numbers between start and end inclusive that are evenly divisible by dividing Number.
+         
+        while (counter <= ending) {
+           if ((counter % dividing) == 0 ){
+               outputstring = outputstring + counter + " ";
+           }  
+           counter ++
+           }    
+          
+          console.log(outputstring + counter + " " + "<br>");
+          
+       
+        // Output: All numbers evenly divisible between the user enterd two start and end numbers.
+        document.getElementById("output").innerHTML = outputstring;
+      }
+    </script>
+  </body>
+</html>

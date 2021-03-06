@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>fifteen</title>
+<script>
+/* Input: Two numbers from text fields.
+ * Processing: determine if either number is greater than 15, or if their sum is greater than 15.
+ * Output: "True" if either number number or their sum is greater than 15, "False" if not.
+ */
+function fifteen() {
+var numberOne = parseFloat(document.getElementById('one').value);
+var numberTwo = parseFloat(document.getElementById('two').value);
+var sum = numberOne + numberTwo;
+
+if (sum > 15 || one > 15 && two > 15) {
+    document.getElementById('output').innerHTML = "True" ;
+} else {
+    document.getElementById('output').innerHTML = "False" ;
+}
+}
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="fifteen()">Click</button>
+<div id="output"></div>
+</body>
+</html> 

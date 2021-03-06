@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Powers of 2</title>
+
+<script>
+/* Input: none
+ * Processing: Create a a list of powers of 2 from 2 ^ 0 to 2 ^ 31 inclusive.
+ * Output: A list of powers of 2 from 2 ^ 0 to 2 ^ 31 inclusive
+ */
+function PowerTable() {
+    let base = 2;
+    let max = 31;
+    let counter = 0;
+    let table = "";
+    let line;
+    // Test all numbers between 1 and 12, and create a times table
+
+    while (counter <= max) {
+        line = Math.pow(base, counter)
+        table = table + line + "<br>";
+        counter += 1;
+    }
+
+    // Determine the output and show it to the user.
+    document.getElementById('outputDiv').innerHTML = table ;
+}
+</script>
+</head>
+
+<body>
+<p>Click the button below to see the first 32 powers of 2.</p><br> 
+<button type="button" onclick="PowerTable()">Show 5 Times Table</button>  
+<div id="outputDiv"></div>  
+</body>
+</html> 
