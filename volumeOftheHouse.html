@@ -84,6 +84,7 @@
             Hint: use the triangleArea function that is written in this chapter.
     
         */
+       //houseVolume = livingVolume + roofVolume
         function doInputOutput() {
             let width = parseInt(document.getElementById("width").value);
             let depth = parseInt(document.getElementById("depth").value);
@@ -97,7 +98,7 @@
                  return calculatedLivingVolume + calculatedRoofVolume;
              }
              function livingVolume(width, depth, height){
-                 return width * depth * height;
+                 return width * depth * height; // let calculated living volume
              }
              function roofVolume(width, depth, sweep){
                  return triangleArea (sweep , sweep ,depth)* width;

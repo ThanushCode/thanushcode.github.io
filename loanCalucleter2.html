@@ -64,9 +64,9 @@
             let principal = parseInt(document.getElementById("principal").value);
             let Intreset = parseInt(document.getElementById("Intreset").value);
             let NumberOfYears = parseInt(document.getElementById("NumberOfYears").value);
-            let paymentPeryeare = parseInt(document.getElementById("paymentPeryear").value);
+            let paymentPeryear = parseInt(document.getElementById("paymentPeryear").value);
 
-            let payment = computePayment(principal , Intreset,NumberOfYears,paymentPeryeare);
+            let payment = computePayment(principal , Intreset,NumberOfYears,paymentPeryear);
             document.getElementById("outputDiv").innerHTML = payment;   
         }
         function doBalance() {
