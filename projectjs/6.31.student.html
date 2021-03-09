@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Student Name : <input placeholder="enter Student Name" type= "text" id = "txtName" size ="15" /> <br/>
+    Completed Credits : <input placeholder="Completed Credits" type="text" id="txtcredits" size ="15"/> <br/>
+    <button type="button" onclick="checkYearInSchool()"> find year in school</button>
+    <div id ="outputDiv"> </div>
+</body>
+<Script>
+
+/*
+Write a defining table and then a program that reads from the keyboard a student’s name and number of completed university 
+credits and then outputs the student’s name and year in school according to this table.
+
+If the number of credits           And the number of credits is less than	    Then the year in school is
+is greater than or equal to
+                 	                           
+0	                                            30                                      	freshman
+30	                                            60	                                        sophomore
+60                                             	90                                         	junior
+90                                          	∞	                                        senior
+
+*/
+
+function checkYearInSchool(){
+//process
+let name = document.getElementById("txtName").value;
+let credit = parseInt(document.getElementById("txtcredits").value);
+let yearInSchool="";
+// between 0 and 30, then freshman
+  if (credit > 0 && credit < 30){
+    yearInSchool = "freshman";
+  }
+
+// between 30 and 60, then sophomore
+ if (credit >= 30 && credit < 60){
+    yearInSchool = "sophomore";   
+ }
+
+// between 60 and 90, then junior
+if (credit >= 60 && credit < 90){
+    yearInSchool = 	"junior";
+}
+
+// Greater then 90 senior
+if (credit >= 90) {
+    yearInSchool = 	"senior";
+}
+//process
+
+
+//output
+
+document.getElementById("outputDiv").innerHTML = name  + " is a " + yearInSchool;
+}
+
+</Script>
+</html>

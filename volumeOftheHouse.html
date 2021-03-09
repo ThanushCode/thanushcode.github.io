@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Week 10:calculates the total volume of the house </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>calculates the total volume of the house</h3>
+        <input placeholder="Enter width" type="text" id="width" size="15" /> <br />
+        <input placeholder="Enter depth" type="text" id="depth" size="15" /> <br />
+        <input placeholder="Enter height" type="text" id="height" size="15" /> <br />
+        <input placeholder="Enter sweep" type="text" id="sweep" size="15" /> <br /><br/>
+        <button type="button" onclick="doInputOutput()"> calculates volume of the house </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        /* Assignment:  basic house. Notice that the roof space of the house is a triangular prism and the living space 
+          of the house is a rectangular prism.
+         Write a program that calculates the total volume of the house, including the volume of the roof space.
+          Your program must allow the user to enter the width, depth, height, 
+         
+          Here are some useful formulas:
+            houseVolume = livingVolume + roofVolume
+            livingVolume = width * depth * height
+            roofVolume = triangleArea * width
+            triangleArea = √s(s−a)(s−b)(s−c)
+            s = a + b + c /2
+
+         Your program must include these five functions:
+             function doInputOutput()
+             function houseVolume(width, depth, height, sweep)
+             function livingVolume(width, depth, height)
+             function roofVolume(width, depth, sweep)
+             function triangleArea(a, b, c)
+
+         The first function (doInputOutput)
+            takes no parameters
+            is called from the onclick attribute
+            gets four numbers from the user
+            calls the houseVolume function
+            displays the house volume to the user
+
+        The second function (houseVolume)
+            takes four parameters
+            calls the livingVolume function
+            calls the roofVolume function
+            computes the house volume by adding the living volume and the roof volume
+            returns the house volume
+  
+        The third function (livingVolume)
+            takes three parameters
+            computes and returns the volume of the living space
+        
+        The fourth function (roofVolume)
+            Takes three parameters
+            calls the triangleArea function
+            computes and returns the volume of the roof
+        
+        The fifth function (triangleArea)
+            takes three parameters
+            computes and returns the area of a triangle
+        
+            Hint: use the triangleArea function that is written in this chapter.
+    
+        */
+        function doInputOutput() {
+            let width = parseInt(document.getElementById("width").value);
+            let depth = parseInt(document.getElementById("depth").value);
+            let height = parseInt(document.getElementById("height").value);
+            let sweep = parseInt(document.getElementById("sweep").value); 
+            document.getElementById("outputDiv").innerHTML = houseVolume(width,depth,height,sweep);
+        }
+             function houseVolume(width, depth, height, sweep){
+                 let calculatedLivingVolume = livingVolume(width, depth, height);
+                 let calculatedRoofVolume = roofVolume(width, depth, sweep);
+                 return calculatedLivingVolume + calculatedRoofVolume;
+             }
+             function livingVolume(width, depth, height){
+                 return width * depth * height;
+             }
+             function roofVolume(width, depth, sweep){
+                 return triangleArea (sweep , sweep ,depth)* width;
+             }
+             function triangleArea(a, b, c){
+              let s = (a+b+c)/2;
+                return Math.sqrt(s*(s-a)*(s-b)*(s-c));
+             }
+
+    </script>
+</body>
+
+</html>

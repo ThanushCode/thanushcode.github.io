@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Fahrenheit to Celsius</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fahrenheit to Celsius</h1>
+    <input placeholder="Enetr fahrenheit Value" type="text" id="farValue" size="24" /> <br />
+    <button type="button" onclick="doInputOutput()"> convert Fahrenheit to Celsius  </button> <br />
+    <div id="outputDiv"> </div>
+    <script>
+        /* Assignment:Create an HTML document, which contains a text field, a button, and a div.
+           Label the first text field “Fahrenheit” and put the text “Celsius” on the button. 
+           Write two functions with these headers:
+           function doInputOutput()
+           function fahrToCels(fahr)
+          The first function (doInputOutput) must be called from the onclick attribute of the button and must do the following:
+               a.get a temperature in Fahrenheit from the text field
+               b.call the second function (fahrToCels)
+               c.store the value returned by fahrToCels in a variable
+               d.output the value returned by fahrToCels to the div for the user to see
+           The second function (fahrToCels) must
+               a.take a temperature in Fahrenheit as a parameter
+               b.calculate the corresponding Celsius temperature
+               c.return the Celsius temperature
+           In other words, the second function (fahrToCels) must not gather any input from a user and 
+           must not output anything for a user to see. Instead, it must calculate and return the result, 
+           which makes this second function very reusable in other projects.
+        */
+        function doInputOutput() {
+            let farTemp = parseFloat(document.getElementById("farValue").value);
+            let celstemp = fahrToCels(farTemp);
+            document.getElementById("outputDiv").innerHTML = celstemp;
+        }
+        function fahrToCels (fahrenheit){
+            return(fahrenheit-32 ) * (5/9);
+        }
+    </script>
+</body>
+
+</html>

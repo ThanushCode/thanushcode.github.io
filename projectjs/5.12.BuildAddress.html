@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+Street Address1: <input type="text" id="txtStreetOne" /> <br/>
+Street Address2: <input type="text" id="txtStreetTwo" /> <br/>
+City: <input type="text" id="Txtcity" /> <br/>
+state: <input type="text" id="Txtstate" /> <br/>
+Postal Code: <input type="text" id ="txtpostalCode"/> <br/>
+<button type="button" onclick="makeAddress()"> Get Full Address</button>
+<div id="output"></div>
+<script>
+  function makeAddress() {
+
+ 
+  //input
+
+    //get street one from Html document and store it in a variable
+   let streetOne = document.getElementById("txtStreetOne").value;
+  console.log(streetOne);
+   //get street Two from Html document and store it in a variable
+   let streetTwo = document.getElementById("txtStreetTwo").value;
+   console.log(streetTwo);
+   //get city from Html document and store it in a variable
+   let city = document.getElementById("Txtcity").value;
+   console.log(city);
+    //get state from Html document and store it in a variable
+    let state = document.getElementById("Txtstate").value;
+   console.log(state);
+   //get post Code from Html document and store it in a variable
+   let PostCode = parseFloat(document.getElementById("txtpostalCode").value);
+   console.log(PostCode);
+
+  //Processing = combine the address with strretone,then combine with street,then combine with City,
+  //then combine with State,then combine with PostalCode;
+   
+   let completeAddress = streetOne + " <br/>"+ streetTwo + " <br/>" + city + " <br/>" + state  + " <br/>" + PostCode;
+  
+   //Output = out put the address to user
+  
+   document.getElementById("output").innerHTML = completeAddress;
+}
+
+
+</script>
+</body>
+</html>

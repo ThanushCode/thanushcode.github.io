@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <p>Please enter two numbers:</p>
+    ENTER NUMBER ONE: <input type="text" id="one" size="5"><br>
+    ENTER NUMBER TWO:<input type="text" id="two" size="5">
+    <button type="button" onclick=" findNumber()">Click</button>
+    <div id="output"></div>
+
+    <script>
+        /*
+        
+        Write a JavaScript program that reads two numbers from two text fields and then outputs to a div 
+        "True" if both of the numbers are greater than 5 or if their sum is greater than 20. Otherwise your 
+        program should output "False" to the div.
+  
+        If you wish, you may use the following HTML code template to begin your program.
+        Test Cases
+Inputs	Output
+-4	5	False
+-4	6	False
+-4	24	False
+-4	25	True
+3	5	False
+3	6	False
+3	17	False
+3	18	True
+5	5	False
+5	6	False
+5	15	False
+5	16	True
+8	5	False
+8	6	True
+8	12	True
+8	13	True
+Submit your HTML file with the embedded JavaScript.
+
+        */
+        /* Input:
+         * Processing:
+         * Output:
+         */
+        function findNumber() {
+            
+            let One = parseInt(document.getElementById("one").value);
+            let two = parseInt(document.getElementById("two").value);
+
+           // if both of the numbers are greater than 5;
+            if (one > 5 || two > 5) {
+                
+                
+        
+           document.getElementById('output').innerHTML = "True" ;
+            }
+            //if their sum is greater than 20;
+            else if (one + two > 20) {
+                document.getElementById('output').innerHTML = "True" ;
+            }
+            // Otherwise your program output "False" ;
+            else  { 
+                document.getElementById('output').innerHTML = "False" ;
+            }
+     
+        }
+
+    </script>
+</body>
+
+</html>

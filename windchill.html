@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the" type="text" id="giveName" size="15" value="" /> <br />
+        <button type="button" onclick="giveFunctionName()"> button Name </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        /*   Assignment:Create an HTML document, which contains two text fields, a button, and a div. 
+             Label the first text field “Temperature”, label the second “Wind Speed”, and put the text “Wind Chill” on the button. 
+             
+             Write two functions with these headers:
+                 function doInputOutput()
+                 function windChill(tempF, speed)
+
+            The first function (doInputOutput) must be called from the onclick attribute of the button and must do the following:
+                 get a temperature from the first text field
+                 get a wind speed from the second text field
+                 call the second function (windChill)
+                 store the value returned by windChill in a variable
+                 output the value returned by windChill to the div for the user to see
+                 
+            The second function (windChill) must
+                 take a temperature in Fahrenheit as a parameter
+                 take a wind speed in miles per hour as a parameter
+                 calculate the wind chill factor as a temperature in Fahrenheit
+                 return the wind chill factor in Fahrenheit
+
+            In other words, the second function (windChill) must not gather any input from a user and 
+            must not output anything for a user to see. Instead,
+            it must calculate and return the result,
+            which makes this second function very reusable in other projects.
+
+T            he formula for computing the wind chill factor is
+                f = 35.74 + 0.6215 t − 35.75 s0.16 + 0.4275 t s0.16
+                where f is the wind chill factor in Fahrenheit, t is the air temperature in Fahrenheit, 
+                and s is the wind speed in miles per hour at five feet above the ground.
+    
+        */
+        function giveFunctionName() {
+            let input = parseInt(document.getElementById("giveName").value);
+            document.getElementById("giveName2").value;
+            let message = 'output message';
+            document.getElementById("outputDiv").innerHTML = message;
+
+        }
+    </script>
+</body>
+
+</html>
