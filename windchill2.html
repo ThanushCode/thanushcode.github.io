@@ -60,7 +60,7 @@
                 windchill = windChill (temperature,windspeed)
             }
             else {
-                windchill = "will not work right now";
+                windchill = "wind chill is not calculated for temperatures above 50 degrees Fahrenheit or for wind speeds below 3 miles per hour" + " , " + "Please enter lesser amount ";
             }
             document.getElementById("outputDiv").innerHTML = windchill;
         }
@@ -81,13 +81,13 @@
     </header>
     <Main>
         <h3>My First Template Program</h3>
-        <input placeholder="Enter the" type="text" id="Temperature" size="15" value="" /> <br />
-        <input placeholder="Enter the" type="text" id="WindSpeed" size="15" value="" /> <br />
-        <button type="button" onclick="doInputOutput()"> Wind Chill </button> <br />
+        <input placeholder="Enter the degrees Fahrenheit" type="text" id="Temperature" size="25" value="" /> <br />
+        <input placeholder="Enter the wind speeds" type="text" id="WindSpeed" size="20" value="" /> <br />
+        <button type="button" onclick="doInputOutput()">calculate Wind Chill </button> <br />
         <div id="outputDiv"> </div>
     </Main>
     <footer>
-        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160 
     </footer>
     
 </body>

@@ -14,7 +14,7 @@
             background-color: #f1faee;
         }
     </style>
-      <script>
+    <script>
         /* Assignment:reate an HTML document that looks similar to figure 9-7. Write four functions with these headers:
 
            function doPayment()
@@ -72,15 +72,15 @@
             let NumberOfYears = parseInt(document.getElementById("NumberOfYears").value);
             let paymentPeryeare = parseInt(document.getElementById("paymentPeryear").value);
 
-            let payment = computePayment(principal , Intreset,NumberOfYears,paymentPeryeare);
+            let payment = computePayment(principal, Intreset, NumberOfYears, paymentPeryeare);
             document.getElementById("outputDiv").innerHTML = payment;
-              
+
         }
 
         function doBalance() {
             let principal = parseInt(document.getElementById("principal").value);
             let annualRate = parseInt(document.getElementById("Intreset").value);
-            let years= parseInt(document.getElementById("NumberOfYears").value);
+            let years = parseInt(document.getElementById("NumberOfYears").value);
             let periodsPerYear = parseInt(document.getElementById("paymentPeryear").value);
             let numberOfPaymentsPaidToDate = parseInt(document.getElementById("numberofpaymentPaidtoDate").value);
 
@@ -89,28 +89,27 @@
 
         }
         function computePayment(principal, annualRate, years, periodsPerYear) {
-            return principal * (annualRate / periodsPerYear ) / 1 - (1 + (annualRate / periodsPerYear )) ** - (years * periodsPerYear);
-            //where p is the payment per period, a is the loan amount, r is the interest rate per period,
-           //and n is the total number of periods throughout the life of the loan.
-           // p = arnumberofpaymentPaidtoDate1 − (1 + r)−n 
+            return principal * (annualRate / periodsPerYear) / 1 - (1 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear);
+            // p = arnumberofpaymentPaidtoDate1 − (1 + r)−n 
+            //where p is the payment per period, a is the loan amount, // r is the interest rate per period,
+            //and n is the total number of periods throughout the life of the loan.// p = arnumberofpaymentPaidtoDate1 − (1 + r)−n
+            //computePayment function computes and returns the monthly payment for a loan with a fixed annual interest rate
+            //p = ar 1 − (1 + r)−n 
         }
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
-            // return   principal * (1 + annualRate) ** - (numberOfPaymentsPaidToDate - periodsPerYear((1 + annualRate) * numberOfPaymentsPaidToDate - 1)) * annualRate ;
             let r = annualRate / periodsPerYear;
-            let p = computePayment(principal,annualRate,years,periodsPerYear);
-            return principal *  (( 1 + r)** numberOfPaymentsPaidToDate) -
-               ( p *  ((1 + annualRate / periodsPerYear)**numberOfPaymentsPaidToDate )-1) / r;
+            let p = computePayment(principal, annualRate, years, periodsPerYear);
+            return principal * ((1 + r) ** numberOfPaymentsPaidToDate) -  (p * ((1 + annualRate / periodsPerYear) ** numberOfPaymentsPaidToDate) - 1) / r;
             // return b = a(1 + r)d -r
             // p((1 + r) d - 1) r
-
             //where b is the balance or payoff amount, a is the loan amount, 
-          //r is the interest rate per period, p is the payment per period, and d is the number of payments paid to date.// r is rate per period 
+            //r is the interest rate per period,// p is the payment per period, and // d is the number of payments paid to date.// r is rate per period 
+            // return b = a(1 + r)d - p((1 + r) d - 1) r //where b is the balance or payoff amount, //a is the loan amount, 
+            //where b is the balance or payoff amount, a is the loan amount, r is the interest rate per period, 
+            // return   principal * (1 + annualRate) ** - (numberOfPaymentsPaidToDate - periodsPerYear((1 + annualRate) * numberOfPaymentsPaidToDate - 1)) * annualRate ;
         }
-
-
-    </script> 
+    </script>
 </head>
-
 <body>
     <header>
         <h1>Week 10:Loan calculato </h1>
@@ -125,15 +124,15 @@
         <button type="button" onclick="doPayment()"> Compute Payment </button> <br />
         <input placeholder="number of payment Paid to Date" type="text" id="numberofpaymentPaidtoDate" size="15"
             value="" /> <br />
-            <div id="outputDiv"> </div>
+        <div id="outputDiv"> </div>
         <button type="button" onclick="doBalance()"> compute payoff Amount </button> <br />
-        
+
         <div id="outputDiv1"> </div>
     </Main>
     <footer>
         &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
     </footer>
- 
+
 </body>
 
 </html>
