@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* Assignment:// Computes and returns the average of three numbers.
+    
+        ** Defining Table **
+          input:
+          processing:
+          output:
+        */
+        function avaerage(a,b,c) {
+            //let a = parseFloat(document.getElementById("fistNumber").value);
+            //let b = parseFloat(document.getElementById("secondNumer").value);
+            //let c = parseFloat(document.getElementById("thirdNumber").value);
+            let sum = a + b + c ;
+            let avg = sum / 3;
+            return avg;
+        }
+            //document.getElementById("outputDiv").innerHTML = avg;
+            let a = 15, b = 5,c = 5;
+            console.log(avaerage(a,b,c))
+            //avg = (a + b + c ) / 3 ;
+
+    
+           
+
+        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the first number" type="text" id="fistNumber" size="15" value="" /> <br />
+        <input placeholder="Enter the second number" type="text" id="secondNumer" size="15" value="" /> <br />
+        <input placeholder="Enter the third number" type="text" id="thirdNumber" size="15" value="" /> <br />
+        <button type="button" onclick="avaerage()"> Calculate avaerage </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

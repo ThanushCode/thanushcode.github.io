@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /*  Write the code to call a function that has this header:
+
+            function drawCircle(centerX, centerY, radius)
+
+            function run() {
+         // Get three values from the user.
+             let x = parseInt(document.getElementById('xInputBox').value);
+             let y = parseInt(document.getElementById('yInputBox').value);
+             let radius = parseFloat(document.getElementById('radiusInputBox').value);
+
+            // Call the drawCircle function.
+               drawCircle(x, y, radius);
+              }
+    To call a function and assign its result to a variable so the result can be used later,
+    write a line that includes the variable name that will hold the result, the assignment 
+    operator (=), the function name, and the arguments to the function.
+        */
+            function drawCircle(centerX, centerY, radius) {
+            let x = parseInt(document.getElementById("xInputBox").value);
+            let y = parseInt(document.getElementById("yInputBox").value);
+            let radius = parseFloat(document.getElementById('radiusInputBox').value);
+
+            //To call a function and assign its result to a variable so the result can be used later,
+            let drowCircle = drawCircle (X, Y, radius) 
+            document.getElementById("outputDiv").innerHTML = drawCircle;
+            //write a line that includes the variable name that will hold the result,
+             
+            let result = x * y * Math.PI * r * r; // argument
+            return result;
+        }
+                       
+             // Call the drawCircle function.
+            console.log(drawCircle(x, y, radius))  
+            //avg = (a + b + c ) / 3 ;
+            
+        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the center X " type="text" id="xInputBox" size="25" value="" /> <br />
+        <input placeholder="Enter the center Y" type="text" id="yInputBox" size="25" value="" /> <br />
+        <input placeholder="Enter the radius" type="text" id="radiusInputBox" size="15" value="" /> <br />
+        <button type="button" onclick="drawCircle()"> draw Circle </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* 
+       // Write code to call a function named computeCaloriesBurned 
+        //and store the result returned from that function in a variable named calories.
+    
+        // The function has this header: function computeCaloriesBurned(distance, elevation, weight)
+
+        function testCalories() {
+           let dist = 2000;
+           let elev = 750;
+           let weight = 72.6;
+
+           // Call the computeCaloriesBurned function.
+                calories = computeCaloriesBurned(dist, elev, weight);
+
+           // Display the calories for the user to see.
+                 document.getElementById('outputDiv').innerHTML = calories;
+                }
+        */
+            function computeCaloriesBurned(distance, elevation, weight) {
+            //let input = parseFloat(document.getElementById("giveName").value);
+              // Call the computeCaloriesBurned function.
+             calories = computeCaloriesBurned(dist, elev, weight);
+            // Display the calories for the user to see.
+            document.getElementById('outputDiv').innerHTML = calories;
+
+        }
+            function testCalories(dist,elev,wweight) {
+            let result = dist * elev * weight;
+            return result;
+           let dist = 2000;
+           let elev = 750;
+           let weight = 72.6;  
+        }
+        console.log(testCalories(dist,elev,weight))
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the" type="text" id="giveName" size="15" value="" /> <br />
+        <button type="button" onclick="giveFunctionName()"> button Name </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>
