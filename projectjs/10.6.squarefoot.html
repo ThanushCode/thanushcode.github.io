@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* Write code to call the square root function found in the Math object and assign 
+        the result returned from it to a variable named r. The square root function has this header:  
+        function sqrt(x)
+
+          function testSqrt() {
+             // Get a number from the user.
+             let value = parseFloat(document.getElementById('inputBox').value);
+
+             // Call the Math.sqrt function.
+                let r = Math.sqrt(value);
+
+             // Display the square root for the user to see.
+                 document.getElementById('outputDiv').innerHTML = r;
+
+              Within a program, a line of code that calls a function is known as a call point.
+              Figure 9-1 demonstrates what a computer does when it calls a function. As shown in the diagram, 
+              the computer first copies the value of each argument at the call point into the corresponding parameter.
+              The computer then executes the code in the body of the called function. Most functions end with a return
+               statement. When the computer executes a return statement in the called function, 
+               the return statement causes the computer to do three things.
+
+               The return statement causes the computer to return a value, which is often a number, to the call point. 
+                If the call point includes a variable and the assignment operator (=), 
+                the computer will store the returned value in that variable.
+                The return statement causes the computer to terminate the called function or in other words to stop 
+                executing the code in the body of the called function.
+                The return statement cause the computer to resume executing code at or after the call point
+}
+        */
+        function testSqrt() {
+
+    // Get a number from the user.
+    let squareRoot = parseFloat(document.getElementById('inputBox').value);
+
+    // Call the Math.sqrt function.
+    let r = Math.sqrt(squareRoot);
+
+    // Display the square root for the user to see.
+    document.getElementById('outputDiv').innerHTML = r;
+}
+        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the value" type="text" id="inputBox" size="15" value="" /> <br />
+        <button type="button" onclick="testSqrt()"> button Name </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>
+
+
+<

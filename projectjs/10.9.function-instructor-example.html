@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* Assignment:
+    
+        ** Defining Table **
+          input:
+          processing:
+          output:
+        */
+       // first function
+        function addNumbers() {
+            //input =go and get the inputs!! , what inputs we need?? and how many ???
+          let num1 =  parseFloat(document.getElementById("One").value);
+          let num2 =   parseFloat(document.getElementById("Two").value);
+            //processing
+           let luis = addTwoNumbers(num1,num2);
+            //1. putting the function name from other funcation as same name
+            //2.put exact variable name inside the called function parantheses.this can be user input in paseFloat
+            //2. creating a varable and assign to the function (let sum = )
+            //3. take the user inputs variable name from the parseFloat and 
+            //output
+            document.getElementById("outputDiv").innerHTML= luis;
+        }
+           
+
+        // Second Function
+         function addTwoNumbers(x,y){ // define function , we can put anywhere in the script code
+            let sum = x + y;
+            return sum ;        // functions has different name in other programming languages as a Procedure , or a Subroutine or built in
+
+         }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the" type="text" id="One" size="15" value=""/><br/>
+        <input placeholder="Enter the" type="text" id="Two" size="15" value=""/><br/>
+        <button type="button" onclick="addNumbers()"> button Name </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>
