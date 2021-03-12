@@ -33,22 +33,27 @@
                  document.getElementById('outputDiv').innerHTML = calories;
                 }
         */
-            function computeCaloriesBurned(distance, elevation, weight) {
-            //let input = parseFloat(document.getElementById("giveName").value);
-              // Call the computeCaloriesBurned function.
-             calories = computeCaloriesBurned(dist, elev, weight);
+     
+            function testCalories() {
+           let dist = parseInt(document.getElementById("distance").value);
+           let elev = parseInt(document.getElementById("elevation").value);
+           let weight = parseFloat(document.getElementById("weigh").value);
+           
+           let calories = computeCaloriesBurned(dist, elev, weight);
             // Display the calories for the user to see.
             document.getElementById('outputDiv').innerHTML = calories;
+        }
+             
+        
+
+        function computeCaloriesBurned(distance, elevation, weight) {
+            //let input = parseFloat(document.getElementById("giveName").value);
+              // Call the computeCaloriesBurned function.
+              let calories = distance * elevation * weight;
+              return calories;
 
         }
-            function testCalories(dist,elev,wweight) {
-            let result = dist * elev * weight;
-            return result;
-           let dist = 2000;
-           let elev = 750;
-           let weight = 72.6;  
-        }
-        console.log(testCalories(dist,elev,weight))
+        
     </script>
 </head>
 <body>
@@ -58,8 +63,10 @@
     </header>
     <Main>
         <h3>My First Template Program</h3>
-        <input placeholder="Enter the" type="text" id="giveName" size="15" value="" /> <br />
-        <button type="button" onclick="giveFunctionName()"> button Name </button> <br />
+        <input placeholder="Enter the" type="text" id="distance" size="15" value="2000" /> <br />
+        <input placeholder="Enter the" type="text" id="elevation" size="15" value="750" /> <br />
+        <input placeholder="Enter the" type="text" id="weigh" size="15" value="72.6" /> <br />
+        <button type="button" onclick="testCalories()"> button Name </button> <br />
         <div id="outputDiv"> </div>
     </Main>
     <footer>
