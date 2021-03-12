@@ -28,20 +28,22 @@
           let num1 =  parseFloat(document.getElementById("One").value);
           let num2 =   parseFloat(document.getElementById("Two").value);
             //processing
-           let luis = addTwoNumbers(num1,num2);
-            //1. putting the function name from other funcation as same name
-            //2.put exact variable name inside the called function parantheses.this can be user input in paseFloat
+            // how to call a function
+           let govert = addTwoNumbers(num1,num2); // num one is send received to the x , num2 is send received to the parameter y.
+            //1. name the function = putting the function name from other funcation as same name
+            //2.send the two values num1 and num 2 = put exact variable name inside the called function parantheses.this can be user input in paseFloat
             //2. creating a varable and assign to the function (let sum = )
             //3. take the user inputs variable name from the parseFloat and 
             //output
-            document.getElementById("outputDiv").innerHTML= luis;
+            document.getElementById("outputDiv").innerHTML= govert;
         }
            
 
         // Second Function
          function addTwoNumbers(x,y){ // define function , we can put anywhere in the script code
-            let sum = x + y;
-            return sum ;        // functions has different name in other programming languages as a Procedure , or a Subroutine or built in
+            let sum = x + y;   // also can be written as = return x + y;
+            return sum ;       //function die when its hit the retun line , function is over
+                               // functions has different name in other programming languages as a Procedure , or a Subroutine or built in
 
          }
     </script>

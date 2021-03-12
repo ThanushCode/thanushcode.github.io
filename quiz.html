@@ -22,13 +22,26 @@
     <script>
 
 outputstring = "";
-for (let i = 1; i <= 3; i++) {
-}
+function compute(x,y,z){
+          //Now x and y are formal parameters or formal arguements
+       return (3,2,x);  // retun avaerage of two numbers
+      }
+  let x =7;
+  let result = compute(3,2,x);
+  //console.log(compute(3,2,x)); 
+           // when formal arguments we dclare as variable & receive x = 5 , y = 40 ,
+           // (5,40 value they become actual argument)
+      
+          
+           // call function // pass variable as a value 
 
-  console.log(Goodbye);
-  outputstring += Goodbye;
+  console.log(result);
+  outputstring += result;
 
 document.getElementById("output").innerHTML = outputstring;
+
+
+        
 
 /*
 outputstring = "";
@@ -40,6 +53,26 @@ let result = ! (x < 3);
   outputstring += result;
 
 document.getElementById("output").innerHTML = outputstring;
+*/
+
+/*
+Assume that a function with this header:
+function amountSaved(price, discountRate, salesTaxRate)
+already exists. Write a single line of JavaScript code to call that 
+function and assign the value returned from that function to a variable named saved.
+ 
+let saved = amountSaved (a,b,c);
+
+*/
+
+/*
+Within a function, what does the keyword return do? 
+
+cause the computer to stop executing the current function
+
+return a value to the call point
+
+cause the computer to resume executing code after the call point
 */
     </script>
   </body>

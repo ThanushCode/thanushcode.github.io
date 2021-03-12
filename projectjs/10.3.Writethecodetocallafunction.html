@@ -34,13 +34,7 @@
       //write a line that includes the variable name that will hold the result, the assignment operator (=),
       // the function name, and the arguments to the function.
         */
-        // 1. first function
-        function drawCircle(x,y,radius) { // assigned the variable from first function user INPUTS.
-            
-            //arguments to the function.
-            let circle = x * y * radius;  //write a line that includes the variable name that will hold the result
-            return  circle 
-        }
+       
             
 
         //2.second function
@@ -49,12 +43,19 @@
             let x = parseInt(document.getElementById("xInputBox").value);
             let y = parseInt(document.getElementById("yInputBox").value);
             let radius = parseFloat(document.getElementById("radiusInputBox").value);
-          
-           
             // Call the drawCircle function.
-            let circle = drawCircle(x, y, radius); 
             // assign its result to a variable so the result can be used later,
+            let circle = drawCircle(x, y, radius); 
+            //output
             document.getElementById("outputDiv").innerHTML = circle; 
+        }
+
+          // 1. first function
+         function drawCircle(x,y,radius) { // assigned the variable from first function user INPUTS.
+            
+            //arguments to the function.
+            let circle = x * y * radius;  //write a line that includes the variable name that will hold the result
+            return  circle 
         }
     </script>
 </head>
