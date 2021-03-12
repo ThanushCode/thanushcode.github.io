@@ -62,9 +62,9 @@
                 windchill = windChill (temperature,windspeed)
             }
             else {
-                windchill = "wind chill is not calculated for temperatures above 50 degrees Fahrenheit or for wind speeds below 3 miles per hour" + " , " + "Please enter lesser amount ";
+                windchill = "not calculated for temperatures above 50 degrees Fahrenheit or for wind speeds below 3 miles per hour" + " , " + "Please enter lesser amount ";
             }
-            document.getElementById("outputDiv").innerHTML = " wind chill factor is" + " = " + windchill;
+            document.getElementById("outputDiv").innerHTML = " wind chill factor is" + "  " + windchill;
         }
         
     
@@ -78,11 +78,11 @@
 </head>
 <body>
     <header>
-        <h1>Week 4:Template </h1>
+        <h1>Week 10:wind chill Calculation with specifications </h1>
         <h2>Thanush </h2>
     </header>
     <Main>
-        <h3>My First Template Program</h3>
+        <h3>wind chill Calculation</h3>
         <input placeholder="Enter the degrees Fahrenheit" type="text" id="Temperature" size="25" value="" /> <br />
         <input placeholder="Enter the wind speeds" type="text" id="WindSpeed" size="20" value="" /> <br />
         <button type="button" onclick="doInputOutput()">calculate Wind Chill </button> <br />
