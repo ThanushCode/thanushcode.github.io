@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* Assignment: Write a function that takes two parameters and computes and //returns the value // of this equation:  f(a,r) = a × (1 + r).
+    
+        ** Defining Table **
+          input:
+          processing:
+          output:
+          function equation(a,r) {
+            let a = parseFloat(document.getElementById("valueone").value) ;        
+            let r = parseFloat(document.getElementById("valuetwo").value) ;    
+            let result  = a * (1 + r);
+            document.getElementById("outputDiv").innerHTML = result;
+            return result;
+        }
+        */
+    
+        function formula(a, r) {
+    let result = a * (1 + r);
+    return result;
+}
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        <input placeholder="Enter the vlue one" type="text" id="valueone" size="15" value="" /> <br />
+        <input placeholder="Enter the value two " type="text" id="valuetwo" size="15" value="" /> <br />
+        <button type="button" onclick="equation()"> retun value </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

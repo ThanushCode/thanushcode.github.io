@@ -42,9 +42,8 @@
                 The return statement causes the computer to terminate the called function or in other words to stop 
                 executing the code in the body of the called function.
                 The return statement cause the computer to resume executing code at or after the call point
-}
-        */
-        function testSqrt() {
+
+                   function testSqrt() {
 
     // Get a number from the user.
     let squareRoot = parseFloat(document.getElementById('inputBox').value);
@@ -55,6 +54,21 @@
     // Display the square root for the user to see.
     document.getElementById('outputDiv').innerHTML = r;
 }
+        */
+     
+        function testSqrt() {
+    // Get a number from the user.
+    let squareRoot = parseFloat(document.getElementById('inputBox').value);
+
+    // Call the Math.sqrt function.
+    let r = Mathsqrt(squareRoot);
+    // Display the square root for the user to see.
+    document.getElementById('outputDiv').innerHTML = r;
+    }
+     function Mathsqrt(x){
+     let r = Math.sqrt(x);
+        return r;
+    }
         
     </script>
 </head>
@@ -78,4 +92,3 @@
 </html>
 
 
-<
