@@ -52,7 +52,6 @@
 
             let payment = computePayment(principal, Intreset, NumberOfYears, paymentPeryeare);
             document.getElementById("outputDiv").innerHTML = paymenttoFixed(2);
-
         }
 
         function doBalance() {
@@ -63,9 +62,9 @@
             let numberOfPaymentsPaidToDate = parseInt(document.getElementById("numberofpaymentPaidtoDate").value);
 
             let balance = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
-            document.getElementById("outputDiv1").innerHTML = balance.toFixed(2);
-
+            document.getElementById("outputDiv1").innerHTML = balance.toFixed(2)
         }
+
         function computePayment(principal, annualRate, years, periodsPerYear) {
             return principal * (annualRate / periodsPerYear) / 1 - (1 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear);
             // p = arnumberofpaymentPaidtoDate1 − (1 + r)−n 
@@ -74,10 +73,11 @@
             //computePayment function computes and returns the monthly payment for a loan with a fixed annual interest rate
             //p = ar 1 − (1 + r)−n 
         }
+
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
             let r = annualRate / periodsPerYear;
             let p = computePayment(principal, annualRate, years, periodsPerYear);
-            return principal * ((1 + r) ** numberOfPaymentsPaidToDate) -  (p * ((1 + annualRate / periodsPerYear) ** numberOfPaymentsPaidToDate) - 1) / r;
+            return principal * ((1 + r) ** numberOfPaymentsPaidToDate) - (p * ((1 + annualRate / periodsPerYear) ** numberOfPaymentsPaidToDate) - 1) / r;
             // return b = a(1 + r)d -r
             // p((1 + r) d - 1) r
             //where b is the balance or payoff amount, a is the loan amount, 
@@ -88,6 +88,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <h1>Week 10:Loan calculator </h1>
@@ -95,13 +96,17 @@
     </header>
     <Main>
         <h3>Loan calculator</h3>
-       Amount invested (principal) :<input placeholder="Amount Borrowed" type="text" id="principal" size="15" value="" /> <br />
-       Annual rate (exampel:0.08) <input placeholder="Annual interest rate" type="text" id="Intreset" size="15" value="" /> <br />
-       Number of years: <input placeholder="Number Of Years" type="text" id="NumberOfYears" size="15" value="" /> <br />
-       Payment per year : <input placeholder="Payment per year" type="text" id="paymentPeryear" size="15" value="" /> <br />
-        <button type="button" onclick="doPayment()"> Compute Payment </button> <br />
-        Number of payment Paid to Date : <input placeholder="number of payment Paid to Date" type="text" id="numberofpaymentPaidtoDate" size="15"
+        Amount invested (principal) :<input placeholder="Amount Borrowed" type="text" id="principal" size="15"
             value="" /> <br />
+        Annual rate (exampel:0.08) <input placeholder="Annual interest rate" type="text" id="Intreset" size="15"
+            value="" /> <br />
+        Number of years: <input placeholder="Number Of Years" type="text" id="NumberOfYears" size="15" value="" />
+        <br />
+        Payment per year : <input placeholder="Payment per year" type="text" id="paymentPeryear" size="15" value="" />
+        <br />
+        <button type="button" onclick="doPayment()"> Compute Payment </button> <br />
+        Number of payment Paid to Date : <input placeholder="number of payment Paid to Date" type="text"
+            id="numberofpaymentPaidtoDate" size="15" value="" /> <br />
         <div id="outputDiv"> </div>
         <button type="button" onclick="doBalance()"> compute payoff Amount </button> <br />
 
