@@ -85,7 +85,7 @@
             let numberOfPaymentsPaidToDate = parseInt(document.getElementById("numberofpaymentPaidtoDate").value);
 
             let balance = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
-            document.getElementById("outputDiv1").innerHTML = balance;
+            document.getElementById("outputDiv1").innerHTML = balance.toFixed(2);
 
         }
         function computePayment(principal, annualRate, years, periodsPerYear) {
@@ -117,12 +117,12 @@
     </header>
     <Main>
         <h3>Loan calculator</h3>
-        <input placeholder="Amount Borrowed" type="text" id="principal" size="15" value="" /> <br />
-        <input placeholder="Annual interest rate" type="text" id="Intreset" size="15" value="" /> <br />
-        <input placeholder="Number Of Years" type="text" id="NumberOfYears" size="15" value="" /> <br />
-        <input placeholder="Payment per year" type="text" id="paymentPeryear" size="15" value="" /> <br />
+       Amount invested (principal) :<input placeholder="Amount Borrowed" type="text" id="principal" size="15" value="" /> <br />
+       Annual rate (exampel:0.08) <input placeholder="Annual interest rate" type="text" id="Intreset" size="15" value="" /> <br />
+       Number of years: <input placeholder="Number Of Years" type="text" id="NumberOfYears" size="15" value="" /> <br />
+       Payment per year : <input placeholder="Payment per year" type="text" id="paymentPeryear" size="15" value="" /> <br />
         <button type="button" onclick="doPayment()"> Compute Payment </button> <br />
-        <input placeholder="number of payment Paid to Date" type="text" id="numberofpaymentPaidtoDate" size="15"
+        number of payment Paid to Date : <input placeholder="number of payment Paid to Date" type="text" id="numberofpaymentPaidtoDate" size="15"
             value="" /> <br />
         <div id="outputDiv"> </div>
         <button type="button" onclick="doBalance()"> compute payoff Amount </button> <br />

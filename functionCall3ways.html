@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        // name of the function = sayHello
+        // function with ()
+        //code of block 3rd
+        let sayHello = function (){
+console.log("Greeting message for user");
+console.log('hey user');
+}
+ // call function 
+ sayHello()
+*/
+//*************************************************************************
+let sayHello = function (name){
+console.log("Greeting message for user");
+console.log('Hey ${name}');
+}
+ // call function 
+ sayHello('Thanush')
+
+ //-----------------------------------------------------------
+
+ let fullNameMaker = function (firstname, lastname){
+console.log("Welcome to America");
+console.log('Happy to have you, ${firstname} ${lastname}');
+}
+ // call function 
+fullNameMaker('Thanush', 'Ganesh');
+console.log(('Thanush', 'Ganesh'));
+
+//**********************************************************************
+/*
+let myAdder = function (num1 , num2){
+    let added = num1 + num ;
+    return added;
+}
+
+console.log( myAdder (3,8))
+*/
+//***********************************************************
+
+function testExample(a){
+    let greeting  = "hi my name is " + a;
+    return greeting;
+}
+
+console.log(testExample("Thanush")); // argument object
+
+//**************************
+
+
+function testExample(a){ // a is place holder sosent need to be a ,it can be any name
+    let greeting  = "hi my name is " + a;
+    return greeting;
+}
+let name = "Thanush"
+console.log(testExample(name)); //call ou the function
+// argument object
+
+//***************************************
+
+///Anonymous function
+
+let testExample2 = function (a){ // we store a variable at top level , we dont have the value frm the function yet until we get into script
+let greeting = "Hi! My name is " + a ;
+return greting;
+}
+let a = "Thanush";
+console.log(testExample2(a));// differnet between Anonymous function and name function is "hoisting"
+
+//**************************************************
+ // imidiatly invoked functional expression
+
+(function(){ 
+let greeting2 = "Hi! My name is t " ;
+console.log(greeting2 );
+}())
+
+
+    </script>
+</body>
+</html>
+
