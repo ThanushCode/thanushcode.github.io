@@ -16,56 +16,34 @@
     </style>
     <script>
         /* Assignment:reate an HTML document that looks similar to figure 9-7. Write four functions with these headers:
-
-           function doPayment()
-           function doBalance()
-           function computePayment(principal, annualRate, years, periodsPerYear)
-           function computeBalance(principal, annualRate, years, periodsPerYear,
-          numberOfPaymentsPaidToDate)
-
-           The user interface for a loan calculator
-              
-
-          The first two functions (doPayment and doBalance)
-             take no parameters 
-             are called from an onclick attribute
-             get input from the user
-
-             call the computePayment or the computeBalance function
-             display a result to the user
-
-            The computePayment function computes and returns the monthly payment for a loan with a fixed annual interest rate. 
-            The formula for computing a loan payment is
-
-                          p = ar / 1 − (1 + r)−n 
-
-           where p is the payment per period, a is the loan amount, r is the interest rate per period,
-           and n is the total number of periods throughout the life of the loan.
-
-           The computeBalance function computes and returns the balance for a loan with a fixed annual interest rate. 
-           
-           The formula for computing a loan payment is  
-               b = a (1 + r)d −  p ((1 + r)d − 1) / r
-
-          where p is the payment per period, a is the loan amount, r is the interest rate per period, 
-          and n is the total number of periods throughout the life of the loan.
-
-          he computeBalance function computes and returns the balance for a loan with a fixed annual interest rate. 
+          1. function doPayment()
+          2.function doBalance()
+          3.function computePayment(principal, annualRate, years, periodsPerYear)
+          4.function computeBalance(principal, annualRate, years, periodsPerYear,numberOfPaymentsPaidToDate)
+                 The user interface for a loan calculator  
+                * The first two functions (doPayment and doBalance)
+                * take no parameters are called from an onclick attribute and get input from the user
+                * call the computePayment or the computeBalance function display a result to the user
+            The computePayment function computes and returns the MONTHLY PAYMENT for a loan with a FIXED ANNUAL interest rate. 
+            The formula for computing a loan payment is  p = ar / 1 − (1 + r)−n 
+                where p is the payment per period, 
+                a is the loan amount, 
+                r is the interest rate per period,
+                n is the total number of periods throughout the life of the loan.
+           The computeBalance function computes and returns the BALANCE for a loan with a fixed annual interest rate. 
+           The formula for computing a loan payment is  b = a (1 + r)d −  p ((1 + r)d − 1) / r
+                where p is the payment per period,
+                a is the loan amount,
+                r is the interest rate per period, 
+                n is the total number of periods throughout the life of the loan.
+           the computeBalance function computes and returns the balance for a loan with a fixed annual interest rate. 
           The formula for computing the balance of a loan after d payments have been made is
-
-          b = a (1 + r)d −  p ((1 + r)d − 1) r
-           
-          where b is the balance or payoff amount, a is the loan amount, 
-          r is the interest rate per period, p is the payment per period, and d is the number of payments paid to date.
-    
-        ** Defining Table **
-          input:
-          processing:
-          output:
+                b = a (1 + r)d −  p ((1 + r)d − 1) r
+                where b is the balance or payoff amount, a is the loan amount, 
+                r is the interest rate per period,
+                p is the payment per period, 
+                d is the number of payments paid to date.
         */
-
-
-
         function doPayment() {
             let principal = parseInt(document.getElementById("principal").value);
             let Intreset = parseInt(document.getElementById("Intreset").value);
@@ -73,7 +51,7 @@
             let paymentPeryeare = parseInt(document.getElementById("paymentPeryear").value);
 
             let payment = computePayment(principal, Intreset, NumberOfYears, paymentPeryeare);
-            document.getElementById("outputDiv").innerHTML = payment;
+            document.getElementById("outputDiv").innerHTML = paymenttoFixed(2);
 
         }
 
