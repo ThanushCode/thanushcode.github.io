@@ -69,7 +69,9 @@
         
     
         function windChill(tempF, speed){
-             return 35.74 + 0.6215 * (tempF) - 35.75 * speed * 0.16 + 0.4275 * tempF * speed * 0.16;
+            
+             return 35.74 + (0.6215 * tempF) - (35.75 * speed ** 0.16) + (0.4275 * tempF * (speed ** 0.16));
+             // wrong formula = return 35.74 + 0.6215 * (tempF) - 35.75 * speed * 0.16 + 0.4275 * tempF * speed * 0.16;
              // f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16
              
         }
