@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Invest</title>
+
+<style>
+
+    body {
+
+        text-align: center;
+
+        padding-top: 35px;
+
+        background-color: #7db8a1;
+
+      }
+
+</style>
+
+ 
+
+<script>
+
+ 
+
+function doFV (){
+
+let principal = parseFloat(document.getElementById("principal").value);
+
+let annualRate = parseFloat(document.getElementById("annualRate").value);
+
+let years = parseFloat(document.getElementById("years").value);
+
+let periodsPerYear = parseFloat(document.getElementById("periodsPerYear").value);
+
+ 
+
+ 
+
+fv = computeFutureValue(principal, annualRate, years, periodsPerYear);
+
+document.getElementById("output").innerHTML = "The future value is " + fv;
+
+}
+
+ 
+
+function computeFutureValue(principal, annualRate, years, periodsPerYear){
+
+//f = a (1 + r)^n, r = annualRate / periodsPerYear, n = years * periodsPerYear
+
+return (principal) * ((1 + (annualRate/periodsPerYear)) ** (years*periodsPerYear));
+
+ 
+}
+
+ 
+
+</script>
+
+</head>
+
+<body>
+
+<h2>W11 - Invest</h2>
+
+Amount invested (principal):<br> <input type="text" id="principal" size="5"><br>
+
+Annual Rate:<br> <input type="text" id="annualRate" size="5"><br>
+
+Number of Years:<br> <input type="text" id="years" size="5"><br>
+
+Period per Year:<br> <input type="text" id="periodsPerYear" size="5"><br>
+
+<button type="button" onclick="doFV()">Compute Future Value</button><br>
+
+<div id="output"></div>
+
+</body>
+
+</html>

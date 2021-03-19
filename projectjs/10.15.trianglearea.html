@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Triangle Area</title>
+
+    <script>
+        /* 
+        function testTriangle() {
+        let r = triangleArea(4, 2, 5);
+        document.getElementById('outputDiv').innerHTML = r;
+              } 
+
+     // Computes and returns the area of a
+    // triangle with side lengths a, b, and c.
+          function triangleArea(a, b, c) {
+          let s = (a + b + c) / 2;
+          let area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+          return area;
+
+
+        Input: No user input
+         * Processing: Compute the area of a triangle
+         *     with side lengths 4, 2, and 5
+         * Output: The area of the triangle
+         */
+        function testTriangle() {
+            let side1 = parseFloat(document.getElementById("one").value);
+            let side2 = parseFloat(document.getElementById("two").value);
+            let side3 = parseFloat(document.getElementById("three").value);
+            let r = triangleArea(side1, side2, side3);
+            document.getElementById('outputDiv').innerHTML = r;
+        }
+
+        // Computes and returns the area of a
+        // triangle with side lengths a, b, and c.
+        function triangleArea(a, b, c) {
+            let s = (a + b + c) / 2;
+            let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            return area;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <label for="one">Enter side One value:<input type="text" name="one" id="one" required> </label><br />
+    <label for="tewo">Enter side Two Value <input type="text" name="two" id="two" required> </label><br />
+    <label for="three">Enter Side Three Value <input type="text" name="three" id="three" required></label><br />
+    <hr />
+    <button type="button" onclick="testTriangle()">Calculate Triangle Area</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

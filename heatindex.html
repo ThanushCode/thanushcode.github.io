@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* Assignment:
+        Create an HTML document, which contains two text fields, a button, and a div. 
+        Label the first text field “Temperature”, label the second “Relative Humidity”, and put the text 
+        “Heat Index” on the button. Write two functions with these headers:
+
+             function doInputOutput()
+             function heatIndex(tempF, humid)
+         The first function (doInputOutput) must be called from the onclick attribute of the button and
+         must do the following:
+
+           get a temperature from the first text field
+           get a relative humidity from the second text field
+           call the second function (heatIndex)
+           store the value returned by heatIndex in a variable
+           output the value returned by heatIndex to the div for the user to see
+           The second function (heatIndex) must
+
+         take a temperature in Fahrenheit as a parameter
+         take a relative humidity between 0% and 100% as a parameter
+         calculate the heat index as a temperature in Fahrenheit
+         return the heat index in Fahrenheit
+         In other words, the second function (heatIndex) must not
+         gather any input from a user and must not output anything for a user to see.
+         Instead, it must calculate and return the result, which makes this second function
+         very reusable in other projects.
+
+             The formula for computing the heat index is
+
+        i = −42.379 + 2.04901523 t + 10.14333127 r − 0.22475541 t r − 0.00683783 t2 − 
+        0.05481717 r2 + 0.00122874 t2 r + 0.00085282 t r2 − 0.00000199 t2 r2
+
+        where i is the heat index in Fahrenheit,
+        t is the air temperature in Fahrenheit, 
+        and r is the relative humidity.
+    
+        */
+        function doInputOutput() {
+            let temperature = parseFloat(document.getElementById("Temperature").value);
+            let relativeHumidiy = parseFloat(document.getElementById("Relative Humidity").value);
+           
+            let heat =  heatIndex (temperature,relativeHumidiy);
+            document.getElementById("outputDiv").innerHTML = heat;
+
+        }
+
+        function heatIndex(tempF, humid) {
+         return - 42.379 + ( 2.04901523 * tempF) + (10.14333127 * humid ) - (0.22475541 * tempF * humid) - (0.00683783 ** tempF ) - 
+         (0.05481717 ** tempF ) + ( 0.00122874 ** tempF * humid ) + ( 0.00085282 * tempF ** humid ) - (  0.00000199 ** tempF ** humid);
+        // where i is the heat index in Fahrenheit,
+       // t is the air temperature in Fahrenheit, 
+       // and r is the relative humidity.
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        Temperature : <input placeholder="Temperature" type="text" id="Temperature" size="15" value="" /> <br />
+        Relative Humidity : <input placeholder="Relative Humidity" type="text" id="Relative Humidity" size="15" value="" /> <br />
+        <button type="button" onclick="doInputOutput()"> Heat Index </button> <br />
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>
