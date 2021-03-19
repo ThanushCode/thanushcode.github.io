@@ -14,33 +14,80 @@
     <main>
      
       <hr />
-      <p><span id="output"></span></p>
+      <p><span id="outputDiv"></span></p>
     </main>
     <footer>
       &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
 
+testGCD();
+
+function testGCD() {
+    var x = -24;
+    var y = 472;
+    var divisor = gcd(x, y);
+    document.getElementById('outputDiv').innerHTML = divisor;
+}
+
+// Finds and returns the greatest common
+// divisor of two integers a and b.
+function gcd(a,b) {
+    // Ensure a and b are not negative.
+    a = Math.abs(a);
+    b = Math.abs(b);
+
+    // Ensure a is greater than or equal to b.
+    if (a < b) {
+        var swap = a;
+        a = b;
+        b = swap;
+    }
+
+    // Loop until the greatest common divisor is found.
+    do {
+        var r = a % b;
+        a = b;
+        b = r;
+    } while (b != 0);
+
+    return a;
+}
+
+
+/*
 outputstring = "";
-function compute(x,y,z){
-          //Now x and y are formal parameters or formal arguements
-       return (3,2,x);  // retun avaerage of two numbers
-      }
-  let x =7;
-  let result = compute(3,2,x);
-  //console.log(compute(3,2,x)); 
-           // when formal arguments we dclare as variable & receive x = 5 , y = 40 ,
-           // (5,40 value they become actual argument)
-      
-          
-           // call function // pass variable as a value 
+testTriangle(4,2,5);
 
-  console.log(result);
-  outputstring += result;
-
-document.getElementById("output").innerHTML = outputstring;
+function testTriangle(a,b,c) {
+ 
+    let r = triangleArea(a,b,c);
+   // return Math.sqrt(r*(r-a)*(r-b)*(r-c));
+    document.getElementById('outputDiv').innerHTML = r;
+}
 
 
+
+ 
+function triangleArea(a, b, c) {
+    let s = (a + b + c) / 2;
+    let area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+    return area;
+}
+
+*/
+//Round all answers for this question to one place after the decimal.
+
+/*
+ //console.log(r);
+  //outputstring += r;
+
+//document.getElementById("output").innerHTML = outputstring;
+
+// Computes and returns the area of a
+// triangle with side lengths a, b, and c.
+
+*/
         
 
 /*
@@ -74,6 +121,102 @@ return a value to the call point
 
 cause the computer to resume executing code after the call point
 */
+
+/*
+ testPyramid(8,7);
+
+function testPyramid(base,height) {
+    var pa = pyramidSurfaceArea(8,7);
+    document.getElementById('outputDiv').innerHTML = pa;
+}
+
+// Computes and returns the surface area of the
+// four triangular faces of a regular pyramid
+// with the specified base length and height.
+function pyramidSurfaceArea(base, height) {
+    var edge = Math.sqrt(base*base/2 + height*height);
+    var triArea = triangleArea(base, edge, edge);
+    var pyramidArea = 4 * triArea;
+    return pyramidArea;
+}
+
+// Computes and returns the area of a
+// triangle with side lengths a, b, and c.
+function triangleArea(a, b, c) {
+    var s = (a + b + c) / 2;
+    var area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+    return area;
+}
+
+*********************************************************
+testPyramid();
+
+function testPyramid() {
+    var pa = pyramidSurfaceArea(8, 7);
+    document.getElementById('outputDiv').innerHTML = pa;
+}
+pa	
+129
+correct
+// Computes and returns the surface area of the
+// four triangular faces of a regular pyramid
+// with the specified base length and height.
+function pyramidSurfaceArea(base, height) {
+    var edge = Math.sqrt(base*base/2 + height*height);
+    var triArea = triangleArea(base, edge, edge);
+    var pyramidArea = 4 * triArea;
+    return pyramidArea;
+}
+base		height		edge		triArea		pyramidArea	
+8
+correct	
+7
+correct	
+9
+correct	
+32.2
+correct	
+129
+correct
+// Computes and returns the area of a
+// triangle with side lengths a, b, and c.
+function triangleArea(a, b, c) {
+    var s = (a + b + c) / 2;
+    var area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+    return area;
+}
+*/
+
+
+/*
+testInvest(100, 0.06, 103);
+
+function testInvest(principal, annualRate, target) {
+    var m = determineMonths(100, 0.06, 103);
+    document.getElementById('outputDiv').innerHTML = m;
+}
+
+// Computes and returns how many months are
+// needed for principal invested at a constant
+// annual rate to grow to a target amount.
+function determineMonths(principal, annualRate, target) {
+    var monthlyRate = annualRate / 12;
+    var balance = principal;
+    var month = 0;
+
+    // Repeat while the balance of the
+    // investment is less than the target.
+    while (balance < target) {
+        var interest = Math.round(balance * monthlyRate * 100) / 100;
+        balance += interest;
+        month++;
+    }
+
+    return month;
+}
+*/
+
+
     </script>
   </body>
 </html>

@@ -45,28 +45,28 @@
                 d is the number of payments paid to date.
         */
         function doPayment() {
-            let principal = parseInt(document.getElementById("principal").value);
-            let Intreset = parseInt(document.getElementById("Intreset").value);
-            let NumberOfYears = parseInt(document.getElementById("NumberOfYears").value);
-            let paymentPeryeare = parseInt(document.getElementById("paymentPeryear").value);
+            let principal = parseFloat(document.getElementById("principal").value);
+            let Intreset = parseFloat(document.getElementById("Intreset").value);
+            let NumberOfYears = parseFloat(document.getElementById("NumberOfYears").value);
+            let paymentPeryeare = parseFloat(document.getElementById("paymentPeryear").value);
 
             let payment = computePayment(principal, Intreset, NumberOfYears, paymentPeryeare);
-            document.getElementById("outputDiv").innerHTML = paymenttoFixed(2);
+            document.getElementById("outputDiv").innerHTML = payment.toFixed(2);
         }
 
         function doBalance() {
-            let principal = parseInt(document.getElementById("principal").value);
-            let annualRate = parseInt(document.getElementById("Intreset").value);
-            let years = parseInt(document.getElementById("NumberOfYears").value);
-            let periodsPerYear = parseInt(document.getElementById("paymentPeryear").value);
-            let numberOfPaymentsPaidToDate = parseInt(document.getElementById("numberofpaymentPaidtoDate").value);
+            let principal = parseFloat(document.getElementById("principal").value);
+            let annualRate = parseFloat(document.getElementById("Intreset").value);
+            let years = parseFloat(document.getElementById("NumberOfYears").value);
+            let periodsPerYear = parseFloat(document.getElementById("paymentPeryear").value);
+            let numberOfPaymentsPaidToDate = parseFloat(document.getElementById("numberofpaymentPaidtoDate").value);
 
             let balance = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate);
-            document.getElementById("outputDiv1").innerHTML = balance.toFixed(2)
+            document.getElementById("outputDiv1").innerHTML = balance.toFixed(2);
         }
 
         function computePayment(principal, annualRate, years, periodsPerYear) {
-            return principal * (annualRate / periodsPerYear) / 1 - (1 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear);
+            return principal * (annualRate / periodsPerYear) /(1.0 - (1.0 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear));
             // p = arnumberofpaymentPaidtoDate1 − (1 + r)−n 
             //where p is the payment per period, a is the loan amount, // r is the interest rate per period,
             //and n is the total number of periods throughout the life of the loan.// p = arnumberofpaymentPaidtoDate1 − (1 + r)−n
@@ -77,12 +77,14 @@
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
             let r = annualRate / periodsPerYear;
             let p = computePayment(principal, annualRate, years, periodsPerYear);
-            return principal * ((1 + r) ** numberOfPaymentsPaidToDate) - (p * ((1 + annualRate / periodsPerYear) ** numberOfPaymentsPaidToDate) - 1) / r;
+            return (principal * ((1.0 + r) ** numberOfPaymentsPaidToDate)) - (p *(((1.0 + r) ** numberOfPaymentsPaidToDate) - 1.0) / r);
             // return b = a(1 + r)d -r
             // p((1 + r) d - 1) r
             //where b is the balance or payoff amount, a is the loan amount, 
-            //r is the interest rate per period,// p is the payment per period, and // d is the number of payments paid to date.// r is rate per period 
-            // return b = a(1 + r)d - p((1 + r) d - 1) r //where b is the balance or payoff amount, //a is the loan amount, 
+            //r is the interest rate per period,// p is the payment per period, and // r is rate per period 
+            // d is the number of payments paid to date.
+            // return b = a(1 + r)d - p((1 + r) d - 1) r //where b is the balance or payoff amount,
+             //a is the loan amount, 
             //where b is the balance or payoff amount, a is the loan amount, r is the interest rate per period, 
             // return   principal * (1 + annualRate) ** - (numberOfPaymentsPaidToDate - periodsPerYear((1 + annualRate) * numberOfPaymentsPaidToDate - 1)) * annualRate ;
         }

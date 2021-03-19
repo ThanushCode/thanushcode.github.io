@@ -23,7 +23,7 @@
     </header>
     <Main>
         <h3>My First Template Program</h3>
-        Amount nvested (principal):<input placeholder="Amount nvested (principal)" type="text" id="principal" size="25" value="" /> <br />
+        Amount Invested (principal):<input placeholder="Amount nvested (principal)" type="text" id="principal" size="25" value="" /> <br />
         Annual rate (exaple:0.8):<input placeholder="Annual rate (exaple:0.8)" type="text" id="annualRate" size="25" value="" /> <br />
         Numner Of years:<input placeholder="Numner Of years" type="text" id="years" size="15" value="" /> <br />
         Periods per year:<input placeholder="Periods per year" type="text" id="periodsPerYear" size="15" value="" /> <br />
@@ -70,7 +70,7 @@
             let annualRate = parseFloat(document.getElementById("annualRate").value);
             let years = parseFloat(document.getElementById("years").value);
             let periodsPerYear = parseFloat(document.getElementById("periodsPerYear").value);
-            let FutureValue= parseFloat(document.getElementById("periodsPerYear").value);
+           
             
             let totalretuns = computeFutureValue(principal, annualRate, years, periodsPerYear);
             document.getElementById("outputDiv").innerHTML = totalretuns;
@@ -79,7 +79,8 @@
         function computeFutureValue(principal, annualRate, years, periodsPerYear){
             let r = annualRate / periodsPerYear;
             // future Value (f) = a (1 + r)n 
-            return (principal * (1 + r)) * years;
+         //return (principal) * ((1 + (annualRate/periodsPerYear)) ** (years*periodsPerYear));
+         return (principal) * ((1 + (annualRate/periodsPerYear)) ** (years*periodsPerYear));
         }
  
        
