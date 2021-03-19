@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+  }
+  header,
+  footer {
+    background-color: #000;
+    color: rgb(236, 116, 216);
+    padding: 10px;
+  }
+  
+  footer {
+    font-size: 13px;
+    letter-spacing: 1.5pt;
+  }
+  
+  h1,
+  h2 {
+    margin: 0;
+  }
+  
+  h2,
+  #currentdate {
+    color: rgb(201, 60, 214);
+  }
+  
+  main {
+    margin: 10px auto;
+    border: 1px solid rgb(243, 27, 27);
+    padding: 10px;
+    max-width: 500px;
+    background-color: rgb(217, 150, 243);
+    box-shadow: 0 0 30px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #333;
+    padding: 0;
+  }
+  
+  label {
+     
+    display: block;
+    margin: 5px;
+  }
+  
+ 
