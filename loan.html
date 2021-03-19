@@ -6,14 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Thanush G">
     <title>Template</title>
-    <style>
-        body {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            background-color: #faaed1;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style2.css">
+
     <script>
         /* Assignment:reate an HTML document that looks similar to figure 9-7. Write four functions with these headers:
           1. function doPayment()
@@ -66,7 +60,7 @@
         }
 
         function computePayment(principal, annualRate, years, periodsPerYear) {
-            return principal * (annualRate / periodsPerYear) /(1.0 - (1.0 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear));
+            return principal * (annualRate / periodsPerYear) / (1.0 - (1.0 + (annualRate / periodsPerYear)) ** - (years * periodsPerYear));
             // p = arnumberofpaymentPaidtoDate1 − (1 + r)−n 
             //where p is the payment per period, a is the loan amount, // r is the interest rate per period,
             //and n is the total number of periods throughout the life of the loan.// p = arnumberofpaymentPaidtoDate1 − (1 + r)−n
@@ -77,7 +71,7 @@
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
             let paymentPerPeriod = computePayment(principal, annualRate, years, periodsPerYear);
             let InterestRatePerPeriod = annualRate / periodsPerYear;
-            let balance = principal * Math.pow(1 + InterestRatePerPeriod, numberOfPaymentsPaidToDate) - (paymentPerPeriod * (Math.pow(1 + InterestRatePerPeriod,numberOfPaymentsPaidToDate) - 1) / InterestRatePerPeriod);
+            let balance = principal * Math.pow(1 + InterestRatePerPeriod, numberOfPaymentsPaidToDate) - (paymentPerPeriod * (Math.pow(1 + InterestRatePerPeriod, numberOfPaymentsPaidToDate) - 1) / InterestRatePerPeriod);
             return balance;
             // return (principal * ((1.0 + r) ** numberOfPaymentsPaidToDate)) - (p *(((1.0 + r) ** numberOfPaymentsPaidToDate) - 1.0) / r);
             // return principal * ((1 + r) ** numberOfPaymentsPaidToDate) -  (p * ((1 + annualRate / periodsPerYear) ** numberOfPaymentsPaidToDate) - 1) / r;
@@ -87,7 +81,7 @@
             //r is the interest rate per period,// p is the payment per period, and // r is rate per period 
             // d is the number of payments paid to date.
             // return b = a(1 + r)d - p((1 + r) d - 1) r //where b is the balance or payoff amount,
-             //a is the loan amount, 
+            //a is the loan amount, 
             //where b is the balance or payoff amount, a is the loan amount, r is the interest rate per period, 
             // return   principal * (1 + annualRate) ** - (numberOfPaymentsPaidToDate - periodsPerYear((1 + annualRate) * numberOfPaymentsPaidToDate - 1)) * annualRate ;
         }
@@ -101,20 +95,24 @@
     </header>
     <Main>
         <h3>Loan calculator</h3>
-        Amount invested (principal) :<input placeholder="Amount Borrowed" type="text" id="principal" size="15"
-            value="" /> <br />
-        Annual rate (exampel:0.08) <input placeholder="Annual interest rate" type="text" id="Intreset" size="15"
-            value="" /> <br />
-        Number of years: <input placeholder="Number Of Years" type="text" id="NumberOfYears" size="15" value="" />
-        <br />
-        Payment per year : <input placeholder="Payment per year" type="text" id="paymentPeryear" size="15" value="" />
-        <br />
+        Amount invested (principal) : <label for="principal"><input placeholder="Amount Borrowed" type="text"
+                id="principal" size="15" value="" /></label> <br />
+        Annual rate (exampel:0.08) : <label for="Intreset"><input placeholder="Annual interest rate" type="text"
+                id="Intreset" size="15" value="" /></label> <br />
+        Number of years: <label for="NumberOfYears"><input placeholder="Number Of Years" type="text" id="NumberOfYears"
+                size="15" value="" /></label> <br />
+        Payment per year : <label for="paymentperyear"><input placeholder="Payment per year" type="text"
+                id="paymentPeryear" size="15" value="" /></label><br />
+         
         <button type="button" onclick="doPayment()"> Compute Payment </button> <br />
-        Number of payment Paid to Date : <input placeholder="number of payment Paid to Date" type="text"
-            id="numberofpaymentPaidtoDate" size="15" value="" /> <br />
+        <hr/>
+        Number of payment Paid to Date : <label for="numberofpaymentPaidtoDate"><input
+                placeholder="number of payment Paid to Date" type="text" id="numberofpaymentPaidtoDate" size="15"
+                value="" /> <br /></label>
         <div id="outputDiv"> </div>
+       
         <button type="button" onclick="doBalance()"> compute payoff Amount </button> <br />
-
+        <hr/>
         <div id="outputDiv1"> </div>
     </Main>
     <footer>
