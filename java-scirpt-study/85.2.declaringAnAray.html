@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+<body>
+  <header>
+    <h1>Week 4:Template Add two Numbers</h1>
+    <h2>Thanush Ganesh</h2>
+  </header>
+  <main>
+    <h3>Creating Arrays</h3>
+    
+    <hr />
+    <p><span id="output"></span></p>
+    <p><span id="output1"></span></p>
+    <p><span id="output2"></span></p>
+    <p><span id="output3"></span></p>
+    <p><span id="output4"></span></p>
+  </main>
+  <footer>
+    &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+  </footer>
+  <script>
+/*
+Declaring an array in JavaScript does not cause the computer to reserve 
+space for the elements of the array.
+To do this, a programmer must also create the array.
+All objects, including arrays, are created in JavaScript using the keyword new.
+
+Template
+    arrayName = new Array(size);
+
+*/
+
+// Example 2 Creates the Array that holds 6 elements;
+   data = new Array (6);
+   console.log(data.length)
+
+   //Create an Array
+let fruits = ['Apple', 'Banana']
+   // Access an Array item using the index position
+let first = fruits[0];
+
+/*
+ example 5
+All arrays in JavaScript automatically have an attribute named length, 
+which is the number of elements contained in the array.
+Template
+    arrayName.length
+    let data = new Array(8);
+    let sizes = [ 4.7, 5.8, 2.1, 3.9, 7.2 ];
+    document.getElementById('div1').innerHTML = data.length;   // displays 8
+    document.getElementById('div2').innerHTML = sizes.length;  // displays 5
+*/
+
+console.log(fruits.length)
+ // finding the total elements in Array
+document.getElementById("output").innerHTML= fruits.length ;
+document.getElementById("output1").innerHTML= data.length;
+ // Access an Array item using the index position
+document.getElementById("output3").innerHTML= fruits[0];
+document.getElementById("output4").innerHTML= fruits[fruits.length - 1];
+/*
+The code in the previous example causes the computer to reserve space for
+ an array named data that holds six elements with indexes numbered from 0 to 5 inclusive. 
+It is possible to combine the array declaration and creation into a single statement
+ as shown in the next example.
+*/
+
+// example 3  // Declare and create an array that holds 25 elements
+let scores = new Array(25);
+//let scores = new Array (25);
+document.getElementById("output2").innerHTML= scores.length;
+/*
+The code in the previous example causes the computer to declare and 
+create an array named scores that holds 25 elements numbered from 0 to 24 inclusive. 
+It is also possible to ask the user for a length and create an array with the exact
+length specified by the user.
+*/
+  </script>
+</body>
+
+</html>

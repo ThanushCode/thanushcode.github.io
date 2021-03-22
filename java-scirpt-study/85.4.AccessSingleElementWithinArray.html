@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+    
+// Get a length from the user and declare and create an array
+    // that holds the number of elements specified by the user.
+    function accessArray (){
+
+   
+    let data = new Array(6);
+    data[0] = -4.3;
+    data[1] = parseFloat(document.getElementById("input1").value);
+    
+    document.getElementById('output').innerHTML = data[4];
+    
+    if (data[5] > 6.3) {
+        document.getElementById('error').innerHTML =
+                'Data value is too high!';
+    }
+}
+
+
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="input1" size="15" > </label><br/>
+        <p><span id="error"></span></p>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="accessArray()"> access the single array  </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

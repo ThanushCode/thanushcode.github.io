@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+<body>
+  <header>
+    <h1>Week 12: Array Operations</h1>
+    <h2>Thanush Ganesh</h2>
+  </header>
+  <main>
+    <h3>Common Array Operations</h3>
+    
+    <hr />
+    <p><span id="output"></span></p>
+    <p><span id="output1"></span></p>
+    <p><span id="output2"></span></p>
+    <p><span id="output3"></span></p>
+    <p><span id="output4"></span></p>
+  </main>
+  <footer>
+    &copy;2020 &bull; Thanush Ganesh &bull; BYU-Idaho &bull; CIT 160
+  </footer>
+  <script>
+
+   //Create an Array
+let fruits = ['Apple', 'Banana']
+ // 1. Access an Array item using the index position
+
+let first = fruits[0];
+console.log(fruits[0]);
+
+
+ // finding the total elements in Array
+
+ console.log(fruits.length)
+document.getElementById("output").innerHTML= fruits.length ;
+
+ // 1. Access an Array item using the index position
+
+document.getElementById("output1").innerHTML= fruits[0];
+document.getElementById("output2").innerHTML= fruits[fruits.length - 1];
+
+ //2 .Loop over an Array
+
+   fruits.forEach(function(item, index, array) {
+  console.log(item, index)
+   })
+ 
+//document.getElementById("output3").innerHTML=  index;
+
+//3.Add an item to the end of an Array
+
+ let newLength = fruits.push("orange");
+ console.log(newLength);
+ document.getElementById("output4").innerHTML= newLength;
+
+ //4. Remove an item from the end of an Array
+
+ let last = fruits.pop() // remove Orange (from the end)
+ console.log(fruits);
+// ["Apple", "Banana"]
+
+ //5.Remove an item from the beginning of an Array
+
+
+
+  </script>
+</body>
+
+</html>
