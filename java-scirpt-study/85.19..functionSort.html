@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /*
+* An array is a collection of variables. Each variable in an array is called an element and 
+has a unique index which denotes that element’s location within the array
+*To declare an array, use the keyword let.
+*To create an array which will reserve space in main memory for the elements of the array,
+ write code that uses the keywords new and Array, like this template:
+    arrayName = new Array(size);
+*To create and populate an array with known values write code that uses square brackets ([ and ])
+ like this template:
+    arrayName = [ value0, value1, … valueN ];
+*All arrays in JavaScript automatically have an attribute named length, which is the number of elements 
+contained in the array.
+*To access a single element within an array either to read or write the element’s value, 
+use bracket notation:
+    arrayName[index]
+*The first index in a JavaScript array is always 0.
+*The last index in a JavaScript array is always the length of the array minus 1 or in other words:
+    let lastIndex = arrayName.length - 1;
+*To process all the elements in an array, a programmer will usually write a loop that counts
+ from zero to the length of the array similar to this:
+    for (let i = 0;  i < arrayName.length;  i++) {
+        // Process each element of array using i as the index.
+    }
+*JavaScript includes many built-in methods that process arrays, including: concat, indexOf, join,
+ lastIndexOf, pop, push, reverse, shift, and sort.
+        */
+// Sorts the contents of the specified array in
+// ascending order using the insertion sort algorithm.
+function sort(list) {
+    let first = 0;
+    let last = list.length - 1;
+    for (let i = last - 1;  i >= first;  i--) {
+        let swap = list[i];
+        for (let j = i + 1;  j <= last;  j++) {
+            if (swap <= list[j]) {
+                break;
+            }
+            list[j - 1] = list[j];
+        }
+        list[j - 1] = swap;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

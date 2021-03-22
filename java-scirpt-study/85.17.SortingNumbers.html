@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /*
+        By default, the built-in sort function in JavaScript sorts arrays lexicographically
+         which essentially means alphabetically. This causes problems if you wish to sort an
+          array of numbers. For example, this code will sort the numbers array in a surprising way.
+        */
+  let numbers = [ 7, 10, 8, 16, 3, 35 ];
+
+// WARNING: this will sort the numbers array
+// lexicographically and not numerically.
+numbers.sort();
+    
+/*
+In the previous code, after the computer calls the sort function,
+ the values in the numbers array will be [10, 16, 3, 35, 7, 8]. By default the built-in JavaScript 
+ sort function places 10 and 16 before 3, 7, and 8 because 10 and 16 begin with 1 and lexicographically
+  1 comes before 3, 7, and 8. To force JavaScript to sort an array according to its numeric values,
+   we have to pass a comparison function into the sort function.
+*/
+  
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

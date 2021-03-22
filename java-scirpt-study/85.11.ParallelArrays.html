@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    
+    
+    <script>
+        /*
+        Parallel arrays are two or more arrays that contain corresponding values. 
+        For example, an array of student IDs and an array of corresponding student names 
+        are parallel arrays. Consider this student data.
+
+
+let studentIDs       let studentNames 
+
+'07-153-4276',         'Felix',
+'34-513-3186',        'Jonathan'
+'26-430-0198'         'Grace'
+We could store this data in a program in two parallel arrays like this.
+
+let studentIDs = [ '07-153-4276', '34-513-3186', '26-430-0198' ];
+let studentNames = [ 'Felix', 'Jonathan', 'Grace' ];
+
+The arrays are parallel because the order for both arrays is the same. In other words,
+ Felix’s ID is stored at index 0 in the studentIDs array, and his name is stored also at index 0 in the
+  studentNames array. Jonathan’s ID is stored at index 1 and his name is stored at index 1, and so on.
+   Here is a JavaScript program that reads a student ID from a text field and finds and outputs the 
+   corresponding student name. This program uses the two parallel arrays given above.
+        */
+// The values in these parallel arrays can be hard coded into a
+// program, or even better, they can be read from a file or database.
+let studentIDs = [ '07-153-4276', '34-513-3186', '26-430-0198' ];
+let studentNames = [ 'Felix', 'Jonathan', 'Grace' ];
+
+/* Input: a student's ID
+ * Processing: find the student's name
+ * Output: the student's name
+ */
+function findName() {
+    // Get the student's ID.
+    let studID = document.getElementById('studID').value;
+
+    // Use linear search to find the student's ID.
+    let index = linearSearch(studentIDs, studID);
+
+    let name;
+    if (index == -1) {
+        // The student ID that the user entered
+        // is not stored in the studentIDs array.
+        name = 'No such student ID';
+    }
+    else {
+        // Get the student's name.
+        name = studentNames[index];
+    }
+
+    // Display the student's name for the user to see.
+    document.getElementById('output').innerHTML = name;
+}
+
+// If key is in list, returns the first index where
+// key is located within list; otherwise returns -1.
+function linearSearch(list, key) {
+    let index = -1;
+    for (let i = 0;  i < list.length;  i++) {
+        if (list[i] == key) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        Student ID: <input type="text" id="studID">
+        <button type="button" onclick="findName()">Name</button>
+        <div id="output"></div>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

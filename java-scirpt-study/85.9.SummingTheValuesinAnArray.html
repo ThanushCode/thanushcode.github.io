@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+ /*
+ Within a program, we often have a series of numbers stored in an array, 
+ and the program needs to calculate the sum of those numbers.
+  This is easily done by writing a function with a variable to hold the sum and a loop 
+  that adds each value in an array to that variable.
+ */
+// Returns the sum of the values stored in an array.
+function sum(list) {
+    let s = 0;
+    for (let i = 0;  i < list.length;  i++) {
+        s += list[i];
+    }
+    return s;
+}
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+/*
+Finding a Value (Binary Search)
+If the elements in an array are sorted, then the computer can use a faster algorithm called binary search
+ to find an element within that array. The binary search algorithm works by comparing the key to the middle
+  most element in the array. If the key is greater than the middle most element, then the search is repeated
+   in the last half of the array. If the key is less than the middle most element, then the search is
+    repeated in the first half of the array. Of course, if the key is equal to the middle most element,
+     then the key has been found and the search is done. This process of comparing the key to the middle
+      most element of the current interval is repeated until the key is found or the interval has shrunk
+       to only one element. If that one element is not the same as the key, then the key is not present 
+       in the array, and the function below returns a negative value.
+*/
+function binarySearch(list, key) {
+    let left = 0;
+    let right = list.length - 1;
+    while (left <= right) {
+        // Compute the index of the middle of the current interval.
+        let mid = left + ((right - left) >>> 1);
+
+        // Compare the value in the middle of the interval to the key.
+        let cmp = key - list[mid];
+        if (cmp > 0) {
+            left = mid + 1;
+        }
+        else if (cmp < 0) {
+            right = mid - 1;
+        }
+        else {
+            return mid;
+        }
+    }
+
+    // key is not present in list, but if it
+    // were, it would be stored at location left.
+    return -(left + 1);
+}
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

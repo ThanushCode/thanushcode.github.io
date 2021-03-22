@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+ /*
+Very often a computer program must determine if a certain value is stored in an array
+ or not and if stored in the array, then return the value’s location. The value to be 
+ found is called the key. If the array is not too large (perhaps less than 100 elements), 
+ finding the key can be easily done using a linear search. A linear search is done by comparing
+  each element in the array with the key until the key is found in the array or the end of the array 
+  is reached.
+
+The advantage of a linear search is that it is simple and easy to code.
+ The disadvantage is that it is too slow if the array has many elements in it.
+  When the array has many elements in it, it is probably faster to sort the array 
+  and keep it sorted and to use a binary search to find the key within the array.
+
+JavaScript code to perform a linear search is shown below. In the example,
+ if the key is found in the array, the search function returns the index of the location within 
+ the array where the key was found. If the key is not found, the search function returns −1.
+
+Example 13
+ */
+
+// If key is in list, returns the first index where
+// key is located within list; otherwise returns -1.
+function linearSearch(list, key) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+    
+    let vegetables = [ "Radish", "Carrot", "Tomato", "Pea" ];
+    vegetables.sort();
+
+    /* Compares two values, s1 and s2 and returns -1
+ * if s1 should come before s2, 1 if s1 should come
+ * after s2, and 0 if the two values are equal. */
+function descend(s1, s2) {
+    if (s1 > s2)
+        return -1;
+    if (s1 < s2)
+        return 1;
+    return 0;
+}
+
+let vegetables = [ "Radish", "Carrot", "Tomato", "Pea" ];
+vegetables.sort(descend);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

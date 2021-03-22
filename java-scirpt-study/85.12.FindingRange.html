@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+
+        /*
+        Sometimes a computer program has a list of numerical ranges and must find the range that contains some value. Examples of this type of computing problem include:
+
+determining a person’s income tax rate from a list of income ranges and graduated tax rates
+determining a customer’s discount rate from a list of purchase ranges and discount rates
+determining a salesperson’s commission from a list of sales ranges and commission rates
+determining a student’s letter grade from a list of score ranges and letter grades
+For example, a company may offer discounts to its customers where the discount rate is based on the amount purchased according to this table.
+
+If the purchase
+amount is greater
+than or equal to	  And thepurchase amountis less than   	Then thediscountrate is
+0	                                     $300	                0%
+$300	                                $600	                2.0%
+$600	                                $1000	                2.5%
+$1000	                                ∞	                    3.0%
+167
+A beginning programmer will often code a JavaScript solution to this problem like this:
+        */
+// Computes and returns a discounted purchase amount.
+function getDiscountedAmount(purchase) {
+    let rate;
+    if (purchase < 300) {
+        rate = 0;
+    }
+    else if (purchase < 600) {
+        rate = 0.02;
+    }
+    else if (purchase < 1000) {
+        rate = 0.025;
+    }
+    else {
+        rate = 0.03;
+    }
+    let discount = purchase * rate;
+    return purchase - discount;
+}
+    
+
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="getDiscountedAmount()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

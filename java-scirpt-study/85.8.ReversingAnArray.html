@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /*
+        Reversing the order of the elements in an array is not commonly used in computer programs.
+         However, it is an interesting operation and understanding it helps students to understand more 
+         commonly used array operations. One way to reverse the elements in an array is to use two index 
+         variables, one index starts at the beginning of the array, and the other starts at the end of the
+          array. Then write a loop that repeats n / 2 times where n is the number of elements in the array
+          . Each time through the loop, the computer switches one element in the left half of the array 
+          with one element in the right half
+        */
+    
+// Reverses the contents of the specified array.
+function reverse(list) {
+    let left = 0;
+    let right = list.length - 1;
+
+    while (left < right) {
+        // Exchange two elements.
+        let swap = list[left];
+        list[left] = list[right];
+        list[right] = swap;
+
+        // Move the indexes toward the center.
+        left++;
+        right--;
+    }
+}
+
+  </script>
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+    
+        <label for="len"><input placeholder="Enter the" type="text" id ="len" size="15" > </label><br/>
+        <p><span id="output"></span></p>
+        
+        <button type="button" onclick="ramp()"> ramp </button>
+        
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>

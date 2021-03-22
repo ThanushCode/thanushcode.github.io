@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+        /* 
+Write an HTML document with a button and a div. The onclick attribute of the button must call a function
+ named crazyStory() with no arguments. The div must have an id of 'output'. 
+ Write these five functions in the head of the document, all in the same script tag:
+
+    function chooseNoun()
+    function chooseVerb()
+    function chooseAdjective()
+    function chooseAdverb()
+    function chooseInteger()
+
+The first four functions must each contain an array with at least ten words. 
+The chooseNoun function must contain an array with at least ten nouns. 
+The chooseVerb function must contain an array with at least ten verbs, and so on. When one of these four functions is called, 
+the function must randomly choose one of the words in its array and return that word. 
+
+Hint: write code similar to example 8 of Chapter 9 to get a pseudo random index between 0 and
+ the length of the array of words, in other words in this range [0, length). Then write code to return
+the word that is stored in the array at that index.
+
+The last function, chooseInteger must return a pseudo random integer between 1 and 99, inclusive. 
+Finally add this function to the same script tag as the other five functions.
+
+function crazyStory() {
+    let story = "The man comes "
+        + chooseVerb() + "ing a horse. The horse is "
+        + chooseAdverb() + " " + chooseAdjective()
+        + " and has no " + chooseNoun()
+        + ". The saddle is " + chooseAdjective()
+        + ", and the stirrups don't match. His clothing"
+        + " is strange. He wears " + chooseInteger()
+        + " hats and a " + chooseAdjective()
+        + " shirt. One " + chooseNoun()
+        + " of his pants is torn off to the knee. His sword is "
+        + chooseAdjective() + " and has a broken hilt and "
+        + chooseVerb() + "s from the bottom of the "
+        + chooseNoun() + ".";
+    document.getElementById('output').innerHTML = story;
+
+    function randomInteger() {
+    let min = 5;
+    let max = 11;
+
+    // Call the Math.random and Math.floor functions.
+    let r = min + Math.floor(Math.random() * (max - min));
+
+    // Display the random integer for the user to see.
+    document.getElementById('outputDiv').innerHTML = r;
+}
+}
+    
+        */
+        function crazyStory() {
+    let story = "The man comes "
+        + chooseVerb() + "ing a horse. The horse is "
+        + chooseAdverb() + " " + chooseAdjective()
+        + " and has no " + chooseNoun()
+        + ". The saddle is " + chooseAdjective()
+        + ", and the stirrups don't match. His clothing"
+        + " is strange. He wears " + chooseInteger()
+        + " hats and a " + chooseAdjective()
+        + " shirt. One " + chooseNoun()
+        + " of his pants is torn off to the knee. His sword is "
+        + chooseAdjective() + " and has a broken hilt and "
+        + chooseVerb() + "s from the bottom of the "
+        + chooseNoun() + ".";
+    document.getElementById('output').innerHTML = story;
+    }
+
+    function chooseNoun(){
+
+    }
+    function chooseVerb(){
+
+    }
+    function chooseAdjective(){
+
+    }
+    function chooseAdverb(){
+
+    }
+    function chooseInteger(){
+
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+       // <input placeholder="Enter the" type="text" id="giveName" size="15" value="" /> <br />
+        <button type="button" onclick="crazyStory()"> button Name </button> <br />
+        <div id="output"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    
+</body>
+
+</html>
