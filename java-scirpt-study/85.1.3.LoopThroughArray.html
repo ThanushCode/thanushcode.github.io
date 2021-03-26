@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+       
+  
+        <div id="demo"> </div>
+        <div id="demo1"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+       //The best way to loop through an array is using a standard for loop:
+       //The safest way to loop through an array, is using a for loop:
+       let fruits, text, fLen, i;
+       fruits = ["grapes", "pineApple", "Mandarin", "Papaya"];
+       fLen = fruits.length;
+
+       text = "<ul>";
+       for (i = 0; i < fLen; i++) {
+       text += "<li>" + fruits[i] + "</li>";
+       }
+       text += "</ul>";
+
+       document.getElementById("demo").innerHTML = text;
+
+
+      // <p>Array.forEach() calls a function for each array element.</p>
+
+     //<p>Array.forEach() is not supported in Internet Explorer 8 or earlier.</p>
+       let vegitable, text2;
+       vegitable = ["Photato", "Onion", "Ginger", "Garlic"];
+
+         text2 = "<ul>";
+         vegitable.forEach(myFunction);
+         text2 += "</ul>";
+         document.getElementById("demo1").innerHTML = text2;
+
+         function myFunction(value) {
+         text2 += "<li>" + value + "</li>";
+         }
+            
+     //The easiest way to add a new element to an array is using the push() method:
+     
+        
+    </script>
+</body>
+
+</html>

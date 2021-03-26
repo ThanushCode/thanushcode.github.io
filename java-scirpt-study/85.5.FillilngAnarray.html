@@ -19,17 +19,22 @@
     
 // Get a length from the user and declare and create an array
     // that holds the number of elements specified by the user.
+  function  lenOfArray (){
 
+ 
     let list = new Array(80);
     fill(list, 7);
-
+}
    // Fills the specified array with the value x.
 function fill(list, x) {
     // For each index in the array named list,
     for (let i = 0;  i < list.length;  i++) {
         // store the value in x in the array.
         list[i] = x;
+        //list list[i] = i + 1;
     }
+    console.log(list);
+    document.getElementById("output").innerHTML= list;
 }
  
 

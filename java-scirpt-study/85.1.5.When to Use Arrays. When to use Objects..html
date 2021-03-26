@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+      
+        <div id="demo"> </div>
+        <div id="demo1"> </div>
+        <div id="demo2"> </div>
+        <div id="demo3"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        /*JavaScript does not support associative arrays.
+          You should use objects when you want the element names to be strings (text).
+          You should use arrays when you want the element names to be numbers.
+          let points = new Array();     // Bad
+          let points = [];              // Good 
+          let points = new Array(40, 100, 1, 5, 25, 10); // Bad
+          let points = [40, 100, 1, 5, 25, 10];          // Good
+          let points = new Array(40, 100);  // Creates an array with two elements (40 and 100)
+        */
+
+        /*
+        How to Recognize an Array
+        A common question is: How do I know if a variable is an array?
+        The problem is that the JavaScript operator typeof returns "object":
+        */
+
+
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = typeof fruits;//The typeof operator, when used on an array, returns object
+//The typeof operator returns object because a JavaScript array is an object.
+   
+
+//Solution 1:
+//To solve this problem ECMAScript 5 defines a new method Array.isArray():
+//The new ECMASCRIPT 5 method isArray returns true when used on an array
+let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = Array.isArray(fruits2);
+   
+//solutio2
+let fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = isArray(fruits3);
+
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+
+// Solution3
+var fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo3").innerHTML = fruits4 instanceof Array;
+   </script>
+</body>
+
+</html>

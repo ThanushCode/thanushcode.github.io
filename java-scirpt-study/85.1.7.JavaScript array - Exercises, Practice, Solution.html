@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        
+        <div id="outputDiv"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+ //1. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+ //Write a JavaScript function to check whether an 'input' is an array or not.
+//Test Data :
+let is_array = function (input){
+    if (toString.call(input) === "[Object Array]")
+    return true;
+  return false; 
+
+
+}
+console.log(is_array('w3resource'));
+console.log(is_array([1, 2, 4, 0]));
+
+
+//Write a JavaScript function to clone an array. Go to the editor
+//Test Data :
+
+let array_Clone = function (arra1){
+   return arra1.slice(0);
+   //var array_Clone = arra1 => arra1.slice(0);  es6 version
+}
+console.log(array_Clone([1, 2, 4, 0]));
+console.log(array_Clone([1, 2, [4, 0]]));
+[1, 2, 4, 0]
+[1, 2, [4, 0]]
+//console.log(typeof(['w3resource']));
+//false
+//true
+
+     
+    </script>
+</body>
+
+</html>

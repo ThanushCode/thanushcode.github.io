@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        let cars = ["Saab", "Volvo", "BMW"]; // strings 0 to 2
+
+        document.getElementById("demo").innerHTML = cars; // Access The full Array
+        document.getElementById("demo1").innerHTML = cars.length;// The length property returns the number of elements
+        document.getElementById("demo2").innerHTML = cars[cars.length - 1]; // This is the formula to reffer to the last item on the array                                   
+        document.getElementById("demo2").innerHTML = cars[0];// reffer to first item , you can reffer any items through index number or value
+        console.log(cars);
+        
+        /* Using the JavaScript Keyword new
+          The following example also creates an Array, and assigns values to it:*/
+        let cars2 = new Array("Citron", "Ferrari", "Lambogini");
+        document.getElementById("demo4").innerHTML = cars2;
+        /*
+        Changing an Array Element
+        This statement changes the value of the first element in cars2:
+        */
+        cars2[0] = "bugatti";//Accessing the First Array Element
+        document.getElementById("demo5").innerHTML = cars2;
+
+        let  last = cars2[cars2.length-1];
+        document.getElementById("demo6").innerHTML = last; //Accessing the Last Array Element
+        
+        //JavaScript uses names to access object properties or Objects use names to access its "members"
+        let person = {firstName:"Thanush", lastName:"Dan", age:36};
+        document.getElementById("demo7").innerHTML = person["firstName"];
+
+       
+        /*
+        avaScript variables can be objects
+         Arrays are special kinds of objects.
+         you can have variables of different types in the same Array
+         You can have objects in an Array.
+         You can have functions in an Array
+         You can have arrays in an Array
+
+        */
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        
+      
+        <div id="demo9"> </div>
+        <div id="demo8"> </div>
+        <div id="demo7"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+      //Use the correct Array method to remove the last item of the fruits array.
+let fruits = ["orange","apple","banana", "avacado","papaya"];
+
+fruits.pop();
+fruits.pop();
+fruits.push("mango");
+document.getElementById("demo9").innerHTML = fruits ;
+document.getElementById("demo8").innerHTML = fruits.sort() ;
+  /*
+  we start from the begining index of the array, zero and count the toal fruite length( we tell go to the end in the index list)
+  i is the control varable refernce to the index
+  */
+  for(let i = 0; i < fruits.length ; i++) // i is comman name use for variable , i is 0 because our index start from 0
+document.getElementById("demo7").innerHTML = "The index of apple is" + fruits ;
+
+    </script>
+</body>
+
+</html>
+
