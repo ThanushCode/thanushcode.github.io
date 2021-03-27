@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 4:Template </h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>My First Template Program</h3>
+        
+        <div id="outputDiv"> </div>
+        <div id="outputDiv1"> </div>
+        <div id="outputDiv2"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        /* Assignment:
+    5. Write a simple JavaScript program to join all elements of the following array into a string.
+       Sample array : myColor = ["Red", "Green", "White", "Black"];
+       Expected Output :
+       "Red,Green,White,Black"
+       "Red,Green,White,Black"
+       "Red+Green+White+Black"
+        */
+        myColor = ["Red", "Green", "White", "Black"];
+
+        console.log(myColor.toString());
+        console.log(myColor.join());
+        console.log(myColor.join('+'));
+
+        document.getElementById("outputDiv").innerHTML=(myColor.toString());
+        document.getElementById("outputDiv1").innerHTML=(myColor.join());
+        document.getElementById("outputDiv2").innerHTML=(myColor.join('+'));
+
+    /*
+    6. Write a JavaScript program which accept a number as input and insert dashes (-) 
+    between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+    */
+
+     const num=window.prompt();
+     const str = num.toString();
+     const result = [str[0]];
+  
+for(let x=1; x<str.length; x++)
+  {
+    if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+     {
+      result.push('-', str[x]);
+     }
+    else
+     {
+      result.push(str[x]);
+     }
+  }
+console.log(result.join(''));
+document.getElementById("outputDiv2").innerHTML=result.join('');
+
+//*****************************************************************************************************
+
+    </script>
+</body>
+
+</html>

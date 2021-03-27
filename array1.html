@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanush G">
+    <title>Template</title>
+    <style>
+        body {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            background-color: #f1faee;
+        }
+    </style>
+    <script>
+
+        /* In a file named array1.html, write an HTML document that contains a button and a div (text fields are not needed).
+         Copy and paste this code onclick="test()" as the onclick attribute for the button. 
+         Then copy and paste this function between the opening and closing script tags in your document.
+        
+        Defining Table
+     * Input: no user input
+     * Processing: Test the addEnds and getMiddle functions by calling them.
+     * Output: The values returned from the addEnds and getMiddle functions.
+       */
+
+        function test() {
+            let list1 = [17, 8, 9, 5, 20]; // list
+            let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
+
+            // Test the addEnds function by calling it two times.
+            let sum1 = addEnds(list1);
+            let sum2 = addEnds(list2);
+
+            // Test the getMiddle function by calling it two times.
+            let mid1 = getMiddle(list1);
+            let mid2 = getMiddle(list2);
+
+            // Build a string to display to the user.
+            let output =
+                sum1 + '<br>' +
+                sum2 + '<br>' +
+                mid1 + '<br>' +
+                mid2;
+
+            // Display the output string for the user to see.
+            document.getElementById('output').innerHTML = output;
+        }
+        // 1. Write a function that returns the sum of the first and last values in an array. 
+        //The function must have this header:
+
+        function addEnds(list) {
+            let lastIndex = list.length - 1;
+            return list[0] + list[lastIndex];
+        }
+
+        /*
+        function addEnds(list) {
+        let firstnumber = list [0];
+        let lastnumber = list [list.length-1]
+        return firstnumber + lastnumber;
+        */
+        //For example, if the addEnds function were called like this:
+
+
+        /*
+        Test Cases
+         Parameter List	                  Return
+
+         [17, 8, 9, 5, 20]	                37
+         [12, 4, 8, 15, 17, 5, 20, 11]   	23
+        */
+
+        /*
+         2. Write a function named getMiddle that returns the value of the middle element in an array. 
+        If the array has an even number of elements, then this function must return the average of the two middle elements.
+         The function must have this header:
+         */
+        function getMiddle(list) {
+            // check if the size is even
+            if (list.length % 2 == 0) {
+                // if even divideed the size by two an get the average 
+                let firstIndex = list.length / 2;
+                let secondIndex = firstIndex - 1;
+                return (list[firstIndex] + list[secondIndex]) / 2;
+            }
+            else {
+                // else divide the size by two and round it with parseInt
+                return list[parseInt(list.length / 2)];
+            }
+
+        }
+         //For example, if the getMiddle function were called like this:
+         //let list = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+         //let value = getMiddle(list);
+
+        /*
+        The getMiddle function would return 16 because 15 and 17 are stored in the middle of the array,
+        and the average of 15 and 17 is 16.
+
+        Test Cases
+        Parameter List	                   Return
+        [17, 8, 9, 5, 20]          	     9
+        [12, 4, 8, 15, 17, 5, 20, 11]	    16
+        */
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Week 12:Arrays</h1>
+        <h2>Thanush </h2>
+    </header>
+    <Main>
+        <h3>Arrays</h3>
+
+        <button type="button" onclick="test()"> button Name </button> <br />
+        <div id="output"> </div>
+    </Main>
+    <footer>
+        &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+</body>
+
+</html>

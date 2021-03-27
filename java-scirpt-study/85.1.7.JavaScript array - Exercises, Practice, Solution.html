@@ -24,28 +24,56 @@
     </header>
     <Main>
         
-        <div id="outputDiv"> </div>
+        <div id="outputDiv1"> </div>
+        <div id="outputDiv2"> </div>
+        <div id="outputDiv3"> </div>
+        <div id="outputDiv4"> </div>
+        <div id="outputDiv5"> </div>
+        <div id="outputDiv6"> </div>
+        <div id="outputDiv7"> </div>
+        <div id="outputDiv8"> </div>
+        <div id="outputDiv9"> </div>
+        <div id="outputDiv10"> </div>
+        <div id="outputDiv11"> </div>
+        <div id="outputDiv12"> </div>
+
     </Main>
     <footer>
         &copy;2020 &bull; Thanush &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
- //1. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
- //Write a JavaScript function to check whether an 'input' is an array or not.
+
+//1. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+
+//Write a JavaScript function to check whether an 'input' is an array or not.
 //Test Data :
+
+/*
+Every object has a toString() method that is automatically called when the object is to be 
+represented as a text value or when an object is referred to in a manner in which a string
+is expected. By default, the toString() method is inherited by every object descended from Object.
+If this method is not overridden in a custom object, toString() returns "[object type]",
+where type is the object type. The following code illustrates this:
+   
+let baseTenInt = 10;
+console.log(baseTenInt.toString(2));
+// Expected output is "1010"
+*/
 let is_array = function (input){
     if (toString.call(input) === "[Object Array]")
     return true;
   return false; 
-
-
 }
+
 console.log(is_array('w3resource'));
 console.log(is_array([1, 2, 4, 0]));
 
+document.getElementById("outputDiv1").innerHTML=is_array('w3resource');
+document.getElementById("outputDiv2").innerHTML=is_array([1, 2, 4, 0]);
 
-//Write a JavaScript function to clone an array. Go to the editor
-//Test Data :
+//*****************************************************************************************
+
+//2. Write a JavaScript function to clone an array. Go to the editor
 
 let array_Clone = function (arra1){
    return arra1.slice(0);
@@ -53,13 +81,98 @@ let array_Clone = function (arra1){
 }
 console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
+array_Clone.toString(); 
 [1, 2, 4, 0]
 [1, 2, [4, 0]]
+
+document.getElementById("outputDiv3").innerHTML=array_Clone([1, 2, 4, 0]);
+document.getElementById("outputDiv4").innerHTML=array_Clone([1, 2, [4, 0]]);
 //console.log(typeof(['w3resource']));
 //false
 //true
 
-     
+//*******************************************************************************************
+  /*
+  The slice() method returns a shallow copy of a portion of an array into a new array object selected
+   from start to end (end not included) where start and end represent the index of items in that array.
+    The original array will not be modified
+  */
+/*
+3. Write a JavaScript function to get the first element of an ARRAY.
+ Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+Test Data :
+console.log(first([7, 9, 0, -2]));
+console.log(first([],3));
+console.log(first([7, 9, 0, -2],3));
+console.log(first([7, 9, 0, -2],6));
+console.log(first([7, 9, 0, -2],-3));
+
+Expected Output :
+
+7
+[]
+[7, 9, 0]
+[7, 9, 0, -2]
+[]
+
+*/
+let first = function (array,n){
+if (array == null)
+    return void 0 ;
+if (n == null)
+    return array[0];
+if (n < 0)
+    return [];
+   return array.slice(0,n);
+
+}
+console.log(first([7, 9, 0, -2]));
+console.log(first([],3));
+console.log(first([7, 9, 0, -2],3));
+console.log(first([7, 9, 0, -2],6));
+console.log(first([7, 9, 0, -2],-3));
+
+document.getElementById("outputDiv5").innerHTML=first([7, 9, 0, -2]);
+document.getElementById("outputDiv6").innerHTML=first([],3);
+document.getElementById("outputDiv7").innerHTML=first([7, 9, 0, -2],3);
+document.getElementById("outputDiv8").innerHTML=first([7, 9, 0, -2],6);
+document.getElementById("outputDiv9").innerHTML=first([7, 9, 0, -2],-3);
+
+//************************************************************************************************
+
+/*
+
+4. Write a JavaScript function to get the last element of an array. 
+Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
+Test Data :
+console.log(last([7, 9, 0, -2]));
+console.log(last([7, 9, 0, -2],3));
+console.log(last([7, 9, 0, -2],6));
+Expected Output :
+-2
+[9, 0, -2]
+[7, 9, 0, -2]
+
+*/
+
+let last = function (array,n){
+ if (array == null)
+     return void 0; // need to ask why we retun void 0 and meaning of void
+
+ if ( n == null)
+     return array[array.length - 1];
+     return array.slice(Math.max(array.length - n , 0));
+
+}
+console.log(last([7, 9, 0, -2]));
+console.log(last([7, 9, 0, -2],3));
+console.log(last([7, 9, 0, -2],6));
+
+document.getElementById("outputDiv10").innerHTML=last([7, 9, 0, -2]);
+document.getElementById("outputDiv11").innerHTML=last([7, 9, 0, -2],3);
+document.getElementById("outputDiv12").innerHTML=last([7, 9, 0, -2],6);
+
+
     </script>
 </body>
 
